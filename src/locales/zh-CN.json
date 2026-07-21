@@ -1,0 +1,684 @@
+{
+  "navbar": {
+    "home": "首页",
+    "products": "产品",
+    "solutions": "解决方案",
+    "about": "公司介绍",
+    "contact": "联系我们",
+    "consultation": "预约 AI 体验",
+    "aps_name": "IMPACTs APS",
+    "aps_desc": "AI 驱动有限产能排程",
+    "esg_name": "IMPACTs CeO",
+    "esg_desc": "AI 精准碳排放分析",
+    "aibox_name": "CRIS AI 一体机",
+    "aibox_desc": "私有化部署 · 数据主权掌控",
+    "mc_name": "CRIS Mission Control",
+    "mc_desc": "工厂 AI 任务指挥中心"
+  },
+  "hero": {
+    "badge": "企业 AI Agent 解决方案",
+    "title_prefix": "引领企业进入",
+    "title_g1": "AI 代理人",
+    "title_between": "时代",
+    "title_g2": "",
+    "subtitle": "私有化部署、即插即用、智慧决策——快思科技整合 AI 一体机、智能调度与绿色管理，让企业 AI 真正落地，数据永不离境。",
+    "cta_primary": "预约 AI 体验",
+    "cta_secondary": "探索解决方案",
+    "trust": "200+ 企业伙伴信赖 · 数据主权完全掌控",
+    "scroll": "向下探索",
+    "stat_0_label": "生产效率提升",
+    "stat_1_label": "碳排放降低",
+    "stat_2_label": "企业伙伴"
+  },
+  "features_section": {
+    "tag": "AI 驱动核心产品",
+    "title": "企业 AI 落地解决方案",
+    "subtitle": "三大 AI 驱动系统深度整合，搭载私有化 AI 一体机，从智能调度到绿色管理，数据永不离境。",
+    "learn_more": "深入了解 →"
+  },
+  "features_data": [
+    {
+      "title": "IMPACTs APS",
+      "subtitle": "有限产能智慧排程，决策加速生产",
+      "desc": "整合机台、人力、物料等多维度有限产能限制，自动生成最优排程计划，大幅缩短规划周期。",
+      "points": [
+        "有限产能精准排程，避免超载",
+        "多目标决策支持，降低库存 40%",
+        "即时插单、急单快速重排",
+        "可视化甘特图监控生产进度"
+      ]
+    },
+    {
+      "title": "IMPACTs CeO",
+      "subtitle": "多源数据采集，精准碳核算",
+      "desc": "符合 ISO 14064、GHG Protocol 等国际标准，自动化采集各类排放数据，生成合规碳排放报告。",
+      "points": [
+        "自动化多源数据采集整合",
+        "精准碳排放核算与追踪",
+        "一键生成 ISO/GHG 合规报告",
+        "减碳路径规划与预测分析"
+      ]
+    },
+    {
+      "title": "AI 一体机",
+      "subtitle": "工业 AI 边缘运算，即时现场监控",
+      "desc": "整合工业 AI 视觉与传感器融合技术，部署于生产现场，实现毫秒级异常检测与品质控制。",
+      "points": [
+        "工业 AI 视觉缺陷即时检测",
+        "边缘运算，无需云端依赖",
+        "传感器数据融合分析",
+        "预测性维护，降低停机时间"
+      ]
+    }
+  ],
+  "cases_section": {
+    "tag": "成功案例",
+    "title": "数字化转型，看得见的成效",
+    "subtitle": "来自不同产业的真实案例，展示快思科技如何协助客户突破生产瓶颈，实现可量化的效率提升与可持续目标。",
+    "challenge_label": "导入前挑战",
+    "solution_label": "快思解决方案",
+    "result_label": "成效数据",
+    "cta": "查看更多案例，预约咨询"
+  },
+  "cases_data": [
+    {
+      "industry": "金属制造业",
+      "company": "某大型精密金属加工厂",
+      "tag": "APS + AI 一体机",
+      "challenge": "订单交期频繁延误，人工排程耗时 2 天，紧急插单冲突严重，设备利用率不足 60%。",
+      "solution": "导入 APS 生产排程系统与 AI 一体机进行即时品质监控，自动化排程取代人工，AI 视觉检测缺陷率降至 0.1% 以下。",
+      "metric_0": "生产效率提升",
+      "metric_1": "排程规划时间",
+      "metric_2": "在制品库存降低"
+    },
+    {
+      "industry": "胶膜生产业",
+      "company": "某全球胶膜制造商",
+      "tag": "ESG + APS 整合",
+      "challenge": "面对欧盟 CBAM 碳边境调整机制压力，碳排数据分散在多系统，人工统计误差超过 15%，合规报告需耗费 3 周。",
+      "solution": "部署 ESG 碳盘查系统整合 MES、ERP 数据，自动化计算各制程碳足迹，同步与 APS 系统联动优化低碳排程策略。",
+      "metric_0": "碳排放降低",
+      "metric_1": "合规报告生成",
+      "metric_2": "数据误差率"
+    }
+  ],
+  "contact": {
+    "tag": "联系我们",
+    "title": "开始您的数字化转型之旅",
+    "subtitle": "填写下方表单，我们的专业顾问将在 24 小时内与您联系，提供量身定制的解决方案建议。",
+    "name": "姓名",
+    "name_placeholder": "王小明",
+    "company": "公司名称",
+    "company_placeholder": "XX 制造有限公司",
+    "email": "Email",
+    "email_placeholder": "you@company.com",
+    "phone": "电话",
+    "phone_placeholder": "138-0000-0000",
+    "message": "咨询需求",
+    "message_placeholder": "请描述您目前面临的生产挑战或需求...",
+    "required": "必填",
+    "submit": "提交咨询申请",
+    "privacy": "提交即表示您同意我们的隐私政策，我们绝不将您的资料分享给第三方。",
+    "success_title": "提交成功！",
+    "success_desc": "感谢您的咨询，我们将在 24 小时内与您联系。",
+    "address_label": "地址",
+    "phone_label": "电话",
+    "email_label": "邮箱"
+  },
+  "footer": {
+    "brand_desc": "专注于工业 4.0 智慧制造，以 APS 排程、ESG 碳管理与 AI 技术，赋能制造企业实现效率跃升与可持续目标。",
+    "products_title": "产品",
+    "company_title": "公司",
+    "resources_title": "资源",
+    "about_link": "公司介绍",
+    "cases_link": "成功案例",
+    "news_link": "新闻中心",
+    "contact_link": "联系我们",
+    "docs_link": "技术文档",
+    "whitepaper_link": "白皮书下载",
+    "faq_link": "常见问题",
+    "copyright": "© 2026 快思科技股份有限公司 CRIS Technology. All rights reserved.",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "aps": {
+    "breadcrumb": "APS 生产排程系统",
+    "badge": "智慧排程解决方案",
+    "product_name": "IMPACTs",
+    "product_name_gradient": "APS",
+    "product_subtitle": "有限产能生产排程系统",
+    "product_desc": "以有限产能排程取代人工试算表，整合物料同步规划与模具指派优化，让每一条生产线都以最高效率运转。",
+    "cta_primary": "预约 Demo",
+    "cta_secondary": "看排程演示",
+    "floating_badge": "AI 驱动 · 智慧排程",
+    "tags": ["有限产能排程", "物料同步规划", "模具指派", "换线优化", "多厂协同", "甘特图可视化"],
+    "pipeline_tag": "排程概念示意",
+    "pipeline_title": "APS 智慧排程",
+    "pipeline_subtitle": "APS 引擎同步整合订单、机台产能与物料库存，自动计算最优排程方案，协助管理层掌握生产全貌。",
+    "pipeline_note": "以下为概念示意图，实际画面依导入环境而定",
+    "pipeline_orders_col": "订单进度",
+    "pipeline_machine_col": "机台负荷",
+    "pipeline_material_col": "物料状态",
+    "pipeline_avg_load": "平均稼动率",
+    "integration_tag": "无缝整合您现有的系统",
+    "integration_title": "与全球主流 ERP / MES / WMS 深度整合",
+    "integration_note": "标准 RESTful API 接口 · 支持自定义连接器 · 7 天完成整合评估",
+    "kpi_tag": "可量化成效",
+    "kpi_title": "数字说话的排程革命",
+    "kpi_subtitle": "来自制造业真实客户的平均成效数据，导入后 3 个月内可量化回收。",
+    "pain_tag": "痛点对症",
+    "pain_title": "三大排程痛点，一次根治",
+    "pain_subtitle": "制造业排程主管最常面临的三个核心挑战，APS 从算法层面提供系统性解法。",
+    "pain_before": "导入前痛点",
+    "pain_after": "APS 解决方案",
+    "feat_tag": "核心功能",
+    "feat_title": "六大功能模块",
+    "feat_hint": "点击卡片展开详细说明",
+    "cases_tag": "成功案例",
+    "cases_title": "真实客户，真实成效",
+    "cta_title": "准备好让排程升级了吗？",
+    "cta_subtitle": "填写表单，我们的顾问将在 24 小时内提供免费评估报告。",
+    "cta_btn": "立即预约 Demo",
+    "cta_back": "返回首页",
+    "quick_stats": [
+      { "label": "生产效率提升", "sub": "较人工排程" },
+      { "label": "手动调整时间降低", "sub": "节省人力成本" },
+      { "label": "交期达成率", "sub": "客户满意度提升" }
+    ],
+    "kpis": [
+      { "label": "排程效率提升", "sublabel": "从人工 2 天缩至 30 分钟" },
+      { "label": "生产周期缩短", "sublabel": "有限产能精准配置" },
+      { "label": "在制品库存降低", "sublabel": "物料同步计划优化" },
+      { "label": "交期达成率", "sublabel": "客户满意度显著提升" }
+    ],
+    "pain_points": [
+      {
+        "pain": "紧急插单冲突",
+        "pain_desc": "业务接紧急订单后，人工修改排程需要数小时，且影响其他订单交期，现场混乱。",
+        "solution": "APS 即时重排演算",
+        "solution_desc": "插单后 5 分钟内自动重排全厂排程，显示影响范围，自动协商交期，主管一键核准。"
+      },
+      {
+        "pain": "物料不齐开工",
+        "pain_desc": "生产计划未考虑物料到货时程，频繁发生「机台空转等料」，或「料到了没机台」。",
+        "solution": "物料同步规划引擎",
+        "solution_desc": "APS 整合 ERP/WMS 物料信息，只排「料、机、人」三者均齐的工单，消除等待浪费。"
+      },
+      {
+        "pain": "换线时间黑洞",
+        "pain_desc": "机台换线没有系统化管理，相似工件未整合排程，每日换线损失超过 2 小时稼动。",
+        "solution": "智慧换线优化",
+        "solution_desc": "依模具、颜色、材料相似度自动分群，最小化换线次数，换线时间平均降低 60%。"
+      }
+    ],
+    "features": [
+      {
+        "title": "有限产能排程引擎",
+        "short": "考虑机台、人力、模具等多维度限制，生成可执行排程",
+        "detail": "传统 ERP 的「无限产能」排程常导致排程无法落地。APS 有限产能引擎整合：\n\n• 机台可用时间与维护计划\n• 操作人员班别与技能矩阵\n• 模具寿命与清洗周期\n• 物料到货与库存水位\n\n透过多目标优化演算（遗传算法 + 局部搜索），在数分钟内生成兼顾交期、稼动率、库存的最优排程，并以甘特图可视化呈现。"
+      },
+      {
+        "title": "模具指派优化",
+        "short": "自动匹配模具与工单，延长模具寿命并降低换模成本",
+        "detail": "模具管理是精密制造的核心痛点。APS 模具指派模块：\n\n• 追踪每套模具累计使用次数与剩余寿命\n• 依产品规格自动筛选合格模具\n• 优先指派寿命接近维护点的模具，避免报废\n• 计算跨工单模具借调路径，最小化停机等待\n• 整合维修排程，确保模具维护不冲突正式生产"
+      },
+      {
+        "title": "换线顺序优化",
+        "short": "依相似度分群排程，大幅压缩换线损失时间",
+        "detail": "换线优化采用「相似矩阵」算法：\n\n• 计算工件在材料、颜色、尺寸、模具四个维度的相似度分数\n• 利用旅行商问题（TSP）求解最短换线路径\n• 支持「颜色由浅到深」等行业惯例规则\n• 图形化呈现换线甘特图，方便现场人员确认\n• 实绩反馈机制：记录实际换线时间，持续修正预测模型"
+      },
+      {
+        "title": "多厂多线协同",
+        "short": "跨厂区订单分配，平衡各厂产能与库存",
+        "detail": "集团型制造企业常面临订单在各厂之间分配不均的问题。APS 多厂协同模块：\n\n• 建立集团级产能视图，一览各厂稼动率\n• 订单依制程能力、运输成本、交期自动分配最优厂区\n• 厂间半制品移转计划与追踪\n• 集中采购物料需求汇总，降低分散采购成本\n• 主计划（MPS）与厂级排程（MES）双向同步"
+      },
+      {
+        "title": "决策分析仪表板",
+        "short": "即时 KPI 监控，排程模拟比较，辅助快速决策",
+        "detail": "APS 仪表板不只显示资料，更提供决策建议：\n\n• 交期风险预警：提前 3 天标示可能延迟的订单\n• 产能热力图：直观显示各机台各时段负荷\n• 排程方案模拟器：比较「最短交期」vs「最高稼动」两种策略\n• 排程稳定性分数：量化评估排程被插单冲击的抵抗能力\n• 一键导出客户交期确认函与内部生产计划"
+      },
+      {
+        "title": "物料同步规划",
+        "short": "整合 ERP/WMS，确保排程只在三者皆备时开工",
+        "detail": "「有料没机、有机没料」是制造现场最大的浪费来源。APS 物料同步引擎：\n\n• 即时读取 ERP 采购订单到货预计日\n• 计算每张工单所需物料的最早可用时间\n• 自动前推排程起始时间，确保开工时物料已到位\n• 安全库存缓冲设定，应对供应商延迟风险\n• 物料短缺警报：提前通知采购人员加速催料"
+      }
+    ],
+    "cases": [
+      {
+        "company": "某精密机械制造商",
+        "tag": "插单冲突 + 交期达成",
+        "challenge": "业务频繁接受紧急插单，人工重排排程耗时 4 小时以上，且常造成其他订单延迟，客户抱怨不断。",
+        "result": "导入 APS 后，插单重排缩至 5 分钟，交期达成率从 72% 提升至 97%，业务接单信心大幅提升。",
+        "m0_label": "交期达成率",
+        "m1_label": "插单重排时间",
+        "m2_label": "生产周期缩短"
+      },
+      {
+        "company": "某塑胶射出成型厂",
+        "tag": "换线优化 + 稼动提升",
+        "challenge": "模具换线无系统化管理，每日换线损失超过 2 小时稼动，在制品堆积造成资金积压与场地不足。",
+        "result": "换线顺序优化后平均换线时间降低 58%，稼动率从 61% 提升至 84%，在制品库存减少 40%。",
+        "m0_label": "换线时间降低",
+        "m1_label": "机台稼动率",
+        "m2_label": "在制品库存减少"
+      }
+    ]
+  },
+  "esg": {
+    "breadcrumb": "ESG 碳盘查系统",
+    "badge": "用友 ISV 生态认证产品",
+    "product_name": "IMPACTs",
+    "product_name_gradient": "CeO",
+    "product_subtitle": "双碳数字化管理系统",
+    "product_desc": "精准盘碳、步步减碳，让每一吨碳排放都有据可查。深度对接 ERP、APS、MES 等核心系统，协助企业从容应对 CBAM、CSRD 等国际合规要求。",
+    "cta_primary": "预约碳盘查咨询",
+    "cta_secondary": "索取解决方案白皮书",
+    "floating_badge": "AI 驱动 · 即时核算",
+    "tags": ["碳系数中心", "碳盘查计划", "CBAM 申报", "LCA 分析", "ISO 14064", "GHG Protocol"],
+    "roadmap_tag": "Compliance Roadmap",
+    "roadmap_title": "从采集到申报，全程自动化",
+    "roadmap_subtitle": "四个标准化阶段取代人工盘查，确保每一步都符合 ISO 14064 与 CBAM 要求。",
+    "roadmap_toolbar": "Compliance Roadmap — 合规流程追踪",
+    "integration_tag": "生态整合",
+    "integration_title": "无缝对接您的现有系统",
+    "integration_subtitle": "开箱即用的标准连接器，数据自动流入，无需手动维护",
+    "challenge_tag": "碳管理挑战",
+    "challenge_title": "企业正面临的刚性压力",
+    "challenge_subtitle": "不只是道德责任，更是生存竞争力。全球监管与供应链碳要求正在重塑制造业格局。",
+    "feat_tag": "核心功能模块",
+    "feat_title": "四大模块，完整覆盖碳管理需求",
+    "feat_hint": "点击卡片展开详细说明",
+    "kpi_tag": "预期效益",
+    "kpi_title": "可量化的碳管理 ROI",
+    "kpi_subtitle": "来自客户的平均成效数据，导入后 6 个月可完整回收成本。",
+    "standards_tag": "合规认证支持",
+    "standards_title": "严格遵循国际标准",
+    "cases_tag": "成功案例",
+    "cases_title": "真实客户，真实成效",
+    "cta_title": "让每一吨碳排放都有据可查",
+    "cta_subtitle": "预约免费碳盘查评估，我们的顾问将在 24 小时内提供专属建议。",
+    "cta_btn": "预约碳盘查咨询",
+    "cta_back": "返回首页",
+    "challenge_label": "挑战",
+    "result_label": "成效",
+    "quick_stats": [
+      { "label": "盘查效率提升", "sub": "周期从数月缩至 1-2 周" },
+      { "label": "国际合规保证", "sub": "ISO 14064 / CBAM / CSRD" },
+      { "label": "管理成本降低", "sub": "减少外部顾问依赖" }
+    ],
+    "kpis": [
+      { "label": "盘查效率提升", "sublabel": "周期从数月缩至 1-2 周" },
+      { "label": "管理成本降低", "sublabel": "减少外部顾问依赖" },
+      { "label": "合规性保障", "sublabel": "降低 90% 政策违规风险" },
+      { "label": "融资成本降低", "sublabel": "ESG 优异企业享受利率优惠" }
+    ],
+    "sgs_tag": "国际权威认证",
+    "sgs_title": "快思 CeO 通过 SGS AUP 评核",
+    "sgs_subtitle": "由全球最大验证机构 SGS 出具 AUP（Agreed-Upon Procedures）查核声明书，为您的碳数据提供国际级公信力。",
+    "sgs_note": "内置于 CRIS AI 一体机，实现本地合规数据处理",
+    "sgs_lightbox_close": "关闭",
+    "sgs_img0_alt": "SGS AUP 查核声明书 第一页",
+    "sgs_img1_alt": "SGS AUP 查核声明书 第二页",
+    "sgs_advantages": [
+      { "title": "极致信度与效度", "desc": "让您的碳盘查内容具备国际级公信力" },
+      { "title": "精准符合稽核需求", "desc": "系统流程与关键指标完全符合国际查核规范" },
+      { "title": "增加稽核准确度", "desc": "降低人为误差，增加数据透明度" },
+      { "title": "强化供应链国际合作", "desc": "符合全球减碳热潮，争取跨国订单优势" },
+      { "title": "助益国际披露申请", "desc": "有助于后续申请查证声明与 IFRS 可持续披露" },
+      { "title": "加速查核提升效率", "desc": "大幅缩短查证周期，降低稽核相关费用" },
+      { "title": "降低稽核风险与成本", "desc": "提升报告透明度，有效降低稽核失败风险" }
+    ]
+  },
+  "aibox": {
+    "breadcrumb": "AI 一体机",
+    "badge": "企业级私有 AI 作业平台",
+    "product_name": "IMPACTs",
+    "product_name_gradient": "AI 一体机",
+    "product_subtitle": "大脑决策 × 手脚执行的完整 AI 生态",
+    "product_desc_part1": "「大脑决策」",
+    "product_desc_part2": "「手脚执行」",
+    "product_desc": "赋能企业具备大脑决策与手脚执行的完整 AI 生态。从私有部署到数字员工调度，一机解决企业 AI 转型的全部需求。",
+    "floating_badge": "私有部署 · 零 Token 费用",
+    "cta_primary": "预约 AI 一体机 Demo",
+    "cta_secondary": "探索功能",
+    "tags": ["私有部署", "RAG 知识库", "AI Agent", "vLLM 推理", "多模态", "开箱即用"],
+    "feat_tag": "核心特色",
+    "feat_title": "四大核心价值主张",
+    "feat_subtitle": "从安全合规到成本管控，AI 一体机为企业提供完整、可控的 AI 转型路径。",
+    "modules_tag": "AI 软件栈",
+    "modules_title": "四大 AI 模块，开箱即用",
+    "modules_subtitle": "预装完整的企业 AI 软件栈，从知识管理到自动化执行，一台机器全部搞定。",
+    "kpi_tag": "核心优势",
+    "kpi_title": "可量化的 AI 转型价值",
+    "kpi_subtitle": "以确定性的硬件成本，换取无上限的 AI 应用潜力。",
+    "cta_title": "准备好让 AI 为您工作了吗？",
+    "cta_subtitle": "填写表单，我们将在 24 小时内提供免费 AI 一体机评估报告。",
+    "cta_btn": "预约 AI 一体机 Demo",
+    "cta_back": "返回首页",
+    "core_features": [
+      {
+        "badge": "安全第一",
+        "title": "私有部署 安全合规",
+        "desc": "模型与资料 100% 在企业内部运行，确保资安合规与完整资料主权，杜绝敏感资料外泄风险。",
+        "points": ["模型与资料不出企业防火墙", "符合 ISO 27001 与 GDPR 合规要求", "完整操作日志与访问控制"]
+      },
+      {
+        "badge": "快速整合",
+        "title": "开机即用 随插即用",
+        "desc": "预装企业级 AI 软件栈，开箱即可串接 ERP / MES / APS / ESG 系统，不需懂模型也能立即调用 AI 能力。",
+        "points": ["3 天内完成部署上线", "内置 API Gateway 标准接口", "深度整合快思 APS 与 ESG 系统"]
+      },
+      {
+        "badge": "AI 决策引擎",
+        "title": "大脑决策 手脚执行",
+        "desc": "整合 LLM 推演与 RPA 自动化执行，让对话进化为真正的数字劳动力，AI Agent 负责思考、系统自动完成执行。",
+        "points": ["LLM 负责分析推演与决策建议", "RPA 自动化执行任务流程", "从「问答」进化为「完成任务」"]
+      },
+      {
+        "badge": "成本优化",
+        "title": "成本可控 长期效益",
+        "desc": "免 Token 计费、优化 GPU 资源调度，让 AI 转型从成本中心转为效益引擎，满足企业长期可持续转型需求。",
+        "points": ["零 Token 费用，固定硬件成本", "智慧 GPU 调度最大化资源利用", "3 年 ROI 平均超过 300%"]
+      }
+    ],
+    "modules": [
+      {
+        "title": "AI Agent 指挥中心",
+        "desc": "管理与调度数字员工，从「问答」进化为「执行任务」的完整工作流程自动化平台。",
+        "tags": ["Agent Orchestration", "RPA 整合", "Task Automation"]
+      },
+      {
+        "title": "RAG 知识库 × 向量数据库",
+        "desc": "基于企业内部 SOP 与技术手册建立专属知识库，提供精准的企业内容问答与即时文件检索。",
+        "tags": ["Vector Database", "SOP 自动化", "智慧文件问答"]
+      },
+      {
+        "title": "机器学习模型库",
+        "desc": "专注于制造业的预测分析：设备故障预测、需求预测、品质异常检测，提供理性决策依据。",
+        "tags": ["故障预测", "需求预测", "品质异常检测"]
+      },
+      {
+        "title": "vLLM 多模态推理引擎",
+        "desc": "整合语言理解、RAG 增强生成、Whisper 语音识别及影像分析，提供完整多模态 AI 推理能力。",
+        "tags": ["Language + Vision", "Whisper 语音", "RAG 推理加速"]
+      }
+    ],
+    "kpis": [
+      { "label": "资安合规", "desc": "资料主权完整保障" },
+      { "label": "Token 费用", "desc": "固定成本无计费上限" },
+      { "label": "服务稳定性", "desc": "不受外部网络影响" },
+      { "label": "应用扩充", "desc": "支持多元 AI 应用场景" }
+    ]
+  },
+  "contact_page": {
+    "breadcrumb": "联系我们",
+    "badge": "免费咨询 · 24 小时回复",
+    "title_prefix": "开始您的",
+    "title_gradient": "数字化转型之旅",
+    "subtitle": "填写下方表单，我们的专业顾问将在 24 小时内与您联系，提供量身定制的解决方案建议。",
+    "form_title": "填写咨询表单",
+    "required_note": "的为必填字段",
+    "product_label": "感兴趣的产品",
+    "product_placeholder": "请选择...",
+    "product_aps": "APS 生产排程系统",
+    "product_esg": "ESG 碳盘查系统",
+    "product_aibox": "AI 一体机",
+    "product_all": "全套解决方案",
+    "promise_title": "我们的承诺",
+    "trust_0_title": "24 小时内回复",
+    "trust_0_desc": "工作日收到咨询后，顾问将在一个工作天内主动联系您。",
+    "trust_1_title": "专业顾问服务",
+    "trust_1_desc": "具备制造业领域知识的解决方案顾问，深入了解您的挑战。",
+    "trust_2_title": "免费评估报告",
+    "trust_2_desc": "首次咨询提供免费的数字化转型评估与建议方向，无任何费用。",
+    "company_name": "快思科技股份有限公司",
+    "company_desc": "专注于工业 4.0 智慧制造解决方案，协助制造业实现生产效率最大化与可持续目标达成。",
+    "success_title": "提交成功！",
+    "success_desc": "感谢您的咨询，我们将在 24 小时内与您联系，请保持电话与邮箱畅通。",
+    "back_home": "返回首页"
+  },
+  "lang": {
+    "switcher_label": "语言"
+  },
+  "news_section": {
+    "tag": "最新消息",
+    "title": "产业动态 · 快思观点",
+    "subtitle": "掌握 AI 落地最新趋势，了解快思科技的最新动态与产业洞察。",
+    "read_more": "阅读全文",
+    "view_all": "查看所有消息",
+    "loading": "加载中...",
+    "empty": "暂无消息，请稍后再来。",
+    "error": "无法加载消息，请刷新页面。"
+  },
+  "ai_appliance": {
+    "tag": "硬件规格",
+    "title": "CRIS AI 一体机",
+    "subtitle": "企业级私有 AI 运算平台",
+    "desc": "搭载 NVIDIA 工业级 AI 芯片与 Argox AI 引擎，专为企业内网私有化部署设计。所有 AI 推理运算在本地完成，实现真正的数据主权，零云端依赖。",
+    "badge_onprem": "On-Premise 私有部署",
+    "badge_security": "数据主权保障",
+    "badge_plug": "即插即用",
+    "spec_cpu_label": "AI 运算核心",
+    "spec_cpu_value": "NVIDIA Jetson AGX Orin",
+    "spec_ram_label": "系统内存",
+    "spec_ram_value": "64 GB DDR5 ECC",
+    "spec_storage_label": "高速存储",
+    "spec_storage_value": "2 TB NVMe SSD",
+    "spec_engine_label": "AI 引擎",
+    "spec_engine_value": "Argox AI Engine v2.0",
+    "spec_network_label": "网络接口",
+    "spec_network_value": "10GbE × 2 口",
+    "spec_os_label": "操作系统",
+    "spec_os_value": "CRIS OS (Ubuntu 22.04 LTS)",
+    "arch_label": "AI 落地架构",
+    "cta": "申请硬件规格书"
+  },
+  "solutions": {
+    "tag": "解决方案",
+    "title": "AI Agent 三大应用模块",
+    "subtitle": "基于 Argox AI 引擎，快思科技提供开箱即用的 AI Agent 解决方案，覆盖财务、售服与制造三大核心场景。",
+    "module_1_title": "智能财务",
+    "module_1_subtitle": "ERP 财务报表自动模拟系统",
+    "module_1_tag": "Financial AI Agent",
+    "module_1_desc": "串接企业 ERP 系统，AI 自动分析财务数据，一键产出损益表、资产负债表、现金流量表、权益变动表与财务比率五大报表。",
+    "module_1_features": ["串接主流 ERP 系统（SAP / 用友 / 鼎新）", "自动产出五大财务报表", "AI 财务异常预警检测", "自然语言查询财务数据"],
+    "module_2_title": "智能售服",
+    "module_2_subtitle": "RAG 企业知识库 · 24/7 技术支持",
+    "module_2_tag": "Service AI Agent",
+    "module_2_desc": "基于 RAG 技术，将企业产品手册、故障排除文档建成私有知识库，AI 代理人提供即时、精准的技术问答与售后支持。",
+    "module_2_features": ["私有知识库构建（PDF/Word/URL）", "RAG 精准语义检索", "24/7 AI 技术问答服务", "多轮对话上下文理解"],
+    "module_3_title": "预测性维护",
+    "module_3_subtitle": "AIoT 设备健康诊断与异常预警",
+    "module_3_tag": "Maintenance AI Agent",
+    "module_3_desc": "整合 AIoT 传感器数据流，AI 持续监测设备振动、温度、电流等关键指标，提前预判故障风险，自动触发维护工单。",
+    "module_3_features": ["AIoT 多源传感器数据整合", "AI 设备健康评分与趋势分析", "异常预警自动推送通知", "预测性维护工单自动派发"],
+    "feature_label": "核心能力",
+    "cta_demo": "预约 AI 体验",
+    "cta_learn": "了解技术架构",
+    "expand": "展开功能",
+    "collapse": "收起",
+    "aibox_powered_by": "Powered by Argox AI Engine",
+    "aibox_cta_title": "所有模块均可搭载 CRIS AI 一体机",
+    "aibox_cta_subtitle": "私有化部署，数据永不离开企业内网。从导入评估到上线仅需 7 天，顾问团队全程陪伴。",
+    "aibox_cta_btn": "预约 AI 落地顾问",
+    "aibox_learn_more": "了解一体机规格"
+  },
+  "cases": {
+    "section_tag": "实战案例成果",
+    "section_title": "14 个产业案例",
+    "section_subtitle": "覆盖制造业核心场景，所有方案均可私有化部署于 CRIS AI 一体机，数据永不离境。",
+    "filter_all": "全部",
+    "filter_finance": "经营财务",
+    "filter_support": "技术支持",
+    "filter_manufacturing": "智能制造",
+    "filter_green": "绿色管理",
+    "filter_special": "特定应用",
+    "challenge_label": "挑战",
+    "solution_label": "解决方案",
+    "benefit_label": "效益",
+    "view_detail": "查看详情",
+    "close": "关闭",
+    "appliance_badge": "可搭载 CRIS AI 一体机・私有化部署",
+    "items": [
+      {
+        "title": "ERP 财务模拟系统",
+        "challenge": "月结报表人工试算，耗时 3 天且错误率高",
+        "solution": "AI Agent 对接主流 ERP，自动产出五大财报",
+        "benefit": "产出时间缩短至 5 分钟，人力降低 80%",
+        "detail_challenge": "企业每月结账时，财务人员需从多个 ERP 模块手动导出数据，人工试算损益表、资产负债表等五大报表，平均耗时 3 个工作日，且易因公式错误导致数据不一致，审计风险高。",
+        "detail_solution": "通过 AI Agent 自动对接 SAP / 用友 / 鼎新等主流 ERP，实时抓取原始财务数据，自动计算并产出损益表、资产负债表、现金流量表、权益变动表与财务比率五大报表，全程无需人工干预。",
+        "detail_benefit": "报表产出时间从 3 个工作日缩短至 5 分钟（效率提升 864 倍），财务人员工时降低 80%，数据准确率达 99.8%，月结作业压力大幅减轻。"
+      },
+      {
+        "title": "IPO 辅导合规 Agent",
+        "challenge": "IPO 文件繁杂，合规审查耗费大量顾问时间",
+        "solution": "AI Agent 自动扫描财务文件，标记不合规项目",
+        "benefit": "合规审查效率提升 60%，辅导周期缩短 2 个月",
+        "detail_challenge": "企业申请 IPO 过程中需准备大量财务与法律文件，顾问须逐一核对财报数据是否符合主管机关规范，人工审阅耗时且易遗漏，造成辅导时程一再延误。",
+        "detail_solution": "AI Agent 自动解析财务报告、招股说明书等文件，与 IPO 相关法规条文进行语义比对，自动标记不合规项目并提供具体修正建议，顾问只需审核 AI 标记的重点。",
+        "detail_benefit": "合规审查效率提升 60%，顾问单次审阅时间从 3 天缩短至 1 天，整体 IPO 辅导周期平均缩短 2 个月，大幅降低辅导成本。"
+      },
+      {
+        "title": "采购数据动态分析",
+        "challenge": "采购数据散落各系统，无法实时掌握供应商绩效",
+        "solution": "AI 整合多源采购数据，提供动态看板与异常预警",
+        "benefit": "采购成本降低 12%，异常订单提前 3 天预警",
+        "detail_challenge": "采购数据分散于 ERP、电子邮件与 Excel，采购主管无法实时掌握供应商交期达成率、报价趋势与采购成本，决策缺乏数据支撑，常在问题恶化后才被动应对。",
+        "detail_solution": "AI 整合 ERP、供应商系统等多源采购数据，自动建立供应商绩效评分模型，提供实时动态看板，并对报价异常、交期风险等情况自动推送预警通知。",
+        "detail_benefit": "采购成本降低 12%，供应商交期达成率提升 18%，异常订单平均提前 3 天预警，采购主管决策效率显著提升。"
+      },
+      {
+        "title": "n8n 智能售服系统",
+        "challenge": "技术支持人员每日重复回答相同问题，客户等待时间长",
+        "solution": "RAG 知识库 AI Agent，24/7 即时解答技术问题",
+        "benefit": "首次解答率提升至 85%，客服工时降低 50%",
+        "detail_challenge": "客服人员每日接到大量重复性技术询问，如设备操作说明、故障排除步骤等，人工查找文档并回复耗时，客户平均等待超过 4 小时，客户满意度持续下滑。",
+        "detail_solution": "基于 n8n 自动化平台与 RAG 技术，将产品手册、技术文档、常见问题构建成私有知识库，AI Agent 自动理解客户问题，实时检索相关文档并生成精确回复，支持多轮对话上下文理解。",
+        "detail_benefit": "客户首次问题解答率从 52% 提升至 85%，平均回复时间从 4 小时缩短至 30 秒，客服人员工时降低 50%，可专注于复杂技术问题的处理。"
+      },
+      {
+        "title": "预测性维护 (PHM)",
+        "challenge": "设备突发故障导致停线，平均每次损失 4 小时产能",
+        "solution": "AIoT 持续监测设备健康，提前 48 小时预判故障风险",
+        "benefit": "非计划停机减少 70%，设备寿命延长 20%",
+        "detail_challenge": "制造业设备缺乏实时监控，故障征兆无法提前发现，一旦停机需紧急调度维修人员，平均每次停机造成 4 小时以上的产能损失，年度非计划停机维修费用居高不下。",
+        "detail_solution": "部署 AIoT 传感器持续采集设备振动、温度、电流等关键指标，搭配 PHM（设备健康管理）AI 模型分析数据趋势，在故障发生前 48–72 小时预判风险，自动触发维护工单派发。",
+        "detail_benefit": "非计划停机次数降低 70%，预测准确率达 88%，设备平均寿命延长 20%，年度维修成本降低 35%，生产线稼动率显著提升。"
+      },
+      {
+        "title": "设备异常趋势预警",
+        "challenge": "设备早期异常征兆隐藏在数据中，人工难以识别",
+        "solution": "AI 多维度分析传感数据，自动识别异常趋势并推送",
+        "benefit": "异常检测准确率 92%，维护成本降低 35%",
+        "detail_challenge": "设备异常通常在早期表现为细微的振动增加、温度波动或电流异常，这些变化隐藏在大量正常数据中，人工监测难以识别，等到设备出现明显异常时往往已需要大修。",
+        "detail_solution": "AI 系统整合来自多种传感器的多维度数据，采用时序分析与异常检测算法，自动学习设备正常运行基准线，并对偏离基准的异常趋势进行分级预警，推送至维护人员手机。",
+        "detail_benefit": "设备异常检测准确率达 92%，误报率低于 5%，平均每次提前 3 天预警，维护成本降低 35%，关键设备可用率提升至 99.2%。"
+      },
+      {
+        "title": "AI+APS 智能排程",
+        "challenge": "多厂区排程复杂，插单急单频繁导致计划失效",
+        "solution": "AI 整合有限产能限制，自动生成最优多厂排程",
+        "benefit": "效率提升 35%，排程时间从 8 小时缩短至 20 分钟",
+        "detail_challenge": "跨多个厂区生产，手动排程需考虑机台产能、物料库存、人员配置等多重限制，加上客户插单急单频繁，每次重排需耗费规划人员整天时间，且往往仍无法达到最优解。",
+        "detail_solution": "AI+APS 系统整合多厂区的产能限制、模具管理、物料采购计划，采用启发式算法自动生成全厂最优排程，支持插单快速重排，并可视化呈现甘特图供现场管理。",
+        "detail_benefit": "整体生产效率提升 35%，库存水位降低 28%，排程规划时间从 8 小时缩短至 20 分钟，插单响应时间从次日缩短至 1 小时内，客户订单准时交付率提升至 95%。"
+      },
+      {
+        "title": "Vibe Coding 行动报工",
+        "challenge": "现场报工依赖纸本，数据延迟 4 小时且错误率高",
+        "solution": "移动端扫码即报工，AI 自动整合实时生产实绩",
+        "benefit": "报工准确率提升至 98%，数据实时同步",
+        "detail_challenge": "制造现场作业人员以纸本填写报工表单，班次结束后才由办公室人员手动输入系统，导致生产实绩数据延迟 4 小时以上，且人工输入错误率高达 8%，管理者无法实时掌握现场状况。",
+        "detail_solution": "开发移动端报工 App，作业人员扫描工单 QR Code 即可一键报工，AI 系统自动整合生产实绩、计算工时效率，并与 ERP/APS 系统实时同步，管理者通过看板实时监控现场进度。",
+        "detail_benefit": "报工数据准确率从 92% 提升至 98%，生产实绩数据从延迟 4 小时改善为实时，现场异常响应时间缩短 75%，管理决策质量显著提升。"
+      },
+      {
+        "title": "iPlan 供应链协同",
+        "challenge": "供应链信息不透明，缺料停工事件频繁",
+        "solution": "AI 协同平台整合供应商交期与库存，自动预警风险",
+        "benefit": "交期达成率提升 25%，缺料事件减少 40%",
+        "detail_challenge": "企业与供应商之间缺乏实时数据共享机制，采购人员只能靠电话或 Email 确认交期，供应链突发事件往往在最后一刻才得知，造成生产线缺料停工。",
+        "detail_solution": "iPlan 供应链协同平台提供供应商专属入口，整合采购订单、交期确认、库存水位等数据，AI 自动分析供应链风险，提前预警可能的缺料或延迟情况，并推荐备料或替代供应商方案。",
+        "detail_benefit": "客户订单交期达成率从 78% 提升至 97.5%（提升 25%），缺料停工事件减少 40%，供应商管理效率提升 30%，采购备料准确率大幅提升。"
+      },
+      {
+        "title": "CeO 碳排优化系统",
+        "challenge": "碳排放数据分散，难以符合 ESG 披露与减碳目标",
+        "solution": "AI 自动汇整碳排数据，提供情境模拟与减碳路径",
+        "benefit": "碳计算效率提升 90%，ESG 报告制作缩短至 2 周",
+        "detail_challenge": "制造业碳排放涉及能源消耗、物流、供应链等多个范畴，数据分散于各部门，传统方式难以准确量化，加上 ESG 披露与碳中和目标的压力，企业迫切需要系统化的碳管理工具。",
+        "detail_solution": "CeO AI 系统自动整合工厂能耗、物料使用、物流碳排等数据，依 GHG Protocol 范畴一、二、三分别计算碳排放量，并提供情境模拟功能，协助企业制定最优减碳路径。",
+        "detail_benefit": "碳排放计算效率提升 90%，数据准确性提升 40%，年度减碳目标达成率提升 30%，ESG 报告制作时间从 2 个月缩短至 2 周，有效支撑对客户与投资人的可持续披露。"
+      },
+      {
+        "title": "产品碳足迹",
+        "challenge": "多层供应链碳足迹计算耗时 2 周且误差大",
+        "solution": "AI 追踪全生命周期碳排，自动生成合规碳足迹报告",
+        "benefit": "计算时间缩短至 2 天，准确度提升 40%",
+        "detail_challenge": "产品碳足迹需追踪从原料开采、制造、物流到使用端的全生命周期碳排放，涉及多层供应链的碳数据收集，传统手动计算方式耗时 2 周以上，且各层供应商数据格式不一，误差难以控制。",
+        "detail_solution": "AI 系统自动收集供应商的碳排放数据（支持 PDF、Excel 等多种格式），依 ISO 14064 与 PAS 2050 标准计算产品各阶段碳足迹，自动生成符合国际标准的碳足迹声明报告。",
+        "detail_benefit": "产品碳足迹计算时间从 2 周缩短至 2 天，计算准确度提升 40%，符合 ISO 14064 标准，可直接用于客户 ESG 查核或出口合规要求。"
+      },
+      {
+        "title": "IFRS 可持续披露平台",
+        "challenge": "IFRS S1/S2 披露要求繁杂，企业不知如何系统性整理",
+        "solution": "AI 平台对应 IFRS 框架，引导逐步完成气候相关披露",
+        "benefit": "报告准备时间缩短 60%，合规风险显著降低",
+        "detail_challenge": "IFRS S1（可持续相关财务信息披露）与 S2（气候相关披露）要求企业披露治理、战略、风险管理及指标目标四大面向，涉及大量定性与定量数据，企业往往不知从何着手。",
+        "detail_solution": "AI 平台内建 IFRS S1/S2 披露框架，引导企业逐步完成各项披露要求，自动从现有碳排放数据、财务报表中提取相关指标，并对披露完整性与合规性进行 AI 审查，确保报告质量。",
+        "detail_benefit": "可持续披露报告准备时间缩短 60%（从 3 个月缩短至 6 周），IFRS S1/S2 合规通过率显著提升，帮助企业在投资人与监管机构面前建立可持续信誉。"
+      },
+      {
+        "title": "AI 废钢判级",
+        "challenge": "废钢品质依赖人工目视判定，主观且效率低",
+        "solution": "AI 视觉实时分析废钢图像，自动判定等级与纯度",
+        "benefit": "判定准确率达 94%，判级速度提升 10 倍",
+        "detail_challenge": "废钢收购与冶炼前需对废钢原料进行品质分级，传统方式依赖老师傅目视判断废钢种类、夹杂物比例和等级，判定结果主观、一致性差，且每批次判定耗时长，影响废钢收购效率。",
+        "detail_solution": "部署工业相机拍摄废钢图像，AI 视觉模型实时分析废钢的种类组成、夹杂物比例、腐蚀程度等特征，自动输出废钢等级与建议收购价格，并将判定结果记录入库用于品质追溯。",
+        "detail_benefit": "废钢判定准确率达 94%（超越人工平均 85%），单批次判定时间从 15 分钟缩短至 90 秒（速度提升 10 倍），判定一致性显著提升，年度废钢采购成本降低 8%。"
+      },
+      {
+        "title": "方向盘发泡工艺参数推荐",
+        "challenge": "发泡工艺参数依赖师傅经验，良率不稳定",
+        "solution": "AI 分析历史工艺数据，自动推荐最优发泡参数组合",
+        "benefit": "良率从 78% 提升至 92%，材料浪费降低 18%",
+        "detail_challenge": "方向盘发泡工艺涉及材料配比、温度、压力、注射速度等多个关键参数，传统上依赖资深师傅的经验进行调整，新师傅培养周期长，且当环境温湿度变化时，参数调整缺乏科学依据，良率波动大。",
+        "detail_solution": "AI 系统收集历史工艺数据（温度、压力、材料配比、环境条件等）与对应的产品良率记录，建立工艺参数与良率的预测模型，当环境条件或材料批次改变时，自动推荐最优参数组合并提供调整范围。",
+        "detail_benefit": "产品良率从 78% 提升至 92%，材料浪费降低 18%，新师傅学习周期从 6 个月缩短至 2 个月，工艺调整从「凭感觉」转变为「数据驱动」，品质稳定性大幅改善。"
+      }
+    ]
+  },
+  "about": {
+    "hero_badge": "关于快思科技",
+    "hero_title": "关于快思科技",
+    "hero_subtitle": "我们致力于通过 AI 与数字化工具，协助制造业转型，实现智慧生产与碳中和目标。",
+    "vision_tag": "核心愿景",
+    "vision_sub1": "快思科技相信，制造业的未来在于让机器更聪明、让地球更可持续。",
+    "vision_sub2": "从台中出发，我们的解决方案已服务超过 200 家制造业伙伴。",
+    "values": [
+      { "title": "精准驱动", "desc": "以数据与 AI 算法取代经验法则，让每一个生产决策都有科学依据。" },
+      { "title": "客户成功", "desc": "我们的成功来自客户的成果，每个导入案例都以可量化的 ROI 为目标。" },
+      { "title": "可持续承诺", "desc": "帮助制造业实现碳中和目标，让智慧生产与地球可持续共存。" }
+    ],
+    "timeline_tag": "品牌里程碑",
+    "timeline_sub": "从台中出发，走向两岸、走向全球制造业的数字化转型舞台。",
+    "milestones": [
+      { "title": "快思科技成立", "desc": "成立快思股份有限公司，总部设于台湾台中，以 AI 与数字化工具协助制造业转型为核心使命出发。", "geo_label": "台中总部" },
+      { "title": "推出 IMPACTs APS", "desc": "正式推出旗舰产品 IMPACTs APS 有限产能生产排程系统，同年荣获海峡两岸暨港澳青年创业训练南京开营第一名。", "award_label": "南京开营第一名" },
+      { "title": "拓展两岸版图", "desc": "正式成立广州办公室，拓展大中华区市场，深化两岸制造业数字化转型合作。", "geo_label": "广州办公室" },
+      { "title": "荣获中国创新创业大赛冠军", "desc": "荣获第八届中国创新创业大赛（先进制程与人工智能组）全国第一名，确立 IMPACTs APS 在工业 AI 领域的领先地位。", "award_label": "中国创新创业大赛全国第一名" },
+      { "title": "AWS 最佳 IoT 潜力奖", "desc": "获选新北市亚马逊 AWS 联合创新中心最佳 IoT 潜力奖，肯定快思在工业物联网领域的技术深度与商业潜力。", "award_label": "AWS 最佳 IoT 潜力奖" },
+      { "title": "推出碳排监控系统", "desc": "领先业界推出碳排监控系统，启动绿色数字化转型战略，协助制造业客户精准测量与管理碳排放数据，响应全球净零趋势。" },
+      { "title": "IMPACTs CeO 全面上市", "desc": "推出 IMPACTs CeO 解决方案，全面涵盖碳系数中心、碳盘查计划及 CBAM 产品碳足迹管理，成为制造业最完整的 ESG 数字化平台。", "featured_badge": "绿色数字化转型里程碑", "ceo_features": ["碳系数中心", "碳盘查计划", "CBAM 产品碳足迹"] }
+    ],
+    "team_tag": "Team & Culture",
+    "team_title": "我们的团队与文化",
+    "team_sub": "我们拥有一支深耕制造业、结合 AI 技术与顾问经验的专业团队。",
+    "team_img1": "快思科技专业团队",
+    "team_img2": "快思科技伙伴生活",
+    "cta_title": "了解更多我们的解决方案",
+    "cta_sub": "从 APS 生产排程到 ESG 碳管理，快思科技提供制造业最完整的数字化转型工具。",
+    "cta_aps": "探索 APS 生产排程",
+    "cta_contact": "预约顾问咨询"
+  }
+}
