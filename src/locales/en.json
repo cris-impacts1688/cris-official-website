@@ -13,7 +13,9 @@
     "aibox_name": "CRIS AI Appliance",
     "aibox_desc": "On-premise deployment · Data sovereignty",
     "mc_name": "CRIS Mission Control",
-    "mc_desc": "Factory AI Command Center"
+    "mc_desc": "Factory AI Command Center",
+    "agentforge_name": "CRIS AgentForge Platform",
+    "agentforge_desc": "Forge your enterprise AI agent team"
   },
   "hero": {
     "badge": "Enterprise AI Agent Solutions",

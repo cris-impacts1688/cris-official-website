@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Sun, Moon, Menu, X, ChevronDown } from 'lucide-react'
+import { Sun, Moon, Menu, X, ChevronDown, ExternalLink } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -44,6 +44,22 @@ function LangSwitcher() {
   )
 }
 
+/** 產品連結：外部產品站用 <a> 另開分頁，站內產品頁用 react-router <Link> */
+function ProductLink({ product, className, onNavigate, children }) {
+  if (product.external) {
+    return (
+      <a href={product.href} target="_blank" rel="noopener noreferrer" className={className} onClick={onNavigate}>
+        {children}
+      </a>
+    )
+  }
+  return (
+    <Link to={product.href} className={className} onClick={onNavigate}>
+      {children}
+    </Link>
+  )
+}
+
 export default function Navbar({ dark, setDark }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -57,6 +73,7 @@ export default function Navbar({ dark, setDark }) {
     { name: t('navbar.esg_name'), desc: t('navbar.esg_desc'), href: '/products/esg' },
     { name: t('navbar.aibox_name'), desc: t('navbar.aibox_desc'), href: '/products/ai-box' },
     { name: t('navbar.mc_name'), desc: t('navbar.mc_desc'), href: '/products/mission-control' },
+    { name: t('navbar.agentforge_name'), desc: t('navbar.agentforge_desc'), href: 'https://www.crisforge.com/', external: true },
   ]
 
   useEffect(() => {
@@ -100,15 +117,18 @@ export default function Navbar({ dark, setDark }) {
                   className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 p-2"
                 >
                   {products.map((p) => (
-                    <Link
+                    <ProductLink
                       key={p.href}
-                      to={p.href}
+                      product={p}
                       className="flex flex-col px-4 py-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
-                      onClick={() => setProductOpen(false)}
+                      onNavigate={() => setProductOpen(false)}
                     >
-                      <span className="font-semibold text-slate-900 dark:text-white text-sm">{p.name}</span>
+                      <span className="font-semibold text-slate-900 dark:text-white text-sm flex items-center gap-1">
+                        {p.name}
+                        {p.external && <ExternalLink size={12} className="text-slate-400 dark:text-slate-500" />}
+                      </span>
                       <span className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{p.desc}</span>
-                    </Link>
+                    </ProductLink>
                   ))}
                 </motion.div>
               )}
@@ -166,9 +186,10 @@ export default function Navbar({ dark, setDark }) {
               <Link to="/" className="font-medium text-slate-700 dark:text-slate-300" onClick={() => setMenuOpen(false)}>{t('navbar.home')}</Link>
               <div className="pl-4 border-l-2 border-cris-blue flex flex-col gap-2">
                 {products.map((p) => (
-                  <Link key={p.href} to={p.href} className="text-sm text-slate-600 dark:text-slate-400" onClick={() => setMenuOpen(false)}>
+                  <ProductLink key={p.href} product={p} className="text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1" onNavigate={() => setMenuOpen(false)}>
                     {p.name}
-                  </Link>
+                    {p.external && <ExternalLink size={12} className="text-slate-400 dark:text-slate-500" />}
+                  </ProductLink>
                 ))}
               </div>
               <Link to="/solutions" className="font-medium text-slate-700 dark:text-slate-300" onClick={() => setMenuOpen(false)}>{t('navbar.solutions')}</Link>

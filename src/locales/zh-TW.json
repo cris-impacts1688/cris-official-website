@@ -13,7 +13,9 @@
     "aibox_name": "CRIS AI 一體機",
     "aibox_desc": "私有化部署 · 數據主權掌控",
     "mc_name": "CRIS Mission Control",
-    "mc_desc": "工廠 AI 任務指揮中心"
+    "mc_desc": "工廠 AI 任務指揮中心",
+    "agentforge_name": "CRIS AgentForge Platform",
+    "agentforge_desc": "企業智慧團隊鍛造平台"
   },
   "hero": {
     "badge": "企業 AI Agent 解決方案",
