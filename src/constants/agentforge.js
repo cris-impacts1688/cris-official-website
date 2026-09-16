@@ -40,7 +40,14 @@ export const AF_ICONS = {
   sparkles: Sparkles,
 }
 
-/** 查無對應時回傳 Sparkles，避免 locale 打錯字造成整頁白畫面。 */
+/**
+ * 查無對應時回傳 Sparkles，避免 locale 打錯字造成整頁白畫面。
+ * 開發模式下額外發出警告，讓打錯的 key 不會靜默溜過去。
+ */
 export function afIcon(key) {
-  return AF_ICONS[key] ?? Sparkles
+  const Icon = AF_ICONS[key]
+  if (!Icon && import.meta.env.DEV) {
+    console.warn(`[afIcon] 未知的圖標鍵："${key}"，已退回 Sparkles`)
+  }
+  return Icon ?? Sparkles
 }
