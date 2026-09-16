@@ -12,6 +12,9 @@ dist-ssr/
 .env.local
 .env.*.local
 
+# Claude Code local config
+.claude/
+
 # Editor / OS
 .DS_Store
 *.suo
@@ -29,3 +32,4 @@ yarn-error.log*
 
 # Test
 coverage/
+.superpowers/
