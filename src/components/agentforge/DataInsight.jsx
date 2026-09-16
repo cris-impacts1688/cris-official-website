@@ -16,12 +16,8 @@ export default function DataInsight() {
   const agents = t('agentforge.insight.agents', { returnObjects: true })
   const market = t('agentforge.insight.market', { returnObjects: true })
 
-  // 把 locale 的 {en, zh, desc} 映射成 AgentFlow 的 {title, subtitle, desc}
-  const flowSteps = agents.map((a) => ({
-    title: a.en,
-    subtitle: a.zh,
-    desc: a.desc,
-  }))
+  // 只把名稱餵給流程圖，說明文字留給右欄 —— 兩邊都放會讓同一段話在畫面上出現兩次。
+  const flowSteps = agents.map((a) => ({ title: a.en, subtitle: a.zh }))
 
   return (
     <section id="insight" className="scroll-mt-32 py-24 bg-slate-900 dark:bg-slate-950 relative overflow-hidden">
@@ -53,8 +49,8 @@ export default function DataInsight() {
                 {t('agentforge.insight.pains_label')}
               </p>
               <ul className="space-y-3">
-                {pains.map((p) => (
-                  <li key={p} className="flex items-start gap-3">
+                {pains.map((p, i) => (
+                  <li key={i} className="flex items-start gap-3">
                     <AlertCircle size={17} className="text-amber-500/80 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-slate-300 leading-relaxed">{p}</span>
                   </li>
@@ -69,8 +65,8 @@ export default function DataInsight() {
                 {t('agentforge.insight.gains_label')}
               </p>
               <ul className="space-y-3">
-                {gains.map((g) => (
-                  <li key={g} className="flex items-start gap-3">
+                {gains.map((g, i) => (
+                  <li key={i} className="flex items-start gap-3">
                     <Check size={17} className="text-emerald-400 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-slate-200 leading-relaxed">{g}</span>
                   </li>
@@ -90,7 +86,7 @@ export default function DataInsight() {
           <FadeUp delay={0.1}>
             <div className="space-y-5">
               {agents.map((a, i) => (
-                <div key={a.en} className="flex gap-4">
+                <div key={i} className="flex gap-4">
                   <span className="text-2xl text-violet-400 leading-none flex-shrink-0">{NUMERALS[i]}</span>
                   <div>
                     <p className="text-base font-bold text-white leading-snug">{a.en}</p>
@@ -116,8 +112,8 @@ export default function DataInsight() {
               </div>
               <div>
                 <ul className="space-y-2.5 mb-6">
-                  {market.points.map((p) => (
-                    <li key={p} className="flex items-start gap-2.5">
+                  {market.points.map((p, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
                       <Check size={16} className="text-emerald-400 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-slate-200 leading-relaxed">{p}</span>
                     </li>

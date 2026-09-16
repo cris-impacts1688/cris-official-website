@@ -19,8 +19,8 @@ function ModeCard({ item, index }) {
         <p className="mt-1 text-sm font-medium text-violet-700 dark:text-violet-300 leading-snug">{item.slogan}</p>
         <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
         <ul className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2">
-          {item.points.map((pt) => (
-            <li key={pt} className="flex items-start gap-2">
+          {item.points.map((pt, i) => (
+            <li key={i} className="flex items-start gap-2">
               <CheckCircle2 size={15} className="text-violet-500 dark:text-violet-400 mt-0.5 flex-shrink-0" />
               <span className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{pt}</span>
             </li>
@@ -45,7 +45,7 @@ function ModeGroup({ order, group }) {
       </FadeUp>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {group.items.map((item, i) => (
-          <ModeCard key={item.title} item={item} index={i} />
+          <ModeCard key={i} item={item} index={i} />
         ))}
       </div>
     </div>
@@ -78,8 +78,8 @@ export default function DualMode() {
               <p className="mt-2 text-lg font-bold text-slate-900 dark:text-white">{cmp.a_head}</p>
               <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{cmp.a_desc}</p>
             </div>
-            <div className="hidden md:flex items-center justify-center">
-              <ArrowLeftRight size={22} className="text-slate-300 dark:text-slate-600" />
+            <div className="flex items-center justify-center py-1 md:py-0">
+              <ArrowLeftRight size={22} className="rotate-90 md:rotate-0 text-slate-300 dark:text-slate-600" />
             </div>
             <div className="rounded-2xl border-2 border-indigo-200 bg-indigo-50/60 p-6 dark:border-indigo-500/40 dark:bg-indigo-500/[0.07]">
               <p className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">{cmp.b_label}</p>

@@ -900,8 +900,8 @@ function ModeCard({ item, index }) {
         <p className="mt-1 text-sm font-medium text-violet-700 dark:text-violet-300 leading-snug">{item.slogan}</p>
         <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
         <ul className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2">
-          {item.points.map((pt) => (
-            <li key={pt} className="flex items-start gap-2">
+          {item.points.map((pt, i) => (
+            <li key={i} className="flex items-start gap-2">
               <CheckCircle2 size={15} className="text-violet-500 dark:text-violet-400 mt-0.5 flex-shrink-0" />
               <span className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{pt}</span>
             </li>
@@ -926,7 +926,7 @@ function ModeGroup({ order, group }) {
       </FadeUp>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {group.items.map((item, i) => (
-          <ModeCard key={item.title} item={item} index={i} />
+          <ModeCard key={i} item={item} index={i} />
         ))}
       </div>
     </div>
@@ -959,8 +959,8 @@ export default function DualMode() {
               <p className="mt-2 text-lg font-bold text-slate-900 dark:text-white">{cmp.a_head}</p>
               <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{cmp.a_desc}</p>
             </div>
-            <div className="hidden md:flex items-center justify-center">
-              <ArrowLeftRight size={22} className="text-slate-300 dark:text-slate-600" />
+            <div className="flex items-center justify-center py-1 md:py-0">
+              <ArrowLeftRight size={22} className="rotate-90 md:rotate-0 text-slate-300 dark:text-slate-600" />
             </div>
             <div className="rounded-2xl border-2 border-indigo-200 bg-indigo-50/60 p-6 dark:border-indigo-500/40 dark:bg-indigo-500/[0.07]">
               <p className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">{cmp.b_label}</p>
@@ -1029,12 +1029,8 @@ export default function DataInsight() {
   const agents = t('agentforge.insight.agents', { returnObjects: true })
   const market = t('agentforge.insight.market', { returnObjects: true })
 
-  // 把 locale 的 {en, zh, desc} 映射成 AgentFlow 的 {title, subtitle, desc}
-  const flowSteps = agents.map((a) => ({
-    title: a.en,
-    subtitle: a.zh,
-    desc: a.desc,
-  }))
+  // 只把名稱餵給流程圖，說明文字留給右欄 —— 兩邊都放會讓同一段話在畫面上出現兩次。
+  const flowSteps = agents.map((a) => ({ title: a.en, subtitle: a.zh }))
 
   return (
     <section id="insight" className="scroll-mt-32 py-24 bg-slate-900 dark:bg-slate-950 relative overflow-hidden">
@@ -1066,8 +1062,8 @@ export default function DataInsight() {
                 {t('agentforge.insight.pains_label')}
               </p>
               <ul className="space-y-3">
-                {pains.map((p) => (
-                  <li key={p} className="flex items-start gap-3">
+                {pains.map((p, i) => (
+                  <li key={i} className="flex items-start gap-3">
                     <AlertCircle size={17} className="text-amber-500/80 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-slate-300 leading-relaxed">{p}</span>
                   </li>
@@ -1082,8 +1078,8 @@ export default function DataInsight() {
                 {t('agentforge.insight.gains_label')}
               </p>
               <ul className="space-y-3">
-                {gains.map((g) => (
-                  <li key={g} className="flex items-start gap-3">
+                {gains.map((g, i) => (
+                  <li key={i} className="flex items-start gap-3">
                     <Check size={17} className="text-emerald-400 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-slate-200 leading-relaxed">{g}</span>
                   </li>
@@ -1103,7 +1099,7 @@ export default function DataInsight() {
           <FadeUp delay={0.1}>
             <div className="space-y-5">
               {agents.map((a, i) => (
-                <div key={a.en} className="flex gap-4">
+                <div key={i} className="flex gap-4">
                   <span className="text-2xl text-violet-400 leading-none flex-shrink-0">{NUMERALS[i]}</span>
                   <div>
                     <p className="text-base font-bold text-white leading-snug">{a.en}</p>
@@ -1129,8 +1125,8 @@ export default function DataInsight() {
               </div>
               <div>
                 <ul className="space-y-2.5 mb-6">
-                  {market.points.map((p) => (
-                    <li key={p} className="flex items-start gap-2.5">
+                  {market.points.map((p, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
                       <Check size={16} className="text-emerald-400 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-slate-200 leading-relaxed">{p}</span>
                     </li>
@@ -1208,9 +1204,9 @@ import FadeUp from './FadeUp'
 export function DeltaMetrics({ items }) {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-      {items.map((m) => (
+      {items.map((m, i) => (
         <div
-          key={m.label}
+          key={i}
           className="rounded-xl border border-slate-200 bg-white p-4 text-center
             dark:border-slate-700 dark:bg-slate-800"
         >
@@ -1229,12 +1225,12 @@ export function DeltaMetrics({ items }) {
 export function QualitativeMetrics({ items }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      {items.map((m) => {
+      {items.map((m, i) => {
         const up = m.direction === 'up'
         const Arrow = up ? ArrowUpRight : ArrowDownRight
         return (
           <div
-            key={m.label}
+            key={i}
             className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4
               dark:border-slate-700 dark:bg-slate-800"
           >
@@ -1300,8 +1296,8 @@ function FlagshipCase({ data, index, labels }) {
                 {labels.pains}
               </p>
               <ul className="space-y-2">
-                {data.pains.map((p) => (
-                  <li key={p} className="flex items-start gap-2.5">
+                {data.pains.map((p, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
                     <AlertTriangle size={15} className="text-amber-600 dark:text-amber-500 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{p}</span>
                   </li>
@@ -1351,8 +1347,8 @@ function MoreCard({ item, index }) {
         <h4 className="text-base font-bold text-slate-900 dark:text-white leading-snug">{item.title}</h4>
         <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
         <ul className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2">
-          {item.points.map((pt) => (
-            <li key={pt} className="flex items-start gap-2">
+          {item.points.map((pt, i) => (
+            <li key={i} className="flex items-start gap-2">
               <Check size={14} className="text-violet-500 dark:text-violet-400 mt-0.5 flex-shrink-0" />
               <span className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{pt}</span>
             </li>
@@ -1383,8 +1379,8 @@ function CustomCard({ data }) {
           </div>
           <div>
             <ul className="space-y-2.5 mb-7">
-              {data.points.map((p) => (
-                <li key={p} className="flex items-start gap-2.5">
+              {data.points.map((p, i) => (
+                <li key={i} className="flex items-start gap-2.5">
                   <Check size={16} className="text-violet-600 dark:text-violet-400 mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{p}</span>
                 </li>
@@ -1441,7 +1437,7 @@ export default function WorkflowCases() {
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-24">
           {values.map((v, i) => (
-            <FadeUp key={v.title} delay={i * 0.06} className="h-full">
+            <FadeUp key={i} delay={i * 0.06} className="h-full">
               <div className="h-full rounded-xl border border-slate-200 bg-slate-50/60 p-5
                 dark:border-slate-700 dark:bg-slate-800/40">
                 <div className="flex items-start gap-2.5">
@@ -1459,7 +1455,7 @@ export default function WorkflowCases() {
         {/* 旗艦案例 ×3 */}
         <div className="space-y-10 mb-24">
           {flagship.map((c, i) => (
-            <FlagshipCase key={c.title} data={c} index={i} labels={labels} />
+            <FlagshipCase key={i} data={c} index={i} labels={labels} />
           ))}
         </div>
 
@@ -1471,7 +1467,7 @@ export default function WorkflowCases() {
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
           {more.map((m, i) => (
-            <MoreCard key={m.title} item={m} index={i} />
+            <MoreCard key={i} item={m} index={i} />
           ))}
         </div>
 
@@ -1672,9 +1668,9 @@ export default function AgentForgeProduct() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-2">
-                {tags.map((tag) => (
+                {tags.map((tag, i) => (
                   <span
-                    key={tag}
+                    key={i}
                     className="px-2.5 py-1 rounded text-[11px] font-medium
                       bg-white border border-slate-200 text-slate-500
                       dark:bg-white/5 dark:border-white/10 dark:text-slate-500"
