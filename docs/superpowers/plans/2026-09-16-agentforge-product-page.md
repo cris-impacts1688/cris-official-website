@@ -33,7 +33,9 @@
 
 **4. Task 5 之後 `check:i18n` 會刻意失敗。** Task 5 只加繁中，簡中與英文要到 Task 12、13 才補。這是預期的紅燈 —— Task 5 到 Task 13 之間 `check:i18n` 失敗屬正常，Task 13 結束後必須轉綠。
 
-**5. 每個 Task 結束都要 commit。** commit message 用繁中，結尾加上：
+**5. 所有動畫一律處理 `prefers-reduced-motion`。** `index.css` 既有的漸層文字動畫已經處理，新元件必須比照。一次性進場動畫用 `useReducedMotion()` 改為 `initial={false}` + `duration: 0`；無限循環動畫（呼吸、浮動、閃爍）在該偏好下**完全關閉**，因為無限動畫對這類使用者傷害最大。`useReducedMotion` 由 framer-motion 提供，不需新套件。
+
+**6. 每個 Task 結束都要 commit。** commit message 用繁中，結尾加上：
 
 ```
 Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
@@ -376,7 +378,7 @@ Create `src/components/agentforge/AgentFlow.jsx`：
 
 ```jsx
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { ArrowDown, UserCheck } from 'lucide-react'
 
 const TONES = {
@@ -405,6 +407,7 @@ const NUMERALS = ['①', '②', '③', '④', '⑤', '⑥']
 export default function AgentFlow({ steps, tone = 'onLight' }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
+  const reduceMotion = useReducedMotion()
   const c = TONES[tone] ?? TONES.onLight
 
   return (
@@ -412,9 +415,13 @@ export default function AgentFlow({ steps, tone = 'onLight' }) {
       {steps.map((step, i) => (
         <div key={step.title}>
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ type: 'spring', stiffness: 260, damping: 24, delay: i * 0.12 }}
+            transition={
+              reduceMotion
+                ? { duration: 0 }
+                : { type: 'spring', stiffness: 260, damping: 24, delay: i * 0.12 }
+            }
             className={`flex items-start gap-3 rounded-xl border px-4 py-3 ${step.human ? c.human : c.box}`}
           >
             <span
@@ -434,9 +441,9 @@ export default function AgentFlow({ steps, tone = 'onLight' }) {
 
           {i < steps.length - 1 && (
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={reduceMotion ? false : { opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: i * 0.12 + 0.08 }}
+              transition={reduceMotion ? { duration: 0 } : { delay: i * 0.12 + 0.08 }}
               className="flex justify-center py-1.5"
             >
               <ArrowDown size={16} className={c.arrow} />
@@ -481,7 +488,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 Create `src/components/agentforge/AgentNetwork.jsx`：
 
 ```jsx
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { CalendarClock, Network, ScanLine, Bot, BarChart3 } from 'lucide-react'
 
 /** 5 個 Agent 節點，以百分比定位環繞中心。 */
@@ -500,13 +507,23 @@ const LINES = [
 ]
 
 export default function AgentNetwork() {
+  const reduceMotion = useReducedMotion()
+
+  /**
+   * 無限循環動畫（呼吸、浮動、閃爍）對開啟「減少動態效果」的使用者最不友善，
+   * 一律關閉。回傳空物件時元素就停在 CSS 的靜態樣式。
+   */
+  const loop = (animate, transition) => (reduceMotion ? {} : { animate, transition })
+
   return (
     <div className="relative h-[420px] w-full select-none">
       {/* 呼吸光暈 */}
       <motion.div
         className="absolute left-1/2 top-[46%] -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-violet-500/20 blur-3xl"
-        animate={{ opacity: [0.25, 0.6, 0.25], scale: [0.9, 1.06, 0.9] }}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        {...loop(
+          { opacity: [0.25, 0.6, 0.25], scale: [0.9, 1.06, 0.9] },
+          { duration: 4, repeat: Infinity, ease: 'easeInOut' }
+        )}
       />
 
       {/* 連線 */}
@@ -519,8 +536,11 @@ export default function AgentNetwork() {
             className="text-violet-400 dark:text-violet-500"
             strokeWidth="0.35"
             vectorEffect="non-scaling-stroke"
-            animate={{ opacity: [0.15, 0.7, 0.15] }}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 }}
+            opacity="0.45"
+            {...loop(
+              { opacity: [0.15, 0.7, 0.15] },
+              { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 }
+            )}
           />
         ))}
       </svg>
@@ -528,8 +548,7 @@ export default function AgentNetwork() {
       {/* 中心：平台 */}
       <motion.div
         className="absolute left-1/2 top-[46%] -translate-x-1/2 -translate-y-1/2 z-10"
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        {...loop({ y: [0, -8, 0] }, { duration: 5, repeat: Infinity, ease: 'easeInOut' })}
       >
         <div className="rounded-2xl border border-violet-400/60 bg-violet-600/90 dark:bg-violet-600/80 px-6 py-4 shadow-2xl shadow-violet-500/40 backdrop-blur-sm text-center">
           <p className="text-[10px] font-mono tracking-widest text-violet-200">CRIS</p>
@@ -545,13 +564,19 @@ export default function AgentNetwork() {
             key={n.key}
             className="absolute z-10"
             style={{ left: n.x, top: n.y }}
-            initial={{ opacity: 0, scale: 0.7 }}
+            initial={reduceMotion ? false : { opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 + i * 0.13, type: 'spring', stiffness: 260, damping: 18 }}
+            transition={
+              reduceMotion
+                ? { duration: 0 }
+                : { delay: 0.3 + i * 0.13, type: 'spring', stiffness: 260, damping: 18 }
+            }
           >
             <motion.div
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 4 + i * 0.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }}
+              {...loop(
+                { y: [0, -6, 0] },
+                { duration: 4 + i * 0.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }
+              )}
               className="flex items-center gap-2 rounded-xl border border-violet-300 bg-white/90 px-3 py-2 shadow-lg shadow-violet-500/10 backdrop-blur-sm
                 dark:border-violet-500/40 dark:bg-white/[0.06] dark:shadow-violet-900/40"
             >
@@ -559,8 +584,7 @@ export default function AgentNetwork() {
                 <Icon size={15} className="text-violet-600 dark:text-violet-300" />
                 <motion.span
                   className="absolute -right-1 -top-1 w-1.5 h-1.5 rounded-full bg-emerald-500"
-                  animate={{ opacity: [0.3, 1, 0.3] }}
-                  transition={{ duration: 1.8, repeat: Infinity, delay: i * 0.35 }}
+                  {...loop({ opacity: [0.3, 1, 0.3] }, { duration: 1.8, repeat: Infinity, delay: i * 0.35 })}
                 />
               </span>
               <span className="text-[11px] font-semibold text-slate-700 dark:text-slate-200 whitespace-nowrap">
