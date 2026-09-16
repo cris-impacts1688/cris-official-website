@@ -32,6 +32,9 @@ export function QualitativeMetrics({ items }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {items.map((m, i) => {
+        if (m.direction !== 'up' && m.direction !== 'down' && import.meta.env.DEV) {
+          console.warn(`[QualitativeMetrics] 未知的 direction："${m.direction}"，已當作 down 處理`)
+        }
         const up = m.direction === 'up'
         const Arrow = up ? ArrowUpRight : ArrowDownRight
         return (
@@ -67,6 +70,10 @@ function FlagshipCase({ data, index, labels }) {
     subtitle: s.label,
     human: s.human,
   }))
+
+  if (data.metrics_kind !== 'delta' && data.metrics_kind !== 'qualitative' && import.meta.env.DEV) {
+    console.warn(`[FlagshipCase] 未知的 metrics_kind："${data.metrics_kind}"，已當作 qualitative 處理`)
+  }
 
   return (
     <FadeUp>
