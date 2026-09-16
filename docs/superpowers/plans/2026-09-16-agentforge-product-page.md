@@ -1286,11 +1286,10 @@ function FlagshipCase({ data, index, labels }) {
           {data.summary}
         </p>
 
-        <div className={`mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start
-          ${reversed ? 'lg:[&>*:first-child]:order-2' : ''}`}>
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
           {/* 背景 + 痛點 */}
-          <div className="space-y-5">
+          <div className={`space-y-5 ${reversed ? 'lg:order-2' : 'lg:order-1'}`}>
             <div>
               <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
                 {labels.background}
@@ -1314,7 +1313,7 @@ function FlagshipCase({ data, index, labels }) {
           </div>
 
           {/* 工作流 */}
-          <div>
+          <div className={reversed ? 'lg:order-1' : 'lg:order-2'}>
             <p className="text-xs font-bold text-violet-700 dark:text-violet-400 uppercase tracking-wider mb-3">
               {labels.flow}
             </p>
