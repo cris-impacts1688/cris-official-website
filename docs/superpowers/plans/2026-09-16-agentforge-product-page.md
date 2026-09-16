@@ -20,7 +20,7 @@
 
 | 驗證 | 指令 | 抓什麼 |
 |---|---|---|
-| 多語系對齊 | `npm run check:i18n` | 缺 key（會靜默 fallback 成繁中，不報錯） |
+| 多語系對齊 | `npm run check:i18n` | 缺 key（會靜默 fallback 成繁中，不報錯）、列舉值被誤譯 |
 | 編譯 | `npm run build` | import 錯誤、語法錯誤 |
 | Lint（新檔） | `npx eslint <新檔> --rule '{"react/prop-types":"off"}'` | 未使用的 import、hooks 規則 |
 | 人工 | `npm run dev` | 版面、深色模式、斷點、動畫 |
@@ -2043,6 +2043,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 `icon`、`metrics_kind`、`direction`、`human` 這些欄位是程式用的鍵值，**原樣照抄不要翻譯**。
 
+> `npm run check:i18n` 會比對這三個列舉欄位的值是否三語相同。把 `"up"` 譯成「上升」、`"delta"` 譯成「差量」會被直接擋下並指出應為什麼值 —— 這類錯誤只比對 key 抓不到，畫面卻會靜默走錯分支（箭頭方向錯、成果樣式錯、圖標退回 fallback）。
+
 「經濟部雲市集」是台灣政府單位名稱，簡中版保留「经济部云市集」，不要改成其他名稱。
 
 - [ ] **Step 2：確認結構對齊**
@@ -2096,7 +2098,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 免責聲明英文版：`Based on scenario simulation using actual data; not results from a completed deployment.`
 
-`icon`、`metrics_kind`、`direction`、`human` 原樣照抄不要翻譯。
+`icon`、`metrics_kind`、`direction`、`human` 原樣照抄不要翻譯 —— `check:i18n` 會比對這三個列舉欄位的值三語是否相同，譯了會被擋下。
 `metrics` 的 `before` / `after` 值（`約 71%` → `~71%`、`約 46 天` → `~46 days`、`20 小時／週` → `20 hrs/week`）要翻。
 
 - [ ] **Step 2：確認三份 locale 全部對齊**

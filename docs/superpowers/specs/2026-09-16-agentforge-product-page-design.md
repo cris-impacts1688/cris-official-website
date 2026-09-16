@@ -204,8 +204,10 @@ src/components/AIAppliance.jsx      死碼：全專案沒有任何 import，內�
       "title": "AI Agent 導入更簡單",
       "desc": "…",
       "points": ["…"],                                // ×4
-      "cta": "前往經濟部雲市集",
-      "url": "https://keid.nat.gov.tw/cloud/Web/ai_solution_in.aspx?P=7f3e42ee-8167-e9a1-aac9-9178981d9338"
+      "cta": "前往經濟部雲市集"
+      // 網址不進 locale —— 三語共用同一個連結，翻譯者不該碰它。
+      // 定義為 DataInsight.jsx 的模組常數 MARKET_URL：
+      // https://keid.nat.gov.tw/cloud/Web/ai_solution_in.aspx?P=7f3e42ee-8167-e9a1-aac9-9178981d9338
     }
   },
 
