@@ -84,13 +84,15 @@ import { readFileSync } from 'node:fs'
 const LOCALES = ['zh-TW', 'zh-CN', 'en']
 const BASE = 'zh-TW'
 
-/** 把巢狀物件攤平成 key 路徑清單。陣列會記錄長度，並展開第一筆的結構。 */
+/** 把巢狀物件攤平成 key 路徑清單。陣列會記錄長度，並展開每一筆元素的結構。 */
 function keyPaths(node, prefix = '') {
   if (Array.isArray(node)) {
     const out = [`${prefix}[] len=${node.length}`]
-    if (node.length && node[0] !== null && typeof node[0] === 'object') {
-      out.push(...keyPaths(node[0], `${prefix}[0]`))
-    }
+    node.forEach((item, i) => {
+      if (item !== null && typeof item === 'object') {
+        out.push(...keyPaths(item, `${prefix}[${i}]`))
+      }
+    })
     return out
   }
   if (node !== null && typeof node === 'object') {
@@ -102,7 +104,15 @@ function keyPaths(node, prefix = '') {
 }
 
 const data = Object.fromEntries(
-  LOCALES.map((l) => [l, JSON.parse(readFileSync(`src/locales/${l}.json`, 'utf8'))])
+  LOCALES.map((l) => {
+    const path = `src/locales/${l}.json`
+    try {
+      return [l, JSON.parse(readFileSync(path, 'utf8'))]
+    } catch (e) {
+      console.error(`✗ 無法讀取 ${path}：${e.message}`)
+      process.exit(1)
+    }
+  })
 )
 
 const basePaths = new Set(keyPaths(data[BASE]))
