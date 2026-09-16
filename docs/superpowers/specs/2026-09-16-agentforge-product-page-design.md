@@ -108,13 +108,16 @@ Hero 的 `<AgentNetwork />` 是另一個元件（節點網絡，不是線性流�
 不易維護），因此拆成一頁 + 一個元件資料夾。
 
 ```
-src/pages/AgentForgeProduct.jsx            Hero + 區塊組裝 + 吸頂子導覽   ~300 行
+src/pages/AgentForgeProduct.jsx            Hero + 區塊組裝 + 吸頂子導覽   ~230 行
+src/constants/agentforge.js                icon 字串鍵 → lucide 對應表    ~35
 src/components/agentforge/
   ├── AgentNetwork.jsx      Hero 的 Multi-Agent 協作網絡動畫            ~130
-  ├── DualMode.jsx          AI+ / +AI 對照導言 + 兩組 6 卡              ~180
-  ├── DataInsight.jsx       痛點/獲得對照 + 三階段 + 雲市集             ~200
-  ├── WorkflowCases.jsx     5 條平台價值 + 3 旗艦 + 10 網格 + 客製卡    ~320
-  └── AgentFlow.jsx         共用的 ①→②→③ 流程圖元件                   ~80
+  ├── DualMode.jsx          AI+ / +AI 對照導言 + 兩組 6 卡              ~150
+  ├── DataInsight.jsx       痛點/獲得對照 + 三階段 + 雲市集             ~170
+  ├── WorkflowCases.jsx     5 條平台價值 + 3 旗艦 + 10 網格 + 客製卡    ~300
+  ├── AgentFlow.jsx         共用的 ①→②→③ 流程圖元件                   ~90
+  └── FadeUp.jsx            共用進場動畫包裝（資料夾內 5 個元件共用）    ~20
+scripts/check-i18n.mjs                     三份 locale key 對齊校驗      ~55
 ```
 
 ### 各元件的責任與介面
@@ -161,6 +164,7 @@ src/components/AIAppliance.jsx      死碼：全專案沒有任何 import，內�
 
   "dual": {
     "tag": "雙軌能力",
+    "title": "兩種導入路徑，一個平台",
     "compare": {
       "a_label": "AI+", "a_head": "把 AI 加進營運決策", "a_desc": "…",
       "b_label": "+AI", "b_head": "把執行交給 AI",     "b_desc": "…"
@@ -187,7 +191,8 @@ src/components/AIAppliance.jsx      死碼：全專案沒有任何 import，內�
     "pains": ["…"],                                   // ×5
     "gains_label": "導入後企業獲得",
     "gains": ["…"],                                   // ×5
-    "agents": [ { "no": "①", "en": "Data Analysis Agent", "zh": "資料分析代理人", "desc": "…" } ],  // ×3
+    "agents": [ { "en": "Data Analysis Agent", "zh": "資料分析代理人", "desc": "…" } ],  // ×3
+    // ①②③ 是呈現層的事，由元件端的 NUMERALS 陣列產生，不進 locale
     "market": {
       "tag": "雲市集",
       "title": "AI Agent 導入更簡單",
@@ -202,20 +207,29 @@ src/components/AIAppliance.jsx      死碼：全專案沒有任何 import，內�
     "tag": "企業案例",
     "title": "14 個已落地的工作場景",
     "intro": "…",
+    "values_label": "打造企業專屬 AI Workforce",
     "values": [ { "title": "…", "desc": "…" } ],      // ×5
+
+    // 以下五個標籤三個旗艦案例共用，不逐筆重複
     "flagship_label": "旗艦案例",
+    "background_label": "背景",
+    "pains_label": "痛點",
+    "flow_label": "工作流",
+    "disclaimer": "依實際資料進行情境試算，非已導入成果",
+
     "flagship": [
       {
         "title": "生產排程與緊急插單",
         "summary": "…",
-        "background_label": "背景", "background": "…",
-        "pains_label": "痛點",     "pains": ["…"],
-        "flow_label": "工作流",
-        "flow": [ { "agents": ["排程分析 Agent"], "label": "排程狀態分析", "human": false } ],
+        "background": "…",
+        "pains": ["…"],
+        // agents 是字串不是陣列；多個 Agent 用全形「＋」串在同一字串裡，
+        // 這樣 locale 好翻譯，AgentFlow 也不必處理陣列 join
+        "flow": [ { "agents": "排程分析 Agent", "label": "排程狀態分析", "human": false } ],
+        // metrics_label 逐筆定義：案例 1、2 用「可量化成果」「質化成果」，案例 3 原稿作「可衡量效益」
         "metrics_label": "可量化成果",
         "metrics_kind": "delta",                       // "delta" = before→after；"qualitative" = 方向箭頭
-        "metrics": [ { "label": "訂單準交率", "before": "約 71%", "after": "85～90%" } ],
-        "disclaimer": "依實際資料進行情境試算，非已導入成果"
+        "metrics": [ { "label": "訂單準交率", "before": "約 71%", "after": "85～90%" } ]
       }
       // ×3
     ],
