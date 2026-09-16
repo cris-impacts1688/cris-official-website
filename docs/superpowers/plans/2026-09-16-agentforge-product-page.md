@@ -51,6 +51,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 | `src/constants/agentforge.js` | **新增** icon 字串鍵 → lucide 元件對應表 | ~35 |
 | `src/components/agentforge/FadeUp.jsx` | **新增** 共用進場動畫包裝（資料夾內 5 個元件共用） | ~20 |
 | `src/components/agentforge/AgentFlow.jsx` | **新增** ①→②→③ 流程圖，DATA INSIGHT + 3 旗艦案例共用 | ~90 |
+| `src/components/agentforge/IconCard.jsx` | **新增** 共用圖標卡片，DualMode 12 張與 WorkflowCases 10 張共用 | ~50 |
 | `src/components/agentforge/AgentNetwork.jsx` | **新增** Hero 的 Multi-Agent 協作網絡視覺 | ~130 |
 | `src/components/agentforge/IconCard.jsx` | **新增** MoreCard／ModeCard 共用的圖標卡外殼 | ~40 |
 | `src/components/agentforge/DualMode.jsx` | **新增** AI+／+AI 對照導言 + 兩組 6 卡 | ~150 |
@@ -2316,6 +2317,58 @@ function DualCompareSection() {
 }
 ```
 
+- [ ] **Step 2.5：加 IconCard 區塊**
+
+`IconCard` 是 `DualMode` 的 12 張能力卡與 `WorkflowCases` 的 10 張場景卡共用的卡片元件，依 CLAUDE.md 規定要進設計系統頁。在 `DualCompareSection` 之後加入：
+
+```jsx
+function IconCardSection() {
+  return (
+    <>
+      <SectionAnchor id="comp-iconcard" title="Icon Card" subtitle="圖標卡片，能力卡與工作場景卡共用" />
+
+      <SubSection title="Live Preview">
+        <PreviewBox label="左：帶 slogan（能力卡）　右：不帶 slogan（工作場景卡）">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+            <IconCard
+              icon={Search} iconSize={21} tileSize="w-11 h-11" descSpacing="mt-3"
+              checkIcon={CheckCircle2} checkSize={15}
+              title="ATP/CTP 精敏詢單"
+              slogan="接單前了解是否能準時交貨"
+              desc="即時評估物料、產能與排程狀況，快速提供可靠交期承諾。"
+              points={['降低誤接訂單與延遲交貨風險', '提升接單成功率']}
+            />
+            <IconCard
+              icon={Headphones}
+              title="智慧售服"
+              desc="整合客服、技術支援與知識庫資料，自動回應客戶問題與服務需求。"
+              points={['降低客服與技術支援人力成本', '建立企業知識持續累積機制']}
+            />
+          </div>
+        </PreviewBox>
+      </SubSection>
+
+      <SubSection title="Anatomy">
+        <table className="w-full">
+          <tbody>
+            <AnatomyRow name="icon"        value="lucide 元件"            desc="內部解構為大寫 Icon 才能當 JSX 標籤用" />
+            <AnatomyRow name="iconSize"    value="19 (預設) | 21"        desc="場景卡 19、能力卡 21" />
+            <AnatomyRow name="tileSize"    value="w-10 h-10 | w-11 h-11" desc="圖標方塊尺寸，與 iconSize 成對" />
+            <AnatomyRow name="slogan"      value="string (選填)"          desc="標題下的一句話，只有能力卡有" />
+            <AnatomyRow name="descSpacing" value="mt-2 (預設) | mt-3"     desc="有 slogan 時用 mt-3" />
+            <AnatomyRow name="checkIcon"   value="Check | CheckCircle2"   desc="清單項目圖標" />
+            <AnatomyRow name="points"      value="string[]"              desc="效益清單，上方有 border-t 分隔線" />
+            <AnatomyRow name="delay"       value="number"                desc="傳給 FadeUp 的進場延遲，做出交錯效果" />
+          </tbody>
+        </table>
+      </SubSection>
+    </>
+  )
+}
+```
+
+import 需加入：`IconCard`、以及預覽用的 `Search` / `Headphones` / `CheckCircle2`。
+
 - [ ] **Step 3：加進側邊導覽與頁面組裝**
 
 在 `NAV` 陣列尾端（`comp-darkmode` 之後）加入：
@@ -2324,6 +2377,7 @@ function DualCompareSection() {
   { id: 'comp-agentflow',    label: 'Agent Flow' },
   { id: 'comp-metric',       label: 'Case Metrics' },
   { id: 'comp-dualcompare',  label: 'Dual Mode Compare' },
+  { id: 'comp-iconcard',     label: 'Icon Card' },
 ```
 
 在頁面組裝的 `<DarkModeSection />` 之後加入：
@@ -2332,11 +2386,12 @@ function DualCompareSection() {
           <AgentFlowSection />
           <MetricSection />
           <DualCompareSection />
+          <IconCardSection />
 ```
 
 - [ ] **Step 4：更新頁首統計數字**
 
-頁首有一組統計卡（`{ label: 'Type Styles', val: '9' }` 那一區）。把元件數量往上加 3，保持與實際一致。
+頁首有一組統計卡（`{ label: 'Type Styles', val: '9' }` 那一區）。把元件數量往上加 4，保持與實際一致。
 
 - [ ] **Step 5：確認編譯並人工檢視**
 
