@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight, ChevronDown } from 'lucide-react'
@@ -19,6 +19,7 @@ const SUBNAV = [
 /** 捲過 Hero 後淡入的區塊導覽。固定在 Navbar（h-16）下方。 */
 function SubNav() {
   const { t } = useTranslation()
+  const reduceMotion = useReducedMotion()
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -32,10 +33,10 @@ function SubNav() {
     <AnimatePresence>
       {show && (
         <motion.div
-          initial={{ opacity: 0, y: -12 }}
+          initial={reduceMotion ? false : { opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.2 }}
+          exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -12 }}
+          transition={{ duration: reduceMotion ? 0 : 0.2 }}
           className="fixed top-16 left-0 right-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur-md
             dark:border-slate-700/70 dark:bg-slate-900/90"
         >
@@ -65,6 +66,7 @@ function SubNav() {
 
 export default function AgentForgeProduct() {
   const { t } = useTranslation()
+  const reduceMotion = useReducedMotion()
   const cmsHeroDesc = useCmsContent('agentforge', 'hero_desc')
   const tags = t('agentforge.tags', { returnObjects: true })
 
@@ -85,9 +87,9 @@ export default function AgentForgeProduct() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
           {/* 麵包屑 */}
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={reduceMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: reduceMotion ? 0 : 0.4 }}
             className="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-500 mb-14"
           >
             <Link to="/" className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors text-slate-500">
@@ -102,9 +104,9 @@ export default function AgentForgeProduct() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* 左：文字 */}
             <motion.div
-              initial={{ opacity: 0, x: -24 }}
+              initial={reduceMotion ? false : { opacity: 0, x: -24 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={reduceMotion ? { duration: 0 } : { duration: 0.6, ease: 'easeOut' }}
             >
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8
                 bg-violet-100 border border-violet-200 text-violet-700
@@ -162,9 +164,9 @@ export default function AgentForgeProduct() {
 
             {/* 右：Multi-Agent 協作網絡 */}
             <motion.div
-              initial={{ opacity: 0, x: 60 }}
+              initial={reduceMotion ? false : { opacity: 0, x: 60 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.25 }}
+              transition={reduceMotion ? { duration: 0 } : { duration: 0.8, ease: 'easeOut', delay: 0.25 }}
             >
               <AgentNetwork />
             </motion.div>
