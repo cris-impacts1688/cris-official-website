@@ -2113,6 +2113,10 @@ Expected：
 
 exit code 0。**這是 Task 6 起紅燈的轉綠點。**
 
+- [ ] **Step 2.5：檢查 Hero 協作網絡在英文下的節點間距**
+
+英文 `hero_network` 標籤比中文長（Procurement Agent vs 採購 Agent）。已量測過：**不會溢出容器**（節點用 `right` 定位，右緣位置與內容寬度無關），但左右節點之間的間距會從中文的約 116px 縮到約 32px。實際英文文案定案後，用瀏覽器把視窗縮到 375px 看一眼，確認 `sched` 與 `supply`、`qc` 與 `decide` 沒有互相重疊。若真的太擠，縮短英文標籤（例如 `Procurement` 而非 `Procurement Agent`）比改版面便宜。
+
 - [ ] **Step 3：人工驗證三語切換**
 
 Run: `npm run dev`，開 `/products/agentforge`，用導覽列的語言切換器切三次，確認：
