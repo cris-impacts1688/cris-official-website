@@ -34,7 +34,7 @@ export default function AgentFlow({ steps, tone = 'onLight' }) {
   return (
     <div ref={ref} className="flex flex-col">
       {steps.map((step, i) => (
-        <div key={step.title}>
+        <div key={i}>
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -49,7 +49,7 @@ export default function AgentFlow({ steps, tone = 'onLight' }) {
               className={`flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-sm font-bold
                 ${step.human ? 'bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-300' : c.num}`}
             >
-              {step.human ? <UserCheck size={15} /> : NUMERALS[i] ?? i + 1}
+              {step.human ? <UserCheck size={15} aria-hidden="true" /> : NUMERALS[i] ?? i + 1}
             </span>
             <div className="min-w-0">
               <p className={`text-sm font-bold leading-snug ${c.title}`}>{step.title}</p>
@@ -67,7 +67,7 @@ export default function AgentFlow({ steps, tone = 'onLight' }) {
               transition={reduceMotion ? { duration: 0 } : { delay: i * 0.12 + 0.08 }}
               className="flex justify-center py-1.5"
             >
-              <ArrowDown size={16} className={c.arrow} />
+              <ArrowDown size={16} className={c.arrow} aria-hidden="true" />
             </motion.div>
           )}
         </div>

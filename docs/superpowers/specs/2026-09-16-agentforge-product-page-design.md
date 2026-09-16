@@ -162,6 +162,12 @@ src/components/AIAppliance.jsx      死碼：全專案沒有任何 import，內�
 
   "subnav": { "dual": "雙軌能力", "insight": "數據洞察", "cases": "企業案例", "contact": "預約諮詢" },
 
+  // Hero 的 Multi-Agent 協作網絡上 5 個節點的標籤。
+  // 必須走 i18n —— 寫死在元件裡的話，英文與簡中訪客會在全站最顯眼處看到繁中，
+  // 而且 check-i18n.mjs 抓不到（它只比對三份 locale 之間的 key 結構，
+  // 從未進過 locale 檔的字串不會產生任何差異）。
+  "hero_network": { "sched": "排程 Agent", "supply": "採購 Agent", "qc": "品質 Agent", "decide": "決策 Agent", "report": "報告 Agent" },
+
   "dual": {
     "tag": "雙軌能力",
     "title": "兩種導入路徑，一個平台",
@@ -308,6 +314,7 @@ Emoji 不進 locale 檔。locale 存 `icon` 字串鍵，元件端用靜態對應
 | `cta_primary` | 預約 Demo |
 | `cta_secondary` | 看 14 個工作場景 |
 | `tags` | Multi-Agent · 工作流自動化 · 企業知識庫 · 資料安全 · ERP/MES/CRM 整合 |
+| `hero_network` | 協作網絡 5 個節點：排程 Agent · 採購 Agent · 品質 Agent · 決策 Agent · 報告 Agent |
 
 `hero_desc` 同時是 CMS 可覆寫欄位（`useCmsContent('agentforge', 'hero_desc')`）。
 
@@ -583,6 +590,8 @@ Supabase 中 `page_id='aibox'` 的舊列不處理，成為孤兒資料，不影�
 - [ ] 雲市集外連可正常開啟，`target="_blank" rel="noopener noreferrer"`
 - [ ] 吸頂子導覽的四個錨點都能正確跳轉
 - [ ] 繁中 / 简中 / EN 三語系切換都完整，無 fallback 到繁中的殘留
+- [ ] **元件內沒有任何寫死的使用者可見字串**（`check-i18n.mjs` 只比對 locale 檔之間的 key 結構，抓不到從未進過 locale 檔的硬編字串，必須人工確認）
+- [ ] Hero 協作網絡在 375px 寬度下沒有節點溢出容器
 - [ ] 深色模式所有區塊正常
 - [ ] 手機（sm）、平板（md）、桌機（lg）三個斷點版面正常，旗艦案例的左右交錯在手機上垂直堆疊
 - [ ] `npm run build` 通過

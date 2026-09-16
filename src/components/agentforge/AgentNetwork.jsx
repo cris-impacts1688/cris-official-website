@@ -1,22 +1,22 @@
+import { useTranslation } from 'react-i18next'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CalendarClock, Network, ScanLine, Bot, BarChart3 } from 'lucide-react'
 
-/** 5 個 Agent 節點，以百分比定位環繞中心。 */
+/**
+ * 5 個環繞節點。`pos` 是絕對定位樣式，`line` 是連到中心的線在
+ * viewBox 座標中的端點 —— 兩者放在同一筆資料裡，改了位置不會忘記改線。
+ * 右側節點用 right 定位，讓盒子往內長，避免窄畫面撐出容器。
+ */
 const NODES = [
-  { key: 'sched',  icon: CalendarClock, label: '排程 Agent',  x: '4%',  y: '12%' },
-  { key: 'supply', icon: Network,       label: '採購 Agent',  x: '68%', y: '8%'  },
-  { key: 'qc',     icon: ScanLine,      label: '品質 Agent',  x: '0%',  y: '68%' },
-  { key: 'decide', icon: Bot,           label: '決策 Agent',  x: '70%', y: '72%' },
-  { key: 'report', icon: BarChart3,     label: '報告 Agent',  x: '36%', y: '88%' },
-]
-
-/** 從中心 (50%,46%) 連到各節點的線，用 SVG 畫在節點底下。 */
-const LINES = [
-  { x2: 16, y2: 20 }, { x2: 80, y2: 16 },
-  { x2: 12, y2: 76 }, { x2: 82, y2: 80 }, { x2: 48, y2: 94 },
+  { key: 'sched',  icon: CalendarClock, pos: { left: '2%',  top: '10%' },    line: { x: 14, y: 18 } },
+  { key: 'supply', icon: Network,       pos: { right: '2%', top: '8%' },     line: { x: 86, y: 16 } },
+  { key: 'qc',     icon: ScanLine,      pos: { left: '0%',  top: '66%' },    line: { x: 12, y: 72 } },
+  { key: 'decide', icon: Bot,           pos: { right: '0%', top: '70%' },    line: { x: 88, y: 76 } },
+  { key: 'report', icon: BarChart3,     pos: { left: '50%', bottom: '2%', transform: 'translateX(-50%)' }, line: { x: 50, y: 92 } },
 ]
 
 export default function AgentNetwork() {
+  const { t } = useTranslation()
   const reduceMotion = useReducedMotion()
 
   /**
@@ -26,7 +26,7 @@ export default function AgentNetwork() {
   const loop = (animate, transition) => (reduceMotion ? {} : { animate, transition })
 
   return (
-    <div className="relative h-[420px] w-full select-none">
+    <div className="relative h-[420px] w-full select-none" aria-hidden="true">
       {/* 呼吸光暈 */}
       <motion.div
         className="absolute left-1/2 top-[46%] -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-violet-500/20 blur-3xl"
@@ -37,11 +37,11 @@ export default function AgentNetwork() {
       />
 
       {/* 連線 */}
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full">
-        {LINES.map((l, i) => (
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full" aria-hidden="true">
+        {NODES.map((n, i) => (
           <motion.line
-            key={i}
-            x1="50" y1="46" x2={l.x2} y2={l.y2}
+            key={n.key}
+            x1="50" y1="46" x2={n.line.x} y2={n.line.y}
             stroke="currentColor"
             className="text-violet-400 dark:text-violet-500"
             strokeWidth="0.35"
@@ -70,38 +70,37 @@ export default function AgentNetwork() {
       {NODES.map((n, i) => {
         const Icon = n.icon
         return (
-          <motion.div
-            key={n.key}
-            className="absolute z-10"
-            style={{ left: n.x, top: n.y }}
-            initial={reduceMotion ? false : { opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={
-              reduceMotion
-                ? { duration: 0 }
-                : { delay: 0.3 + i * 0.13, type: 'spring', stiffness: 260, damping: 18 }
-            }
-          >
+          <div key={n.key} className="absolute z-10" style={n.pos}>
             <motion.div
-              {...loop(
-                { y: [0, -6, 0] },
-                { duration: 4 + i * 0.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }
-              )}
-              className="flex items-center gap-2 rounded-xl border border-violet-300 bg-white/90 px-3 py-2 shadow-lg shadow-violet-500/10 backdrop-blur-sm
-                dark:border-violet-500/40 dark:bg-white/[0.06] dark:shadow-violet-900/40"
+              initial={reduceMotion ? false : { opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={
+                reduceMotion
+                  ? { duration: 0 }
+                  : { delay: 0.3 + i * 0.13, type: 'spring', stiffness: 260, damping: 18 }
+              }
             >
-              <span className="relative flex-shrink-0">
-                <Icon size={15} className="text-violet-600 dark:text-violet-300" />
-                <motion.span
-                  className="absolute -right-1 -top-1 w-1.5 h-1.5 rounded-full bg-emerald-500"
-                  {...loop({ opacity: [0.3, 1, 0.3] }, { duration: 1.8, repeat: Infinity, delay: i * 0.35 })}
-                />
-              </span>
-              <span className="text-[11px] font-semibold text-slate-700 dark:text-slate-200 whitespace-nowrap">
-                {n.label}
-              </span>
+              <motion.div
+                {...loop(
+                  { y: [0, -6, 0] },
+                  { duration: 4 + i * 0.6, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }
+                )}
+                className="flex items-center gap-2 rounded-xl border border-violet-300 bg-white/90 px-3 py-2 shadow-lg shadow-violet-500/10 backdrop-blur-sm
+                  dark:border-violet-500/40 dark:bg-white/[0.06] dark:shadow-violet-900/40"
+              >
+                <span className="relative flex-shrink-0">
+                  <Icon size={15} className="text-violet-600 dark:text-violet-300" aria-hidden="true" />
+                  <motion.span
+                    className="absolute -right-1 -top-1 w-1.5 h-1.5 rounded-full bg-emerald-500"
+                    {...loop({ opacity: [0.3, 1, 0.3] }, { duration: 1.8, repeat: Infinity, delay: i * 0.35 })}
+                  />
+                </span>
+                <span className="text-[11px] font-semibold text-slate-700 dark:text-slate-200 sm:whitespace-nowrap">
+                  {t(`agentforge.hero_network.${n.key}`)}
+                </span>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         )
       })}
     </div>
