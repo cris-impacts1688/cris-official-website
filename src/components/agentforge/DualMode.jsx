@@ -2,32 +2,24 @@ import { useTranslation } from 'react-i18next'
 import { CheckCircle2, ArrowLeftRight } from 'lucide-react'
 import { afIcon } from '../../constants/agentforge'
 import FadeUp from './FadeUp'
+import IconCard from './IconCard'
 
 /** 單一能力卡：圖標 + 標題 + 一句話 + 說明 + 效益清單 */
 function ModeCard({ item, index }) {
-  const Icon = afIcon(item.icon)
   return (
-    <FadeUp delay={index * 0.06} className="h-full">
-      <div className="h-full flex flex-col rounded-2xl border border-slate-200 bg-white p-6
-        hover:border-violet-300 hover:shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1
-        transition-all duration-300
-        dark:border-slate-700 dark:bg-slate-800 dark:hover:border-violet-500/50">
-        <div className="w-11 h-11 rounded-xl bg-violet-100 dark:bg-violet-500/15 flex items-center justify-center mb-4">
-          <Icon size={21} className="text-violet-600 dark:text-violet-300" />
-        </div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-white leading-snug">{item.title}</h4>
-        <p className="mt-1 text-sm font-medium text-violet-700 dark:text-violet-300 leading-snug">{item.slogan}</p>
-        <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
-        <ul className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2">
-          {item.points.map((pt, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <CheckCircle2 size={15} className="text-violet-500 dark:text-violet-400 mt-0.5 flex-shrink-0" />
-              <span className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{pt}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </FadeUp>
+    <IconCard
+      icon={afIcon(item.icon)}
+      iconSize={21}
+      tileSize="w-11 h-11"
+      title={item.title}
+      slogan={item.slogan}
+      desc={item.desc}
+      descSpacing="mt-3"
+      points={item.points}
+      checkIcon={CheckCircle2}
+      checkSize={15}
+      delay={index * 0.06}
+    />
   )
 }
 

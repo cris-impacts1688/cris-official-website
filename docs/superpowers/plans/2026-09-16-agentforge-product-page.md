@@ -52,6 +52,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 | `src/components/agentforge/FadeUp.jsx` | **新增** 共用進場動畫包裝（資料夾內 5 個元件共用） | ~20 |
 | `src/components/agentforge/AgentFlow.jsx` | **新增** ①→②→③ 流程圖，DATA INSIGHT + 3 旗艦案例共用 | ~90 |
 | `src/components/agentforge/AgentNetwork.jsx` | **新增** Hero 的 Multi-Agent 協作網絡視覺 | ~130 |
+| `src/components/agentforge/IconCard.jsx` | **新增** MoreCard／ModeCard 共用的圖標卡外殼 | ~40 |
 | `src/components/agentforge/DualMode.jsx` | **新增** AI+／+AI 對照導言 + 兩組 6 卡 | ~150 |
 | `src/components/agentforge/DataInsight.jsx` | **新增** 痛點/獲得對照 + 三階段 + 雲市集 | ~170 |
 | `src/components/agentforge/WorkflowCases.jsx` | **新增** 平台價值 + 3 旗艦 + 10 網格 + 客製卡 | ~300 |
@@ -883,32 +884,25 @@ import { useTranslation } from 'react-i18next'
 import { CheckCircle2, ArrowLeftRight } from 'lucide-react'
 import { afIcon } from '../../constants/agentforge'
 import FadeUp from './FadeUp'
+import IconCard from './IconCard'
 
-/** 單一能力卡：圖標 + 標題 + 一句話 + 說明 + 效益清單 */
+/** 單一能力卡：圖標 + 標題 + 一句話 + 說明 + 效益清單。
+ * 外殼與 WorkflowCases 的 MoreCard 共用，見 IconCard.jsx（Task 9 之後抽出）。 */
 function ModeCard({ item, index }) {
-  const Icon = afIcon(item.icon)
   return (
-    <FadeUp delay={index * 0.06} className="h-full">
-      <div className="h-full flex flex-col rounded-2xl border border-slate-200 bg-white p-6
-        hover:border-violet-300 hover:shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1
-        transition-all duration-300
-        dark:border-slate-700 dark:bg-slate-800 dark:hover:border-violet-500/50">
-        <div className="w-11 h-11 rounded-xl bg-violet-100 dark:bg-violet-500/15 flex items-center justify-center mb-4">
-          <Icon size={21} className="text-violet-600 dark:text-violet-300" />
-        </div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-white leading-snug">{item.title}</h4>
-        <p className="mt-1 text-sm font-medium text-violet-700 dark:text-violet-300 leading-snug">{item.slogan}</p>
-        <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
-        <ul className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2">
-          {item.points.map((pt, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <CheckCircle2 size={15} className="text-violet-500 dark:text-violet-400 mt-0.5 flex-shrink-0" />
-              <span className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{pt}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </FadeUp>
+    <IconCard
+      icon={afIcon(item.icon)}
+      iconSize={21}
+      tileSize="w-11 h-11"
+      title={item.title}
+      slogan={item.slogan}
+      desc={item.desc}
+      descSpacing="mt-3"
+      points={item.points}
+      checkIcon={CheckCircle2}
+      checkSize={15}
+      delay={index * 0.06}
+    />
   )
 }
 
@@ -1186,6 +1180,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 **Files:**
 - Create: `src/components/agentforge/WorkflowCases.jsx`
+- Create: `src/components/agentforge/IconCard.jsx`（MoreCard 與 DualMode 的 ModeCard 共用的圖標卡外殼，事後重構抽出）
 
 - [ ] **Step 1：建立元件**
 
@@ -1198,6 +1193,7 @@ import { Check, ArrowRight, ArrowUpRight, ArrowDownRight, AlertTriangle } from '
 import { afIcon } from '../../constants/agentforge'
 import AgentFlow from './AgentFlow'
 import FadeUp from './FadeUp'
+import IconCard from './IconCard'
 
 /* ── 成果：before → after ──────────────────────────────────────────── */
 /* 具名匯出：/design-system 會 import 來做 Live Preview，避免文件與實作漂移 */
@@ -1339,29 +1335,17 @@ function FlagshipCase({ data, index, labels }) {
 }
 
 /* ── 更多工作場景：網格卡 ──────────────────────────────────────────── */
+/* 外殼抽到共用的 IconCard（見 src/components/agentforge/IconCard.jsx），
+ * 與 DualMode 的 ModeCard 共用同一個殼，差異只留成 props。 */
 function MoreCard({ item, index }) {
-  const Icon = afIcon(item.icon)
   return (
-    <FadeUp delay={index * 0.05} className="h-full">
-      <div className="h-full flex flex-col rounded-2xl border border-slate-200 bg-white p-6
-        hover:border-violet-300 hover:shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1
-        transition-all duration-300
-        dark:border-slate-700 dark:bg-slate-800 dark:hover:border-violet-500/50">
-        <div className="w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-500/15 flex items-center justify-center mb-4">
-          <Icon size={19} className="text-violet-600 dark:text-violet-300" />
-        </div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-white leading-snug">{item.title}</h4>
-        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
-        <ul className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2">
-          {item.points.map((pt, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <Check size={14} className="text-violet-500 dark:text-violet-400 mt-0.5 flex-shrink-0" />
-              <span className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{pt}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </FadeUp>
+    <IconCard
+      icon={afIcon(item.icon)}
+      title={item.title}
+      desc={item.desc}
+      points={item.points}
+      delay={index * 0.05}
+    />
   )
 }
 
@@ -1449,7 +1433,7 @@ export default function WorkflowCases() {
                 <div className="flex items-start gap-2.5">
                   <Check size={17} className="text-violet-600 dark:text-violet-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-bold text-slate-900 dark:text-white leading-snug">{v.title}</p>
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white leading-snug">{v.title}</h4>
                     <p className="mt-1.5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{v.desc}</p>
                   </div>
                 </div>
