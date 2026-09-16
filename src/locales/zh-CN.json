@@ -499,11 +499,11 @@
     "cta_learn": "了解技术架构",
     "expand": "展开功能",
     "collapse": "收起",
-    "aibox_powered_by": "Powered by Argox AI Engine",
-    "aibox_cta_title": "所有模块均可搭载 CRIS AI 一体机",
-    "aibox_cta_subtitle": "私有化部署，数据永不离开企业内网。从导入评估到上线仅需 7 天，顾问团队全程陪伴。",
-    "aibox_cta_btn": "预约 AI 落地顾问",
-    "aibox_learn_more": "了解一体机规格"
+    "agentforge_powered_by": "Powered by Argox AI Engine",
+    "agentforge_cta_title": "所有模块均可接上 CRIS AgentForge Platform",
+    "agentforge_cta_subtitle": "从分析、决策到执行，以 Multi-Agent 工作流串接现有 ERP／MES／CRM 系统，顾问团队全程陪伴导入。",
+    "agentforge_cta_btn": "预约 AI 落地顾问",
+    "agentforge_learn_more": "了解 AgentForge Platform"
   },
   "cases": {
     "section_tag": "实战案例成果",

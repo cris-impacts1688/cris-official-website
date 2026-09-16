@@ -299,7 +299,7 @@ export default function Solutions() {
               <Link to="/contact" className="btn-primary text-sm px-6 py-3">
                 {t('solutions.cta_demo')} <ArrowRight size={16} />
               </Link>
-              <Link to="/products/ai-box" className="btn-outline text-sm px-6 py-3">
+              <Link to="/products/agentforge" className="btn-outline text-sm px-6 py-3">
                 {t('solutions.cta_learn')}
               </Link>
             </div>
@@ -333,20 +333,20 @@ export default function Solutions() {
             transition={{ duration: 0.5 }}
           >
             <span className="text-xs font-semibold text-cris-blue dark:text-cris-blue-light uppercase tracking-widest">
-              {t('solutions.aibox_powered_by')}
+              {t('solutions.agentforge_powered_by')}
             </span>
             <h3 className="mt-3 text-2xl font-bold text-slate-900 dark:text-white">
-              {t('solutions.aibox_cta_title')}
+              {t('solutions.agentforge_cta_title')}
             </h3>
             <p className="section-subtitle mt-3 text-sm">
-              {t('solutions.aibox_cta_subtitle')}
+              {t('solutions.agentforge_cta_subtitle')}
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link to="/contact" className="btn-primary text-sm px-6 py-3">
-                {t('solutions.aibox_cta_btn')} <ArrowRight size={16} />
+                {t('solutions.agentforge_cta_btn')} <ArrowRight size={16} />
               </Link>
-              <Link to="/products/ai-box" className="btn-outline text-sm px-6 py-3">
-                {t('solutions.aibox_learn_more')}
+              <Link to="/products/agentforge" className="btn-outline text-sm px-6 py-3">
+                {t('solutions.agentforge_learn_more')}
               </Link>
             </div>
           </motion.div>

@@ -545,8 +545,9 @@ SKU 數量多、需求變化快速等特性，並透過多個銷售據點服務�
 | `src/components/Features.jsx` | 第 3 張卡 `href` → `/products/agentforge`；`features_data` 第 3 筆文案改寫（見 §9） |
 | `src/pages/AdminContent.jsx` | `{ id: 'aibox', label: 'AI 一體機' }` → `{ id: 'agentforge', label: 'CRIS AgentForge Platform' }`，section 維持只有 `hero_desc` |
 | `src/pages/Admin.jsx` | `AI_TAGS` 中的 `'AI 一體機'` → `'AgentForge'`（次要，可選） |
+| `src/pages/Solutions.jsx` | 兩處 `<Link to="/products/ai-box">` → `/products/agentforge`；`solutions.aibox_*` 五個 key 重新命名為 `solutions.agentforge_*`（原始計畫漏列，Task 11 驗證時發現） |
 | `src/pages/DesignSystem.jsx` | 新增三個元件的 Live Preview / Code snippet / Anatomy table：Agent 流程圖、before→after 數字、AI+/+AI 對照卡 |
-| `src/locales/{zh-TW,zh-CN,en}.json` | 刪 `aibox.*`、`ai_appliance.*`、`navbar.aibox_*`；新增 `agentforge.*` |
+| `src/locales/{zh-TW,zh-CN,en}.json` | 刪 `aibox.*`、`ai_appliance.*`、`navbar.aibox_*`；新增 `agentforge.*`；`solutions.aibox_*` 重新命名為 `solutions.agentforge_*` 並重寫其中三段文案 |
 
 CMS 讀取點：`useCmsContent('agentforge', 'hero_desc')`（原為 `useCmsContent('aibox', 'hero_desc')`）。
 Supabase 中 `page_id='aibox'` 的舊列不處理，成為孤兒資料，不影響前台。
@@ -578,6 +579,7 @@ Supabase 中 `page_id='aibox'` 的舊列不處理，成為孤兒資料，不影�
 | 4 | 首頁 `Features.jsx` 第 3 張卡文案（現為「私有化部署 · 數據主權掌控」）原稿未提供 | 由 §6.4 內容擬一版，實作後請 review |
 | 5 | AI+ / +AI 對照導言（「把 AI 加進營運決策」／「把執行交給 AI」）原稿未提供 | 由我撰寫，實作後請 review |
 | 6 | 第 4 節簡介（§6.4）、CTA Banner 文案（§6.5）原稿未提供 | 由我撰寫，實作後請 review |
+| 7 | `solutions.agentforge_cta_title` / `agentforge_cta_subtitle` / `agentforge_learn_more`（Solutions 頁底部 CTA，原文案講「一體機」「私有化部署」，本次改版必須移除）原稿未提供 | 由我撰寫，實作後請 review。繁中：「所有模組均可接上 CRIS AgentForge Platform」／「從分析、決策到執行，以 Multi-Agent 工作流串接既有 ERP／MES／CRM 系統，顧問團隊全程陪伴導入。」／「了解 AgentForge Platform」 |
 
 ---
 

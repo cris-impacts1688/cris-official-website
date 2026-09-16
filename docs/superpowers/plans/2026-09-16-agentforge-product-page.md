@@ -66,6 +66,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
 | `src/components/Features.jsx` | 改第 3 張卡連結 | — |
 | `src/pages/AdminContent.jsx` | 改 CMS 頁面代號 | — |
 | `src/pages/Admin.jsx` | 改標籤字串 | — |
+| `src/pages/Solutions.jsx` | 改兩處產品連結（`/products/ai-box` → `/products/agentforge`）、`solutions.aibox_*` 重新命名為 `agentforge_*`（原始計畫漏列，Task 11 驗證時發現） | — |
 | `src/pages/DesignSystem.jsx` | 補三個新元件文件 | — |
 | `src/locales/{zh-TW,zh-CN,en}.json` | 刪舊 namespace、加 `agentforge.*` | — |
 | `package.json` | 加 `check:i18n` script | — |
@@ -1762,6 +1763,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 - Modify: `src/components/Features.jsx`
 - Modify: `src/pages/AdminContent.jsx`
 - Modify: `src/pages/Admin.jsx`
+- Modify: `src/pages/Solutions.jsx`（原始計畫漏列，Task 11 驗證時發現）
 
 - [ ] **Step 1：`src/App.jsx` — 換 import 與路由**
 

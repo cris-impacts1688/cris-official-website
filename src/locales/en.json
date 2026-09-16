@@ -499,11 +499,11 @@
     "cta_learn": "Explore Architecture",
     "expand": "Show Features",
     "collapse": "Collapse",
-    "aibox_powered_by": "Powered by Argox AI Engine",
-    "aibox_cta_title": "All Modules Run on CRIS AI Appliance",
-    "aibox_cta_subtitle": "On-premise deployment — your data never leaves the network. From evaluation to go-live in 7 days, with full consultant support.",
-    "aibox_cta_btn": "Book AI Consultant",
-    "aibox_learn_more": "View Appliance Specs"
+    "agentforge_powered_by": "Powered by Argox AI Engine",
+    "agentforge_cta_title": "All Modules Connect to CRIS AgentForge Platform",
+    "agentforge_cta_subtitle": "Multi-Agent workflows connect analysis, decisions, and execution — integrating with your existing ERP, MES, and CRM systems, with consultant support throughout rollout.",
+    "agentforge_cta_btn": "Book AI Consultant",
+    "agentforge_learn_more": "Explore AgentForge Platform"
   },
   "cases": {
     "section_tag": "Case Studies",
