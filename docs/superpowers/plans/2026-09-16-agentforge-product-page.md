@@ -734,7 +734,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
     "background_label": "背景",
     "pains_label": "痛點",
     "flow_label": "工作流",
-    "disclaimer": "依實際資料進行情境試算，非已導入成果",
+    "disclaimer": "※ 依實際資料進行情境試算，非已導入成果",
     "flagship": [
       {
         "title": "生產排程與緊急插單",
@@ -1324,7 +1324,7 @@ function FlagshipCase({ data, index, labels }) {
             ? <DeltaMetrics items={data.metrics} />
             : <QualitativeMetrics items={data.metrics} />}
           <p className="mt-4 text-xs text-slate-500 dark:text-slate-400 italic">
-            ※ {labels.disclaimer}
+            {labels.disclaimer}
           </p>
         </div>
       </article>
@@ -2043,6 +2043,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 「經濟部雲市集」是台灣政府單位名稱，簡中版保留「经济部云市集」，不要改成其他名稱。
 
+`agentforge.cases.disclaimer` 保留 `※` 前綴（`※` 是泛中文的注記慣例，簡中沿用，不是台灣特有寫法），只翻譯後面的文字本身。
+
 - [ ] **Step 2：確認結構對齊**
 
 Run: `npm run check:i18n`
@@ -2092,7 +2094,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 | 差勤管理與文管 | attendance & document management |
 | 情境試算 | scenario simulation |
 
-免責聲明英文版：`Based on scenario simulation using actual data; not results from a completed deployment.`
+免責聲明英文版：`* Based on scenario simulation using actual data; not results from a completed deployment.`
+`agentforge.cases.disclaimer` 的注記符號英文版用 `*`（ASCII 星號），不要沿用中文的 `※`。
 
 `icon`、`metrics_kind`、`direction`、`human` 原樣照抄不要翻譯 —— `check:i18n` 會比對這三個列舉欄位的值三語是否相同，譯了會被擋下。
 `metrics` 的 `before` / `after` 值（`約 71%` → `~71%`、`約 46 天` → `~46 days`、`20 小時／週` → `20 hrs/week`）要翻。

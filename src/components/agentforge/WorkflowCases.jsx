@@ -130,7 +130,7 @@ function FlagshipCase({ data, index, labels }) {
             ? <DeltaMetrics items={data.metrics} />
             : <QualitativeMetrics items={data.metrics} />}
           <p className="mt-4 text-xs text-slate-500 dark:text-slate-400 italic">
-            ※ {labels.disclaimer}
+            {labels.disclaimer}
           </p>
         </div>
       </article>

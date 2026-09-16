@@ -223,7 +223,9 @@ src/components/AIAppliance.jsx      死碼：全專案沒有任何 import，內�
     "background_label": "背景",
     "pains_label": "痛點",
     "flow_label": "工作流",
-    "disclaimer": "依實際資料進行情境試算，非已導入成果",
+    "disclaimer": "※ 依實際資料進行情境試算，非已導入成果",
+    // 注記符號由各語系自行提供，不寫死在元件裡：
+    // 繁中／簡中用「※」（泛中文慣例，非台灣特有），英文用「*」。
 
     "flagship": [
       {
