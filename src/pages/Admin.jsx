@@ -15,7 +15,7 @@ const TABLE = 'posts'
 const BUCKET = 'media'
 
 const CATEGORIES = ['公司動態', '產品更新', '產業觀察', '客戶案例', '技術分享', '活動資訊']
-const AI_TAGS = ['AI Agent', 'RAG', 'On-Premise', '預測性維護', '智能財務', '智能售服', 'AIoT', 'Argox AI', 'AI 一體機', '數據主權']
+const AI_TAGS = ['AI Agent', 'RAG', 'On-Premise', '預測性維護', '智能財務', '智能售服', 'AIoT', 'Argox AI', 'AgentForge', '數據主權']
 
 // ─── Shared input style ───────────────────────────────────────────────────────
 const inp = 'w-full px-4 py-2.5 rounded-xl border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cris-blue/40 focus:border-cris-blue text-sm transition-colors'

@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 const featureMeta = [
   { icon: Calendar, iconColor: 'text-blue-500',    lightBg: 'bg-blue-50 dark:bg-blue-900/20',    href: '/products/aps' },
   { icon: BarChart3, iconColor: 'text-emerald-500', lightBg: 'bg-emerald-50 dark:bg-emerald-900/20', href: '/products/esg' },
-  { icon: Cpu,       iconColor: 'text-violet-500',  lightBg: 'bg-violet-50 dark:bg-violet-900/20', href: '/products/ai-box' },
+  { icon: Cpu,       iconColor: 'text-violet-500',  lightBg: 'bg-violet-50 dark:bg-violet-900/20', href: '/products/agentforge' },
 ]
 
 function FeatureCard({ meta, data, index }) {

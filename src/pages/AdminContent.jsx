@@ -35,8 +35,8 @@ const CMS_PAGES = [
     ],
   },
   {
-    id: 'aibox',
-    label: 'AI 一體機',
+    id: 'agentforge',
+    label: 'CRIS AgentForge Platform',
     sections: [
       { key: 'hero_desc', label: 'Hero 說明文字', hint: '產品頁主標下方的介紹段落' },
     ],

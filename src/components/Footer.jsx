@@ -8,7 +8,7 @@ export default function Footer() {
     products: [
       { key: 'navbar.aps_name',  href: '/products/aps' },
       { key: 'navbar.esg_name',  href: '/products/esg' },
-      { key: 'navbar.aibox_name', href: '/products/ai-box' },
+      { key: 'navbar.agentforge_name', href: '/products/agentforge' },
     ],
     company: [
       { key: 'footer.about_link',   href: '/about' },

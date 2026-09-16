@@ -17,7 +17,7 @@ import Contact from './components/Contact'
 import APSProduct from './pages/APSProduct'
 import About from './pages/About'
 import ESGProduct from './pages/ESGProduct'
-import AIBoxProduct from './pages/AIBoxProduct'
+import AgentForgeProduct from './pages/AgentForgeProduct'
 import ContactPage from './pages/ContactPage'
 import Admin from './pages/Admin'
 import DesignSystem from './pages/DesignSystem'
@@ -76,7 +76,7 @@ export default function App() {
               <Route path="/products/aps" element={<APSProduct />} />
               <Route path="/about" element={<About />} />
               <Route path="/products/esg" element={<ESGProduct />} />
-              <Route path="/products/ai-box" element={<AIBoxProduct />} />
+              <Route path="/products/agentforge" element={<AgentForgeProduct />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/news/:id" element={<NewsPost />} />
               <Route path="/solutions" element={<Solutions />} />
