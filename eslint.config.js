@@ -5,7 +5,9 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  // .claude 底下是 Claude Code 建立的 git worktree，那是別的分支的副本，
+  // 不該被本專案的 lint 掃到（會多出上千筆重複錯誤，讓 lint 失去意義）。
+  { ignores: ['dist', '.claude'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {

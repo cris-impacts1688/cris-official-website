@@ -22,12 +22,18 @@
 |---|---|---|
 | 多語系對齊 | `npm run check:i18n` | 缺 key（會靜默 fallback 成繁中，不報錯） |
 | 編譯 | `npm run build` | import 錯誤、語法錯誤 |
-| Lint | `npm run lint` | 未使用的 import、hooks 規則 |
+| Lint（新檔） | `npx eslint <新檔> \| grep -v react/prop-types` | 未使用的 import、hooks 規則 |
 | 人工 | `npm run dev` | 版面、深色模式、斷點、動畫 |
 
-**3. Task 5 之後 `check:i18n` 會刻意失敗。** Task 5 只加繁中，簡中與英文要到 Task 12、13 才補。這是預期的紅燈 —— Task 5 到 Task 13 之間 `check:i18n` 失敗屬正常，Task 13 結束後必須轉綠。
+**3. `npm run lint` 不能當作通過／失敗的閘門。** 專案現況：`npx eslint .` 有 280 筆問題，其中 **265 筆是 `react/prop-types`** —— 這個專案 20 幾個元件沒有任何 PropTypes，顯然不遵循該規則，這 265 筆是設定與慣例不合造成的雜訊，不是缺陷。真正可行動的只有 11 筆 `no-unused-vars` 與 4 筆 `react-hooks/exhaustive-deps`，全部在本次不會改動的既有檔案裡。
 
-**4. 每個 Task 結束都要 commit。** commit message 用繁中，結尾加上：
+因此各 task 的 lint 驗證一律**只掃該 task 動到的檔案並濾掉 prop-types**，要求是「沒有任何 error 輸出」。這樣才擋得住真正想擋的東西（例如多餘的 import）。
+
+（本次已順手修掉一個設定缺陷：`eslint.config.js` 原本只 ignore `dist`，導致 eslint 連 `.claude/worktrees/` 底下其他分支的副本一起掃，問題數從 1880 虛報到只剩 280。）
+
+**4. Task 5 之後 `check:i18n` 會刻意失敗。** Task 5 只加繁中，簡中與英文要到 Task 12、13 才補。這是預期的紅燈 —— Task 5 到 Task 13 之間 `check:i18n` 失敗屬正常，Task 13 結束後必須轉綠。
+
+**5. 每個 Task 結束都要 commit。** commit message 用繁中，結尾加上：
 
 ```
 Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
@@ -1103,8 +1109,16 @@ export default function DataInsight() {
 
 - [ ] **Step 2：確認編譯與 lint 都通過**
 
-Run: `npm run build && npm run lint`
-Expected：build 成功，lint 無 error。
+Run: `npm run build`
+Expected：`✓ built in ...`
+
+Run（只掃本 task 新增／修改的檔案，並濾掉 prop-types）：
+
+```bash
+npx eslint <本 task 動到的檔案> 2>&1 | grep -v "react/prop-types"
+```
+
+Expected：沒有任何 error 輸出。
 
 - [ ] **Step 3：Commit**
 
@@ -1421,8 +1435,16 @@ export default function WorkflowCases() {
 
 - [ ] **Step 2：確認編譯與 lint 都通過**
 
-Run: `npm run build && npm run lint`
-Expected：build 成功，lint 無 error。
+Run: `npm run build`
+Expected：`✓ built in ...`
+
+Run（只掃本 task 新增／修改的檔案，並濾掉 prop-types）：
+
+```bash
+npx eslint <本 task 動到的檔案> 2>&1 | grep -v "react/prop-types"
+```
+
+Expected：沒有任何 error 輸出。
 
 - [ ] **Step 3：Commit**
 
@@ -1665,8 +1687,16 @@ export default function AgentForgeProduct() {
 
 - [ ] **Step 2：確認編譯與 lint 都通過**
 
-Run: `npm run build && npm run lint`
-Expected：build 成功，lint 無 error。
+Run: `npm run build`
+Expected：`✓ built in ...`
+
+Run（只掃本 task 新增／修改的檔案，並濾掉 prop-types）：
+
+```bash
+npx eslint <本 task 動到的檔案> 2>&1 | grep -v "react/prop-types"
+```
+
+Expected：沒有任何 error 輸出。
 
 - [ ] **Step 3：Commit**
 
@@ -1825,8 +1855,16 @@ import { Sun, Moon, Menu, X, ChevronDown } from 'lucide-react'
 
 - [ ] **Step 7：確認編譯與 lint**
 
-Run: `npm run build && npm run lint`
-Expected：build 成功，lint 無 error（特別留意 `ExternalLink`、`ProductLink` 是否有殘留未使用）。
+Run: `npm run build`
+Expected：`✓ built in ...`
+
+Run：
+
+```bash
+npx eslint src/App.jsx src/components/Navbar.jsx src/components/Footer.jsx src/components/Features.jsx src/pages/AdminContent.jsx src/pages/Admin.jsx 2>&1 | grep -v "react/prop-types"
+```
+
+Expected：沒有任何 error 輸出。特別確認 `ExternalLink`、`ProductLink` 沒有殘留成未使用的變數。
 
 - [ ] **Step 8：人工驗證**
 
@@ -1898,8 +1936,16 @@ Expected: `CLEAN`
 
 - [ ] **Step 5：確認編譯通過**
 
-Run: `npm run build && npm run lint`
-Expected：build 成功，lint 無 error。
+Run: `npm run build`
+Expected：`✓ built in ...`
+
+Run（只掃本 task 新增／修改的檔案，並濾掉 prop-types）：
+
+```bash
+npx eslint <本 task 動到的檔案> 2>&1 | grep -v "react/prop-types"
+```
+
+Expected：沒有任何 error 輸出。
 
 - [ ] **Step 6：Commit**
 
@@ -2249,8 +2295,16 @@ function DualCompareSection() {
 
 - [ ] **Step 5：確認編譯並人工檢視**
 
-Run: `npm run build && npm run lint`
-Expected：build 成功，lint 無 error。
+Run: `npm run build`
+Expected：`✓ built in ...`
+
+Run（只掃本 task 新增／修改的檔案，並濾掉 prop-types）：
+
+```bash
+npx eslint <本 task 動到的檔案> 2>&1 | grep -v "react/prop-types"
+```
+
+Expected：沒有任何 error 輸出。
 
 Run: `npm run dev`，開 `http://localhost:5173/design-system`，確認：
 
@@ -2281,10 +2335,26 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 Run:
 
 ```bash
-npm run check:i18n && npm run lint && npm run build
+npm run check:i18n && npm run build
 ```
 
-Expected：三項全過，exit code 0。
+Expected：兩項全過，exit code 0。
+
+再跑新增檔案的 lint：
+
+```bash
+npx eslint src/components/agentforge src/pages/AgentForgeProduct.jsx src/constants/agentforge.js 2>&1 | grep -v "react/prop-types"
+```
+
+Expected：沒有任何 error 輸出。
+
+最後確認全專案可行動問題數沒有增加：
+
+```bash
+npx eslint . 2>&1 | grep -cE "no-unused-vars|exhaustive-deps"
+```
+
+Expected：**14 或更少**。（改版前基線為 15；Task 12 刪掉 `AIAppliance.jsx` 會少一筆，故為 14。）
 
 - [ ] **Step 2：確認舊產品完全清乾淨**
 
