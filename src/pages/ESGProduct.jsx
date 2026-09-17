@@ -87,7 +87,7 @@ const integrationPartners = [
   { name: '用友 ERP',       desc: '原生雙碳模組對接' },
   { name: 'MES 系統',       desc: '製程排放數據' },
   { name: '採購 / 財務系統', desc: '供應鏈碳足跡' },
-  { name: 'AI 一體機',      desc: 'RAG 係數查詢' },
+  { name: 'AgentForge',    desc: 'RAG 係數查詢' },
   { name: 'IPCC 數據庫',    desc: '國際排放因子' },
   { name: 'CBAM 模組',      desc: '碳邊境調整機制' },
 ]

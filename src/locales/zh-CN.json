@@ -10,8 +10,6 @@
     "aps_desc": "AI 驱动有限产能排程",
     "esg_name": "IMPACTs CeO",
     "esg_desc": "AI 精准碳排放分析",
-    "aibox_name": "CRIS AI 一体机",
-    "aibox_desc": "私有化部署 · 数据主权掌控",
     "mc_name": "CRIS Mission Control",
     "mc_desc": "工厂 AI 任务指挥中心",
     "agentforge_name": "CRIS AgentForge Platform",
@@ -331,87 +329,6 @@
       { "title": "降低稽核风险与成本", "desc": "提升报告透明度，有效降低稽核失败风险" }
     ]
   },
-  "aibox": {
-    "breadcrumb": "AI 一体机",
-    "badge": "企业级私有 AI 作业平台",
-    "product_name": "IMPACTs",
-    "product_name_gradient": "AI 一体机",
-    "product_subtitle": "大脑决策 × 手脚执行的完整 AI 生态",
-    "product_desc_part1": "「大脑决策」",
-    "product_desc_part2": "「手脚执行」",
-    "product_desc": "赋能企业具备大脑决策与手脚执行的完整 AI 生态。从私有部署到数字员工调度，一机解决企业 AI 转型的全部需求。",
-    "floating_badge": "私有部署 · 零 Token 费用",
-    "cta_primary": "预约 AI 一体机 Demo",
-    "cta_secondary": "探索功能",
-    "tags": ["私有部署", "RAG 知识库", "AI Agent", "vLLM 推理", "多模态", "开箱即用"],
-    "feat_tag": "核心特色",
-    "feat_title": "四大核心价值主张",
-    "feat_subtitle": "从安全合规到成本管控，AI 一体机为企业提供完整、可控的 AI 转型路径。",
-    "modules_tag": "AI 软件栈",
-    "modules_title": "四大 AI 模块，开箱即用",
-    "modules_subtitle": "预装完整的企业 AI 软件栈，从知识管理到自动化执行，一台机器全部搞定。",
-    "kpi_tag": "核心优势",
-    "kpi_title": "可量化的 AI 转型价值",
-    "kpi_subtitle": "以确定性的硬件成本，换取无上限的 AI 应用潜力。",
-    "cta_title": "准备好让 AI 为您工作了吗？",
-    "cta_subtitle": "填写表单，我们将在 24 小时内提供免费 AI 一体机评估报告。",
-    "cta_btn": "预约 AI 一体机 Demo",
-    "cta_back": "返回首页",
-    "core_features": [
-      {
-        "badge": "安全第一",
-        "title": "私有部署 安全合规",
-        "desc": "模型与资料 100% 在企业内部运行，确保资安合规与完整资料主权，杜绝敏感资料外泄风险。",
-        "points": ["模型与资料不出企业防火墙", "符合 ISO 27001 与 GDPR 合规要求", "完整操作日志与访问控制"]
-      },
-      {
-        "badge": "快速整合",
-        "title": "开机即用 随插即用",
-        "desc": "预装企业级 AI 软件栈，开箱即可串接 ERP / MES / APS / ESG 系统，不需懂模型也能立即调用 AI 能力。",
-        "points": ["3 天内完成部署上线", "内置 API Gateway 标准接口", "深度整合快思 APS 与 ESG 系统"]
-      },
-      {
-        "badge": "AI 决策引擎",
-        "title": "大脑决策 手脚执行",
-        "desc": "整合 LLM 推演与 RPA 自动化执行，让对话进化为真正的数字劳动力，AI Agent 负责思考、系统自动完成执行。",
-        "points": ["LLM 负责分析推演与决策建议", "RPA 自动化执行任务流程", "从「问答」进化为「完成任务」"]
-      },
-      {
-        "badge": "成本优化",
-        "title": "成本可控 长期效益",
-        "desc": "免 Token 计费、优化 GPU 资源调度，让 AI 转型从成本中心转为效益引擎，满足企业长期可持续转型需求。",
-        "points": ["零 Token 费用，固定硬件成本", "智慧 GPU 调度最大化资源利用", "3 年 ROI 平均超过 300%"]
-      }
-    ],
-    "modules": [
-      {
-        "title": "AI Agent 指挥中心",
-        "desc": "管理与调度数字员工，从「问答」进化为「执行任务」的完整工作流程自动化平台。",
-        "tags": ["Agent Orchestration", "RPA 整合", "Task Automation"]
-      },
-      {
-        "title": "RAG 知识库 × 向量数据库",
-        "desc": "基于企业内部 SOP 与技术手册建立专属知识库，提供精准的企业内容问答与即时文件检索。",
-        "tags": ["Vector Database", "SOP 自动化", "智慧文件问答"]
-      },
-      {
-        "title": "机器学习模型库",
-        "desc": "专注于制造业的预测分析：设备故障预测、需求预测、品质异常检测，提供理性决策依据。",
-        "tags": ["故障预测", "需求预测", "品质异常检测"]
-      },
-      {
-        "title": "vLLM 多模态推理引擎",
-        "desc": "整合语言理解、RAG 增强生成、Whisper 语音识别及影像分析，提供完整多模态 AI 推理能力。",
-        "tags": ["Language + Vision", "Whisper 语音", "RAG 推理加速"]
-      }
-    ],
-    "kpis": [
-      { "label": "资安合规", "desc": "资料主权完整保障" },
-      { "label": "Token 费用", "desc": "固定成本无计费上限" },
-      { "label": "服务稳定性", "desc": "不受外部网络影响" },
-      { "label": "应用扩充", "desc": "支持多元 AI 应用场景" }
-    ]
-  },
   "contact_page": {
     "breadcrumb": "联系我们",
     "badge": "免费咨询 · 24 小时回复",
@@ -424,7 +341,7 @@
     "product_placeholder": "请选择...",
     "product_aps": "APS 生产排程系统",
     "product_esg": "ESG 碳盘查系统",
-    "product_aibox": "AI 一体机",
+    "product_agentforge": "CRIS AgentForge Platform",
     "product_all": "全套解决方案",
     "promise_title": "我们的承诺",
     "trust_0_title": "24 小时内回复",
@@ -451,29 +368,6 @@
     "loading": "加载中...",
     "empty": "暂无消息，请稍后再来。",
     "error": "无法加载消息，请刷新页面。"
-  },
-  "ai_appliance": {
-    "tag": "硬件规格",
-    "title": "CRIS AI 一体机",
-    "subtitle": "企业级私有 AI 运算平台",
-    "desc": "搭载 NVIDIA 工业级 AI 芯片与 Argox AI 引擎，专为企业内网私有化部署设计。所有 AI 推理运算在本地完成，实现真正的数据主权，零云端依赖。",
-    "badge_onprem": "On-Premise 私有部署",
-    "badge_security": "数据主权保障",
-    "badge_plug": "即插即用",
-    "spec_cpu_label": "AI 运算核心",
-    "spec_cpu_value": "NVIDIA Jetson AGX Orin",
-    "spec_ram_label": "系统内存",
-    "spec_ram_value": "64 GB DDR5 ECC",
-    "spec_storage_label": "高速存储",
-    "spec_storage_value": "2 TB NVMe SSD",
-    "spec_engine_label": "AI 引擎",
-    "spec_engine_value": "Argox AI Engine v2.0",
-    "spec_network_label": "网络接口",
-    "spec_network_value": "10GbE × 2 口",
-    "spec_os_label": "操作系统",
-    "spec_os_value": "CRIS OS (Ubuntu 22.04 LTS)",
-    "arch_label": "AI 落地架构",
-    "cta": "申请硬件规格书"
   },
   "solutions": {
     "tag": "解决方案",

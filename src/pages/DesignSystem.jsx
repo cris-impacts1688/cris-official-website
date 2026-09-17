@@ -663,7 +663,7 @@ function BadgeSection() {
       <SubSection title="Private Deploy Badge (Modal)">
         <PreviewBox label="bg-cris-blue/7  border-cris-blue/20  rounded-xl px-4 py-3">
           <div className="flex items-center gap-2.5 bg-cris-blue/[0.07] border border-cris-blue/20 rounded-xl px-4 py-3">
-            <span className="text-sm font-semibold text-cris-blue">私有化部署 · CRIS AI 一體機</span>
+            <span className="text-sm font-semibold text-cris-blue">Multi-Agent 工作流 · CRIS AgentForge</span>
           </div>
         </PreviewBox>
       </SubSection>

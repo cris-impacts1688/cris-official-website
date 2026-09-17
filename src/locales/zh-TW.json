@@ -10,8 +10,6 @@
     "aps_desc": "AI 驅動有限產能排程",
     "esg_name": "IMPACTs CeO",
     "esg_desc": "AI 精準碳排放分析",
-    "aibox_name": "CRIS AI 一體機",
-    "aibox_desc": "私有化部署 · 數據主權掌控",
     "mc_name": "CRIS Mission Control",
     "mc_desc": "工廠 AI 任務指揮中心",
     "agentforge_name": "CRIS AgentForge Platform",
@@ -329,87 +327,6 @@
       { "title": "助益國際揭露申請", "desc": "有助於後續申請查證聲明與 IFRS 永續揭露" },
       { "title": "加速查核提升效率", "desc": "大幅縮短查證週期，降低稽核相關費用" },
       { "title": "降低稽核風險與成本", "desc": "提升報告透明度，有效降低稽核失敗風險" }
-    ]
-  },
-  "aibox": {
-    "breadcrumb": "AI 一體機",
-    "badge": "企業級私有 AI 作業平台",
-    "product_name": "IMPACTs",
-    "product_name_gradient": "AI 一體機",
-    "product_subtitle": "大腦決策 × 手腳執行的完整 AI 生態",
-    "product_desc_part1": "「大腦決策」",
-    "product_desc_part2": "「手腳執行」",
-    "product_desc": "賦能企業具備大腦決策與手腳執行的完整 AI 生態。從私有部署到數位員工調度，一機解決企業 AI 轉型的全部需求。",
-    "floating_badge": "私有部署 · 零 Token 費用",
-    "cta_primary": "預約 AI 一體機 Demo",
-    "cta_secondary": "探索功能",
-    "tags": ["私有部署", "RAG 知識庫", "AI Agent", "vLLM 推理", "多模態", "開箱即用"],
-    "feat_tag": "核心特色",
-    "feat_title": "四大核心價值主張",
-    "feat_subtitle": "從安全合規到成本管控，AI 一體機為企業提供完整、可控的 AI 轉型路徑。",
-    "modules_tag": "AI 軟體棧",
-    "modules_title": "四大 AI 模組，開箱即用",
-    "modules_subtitle": "預裝完整的企業 AI 軟體棧，從知識管理到自動化執行，一台機器全部搞定。",
-    "kpi_tag": "核心優勢",
-    "kpi_title": "可量化的 AI 轉型價值",
-    "kpi_subtitle": "以確定性的硬體成本，換取無上限的 AI 應用潛力。",
-    "cta_title": "準備好讓 AI 為您工作了嗎？",
-    "cta_subtitle": "填寫表單，我們將在 24 小時內提供免費 AI 一體機評估報告。",
-    "cta_btn": "預約 AI 一體機 Demo",
-    "cta_back": "回首頁",
-    "core_features": [
-      {
-        "badge": "安全第一",
-        "title": "私有部署 安全合規",
-        "desc": "模型與資料 100% 在企業內部運行，確保資安合規與完整資料主權，杜絕敏感資料外洩風險。",
-        "points": ["模型與資料不出企業防火牆", "符合 ISO 27001 與 GDPR 合規要求", "完整操作日誌與存取控制"]
-      },
-      {
-        "badge": "快速整合",
-        "title": "開機即用 隨插即用",
-        "desc": "預裝企業級 AI 軟體棧，開箱即可串接 ERP / MES / APS / ESG 系統，不需懂模型也能立即調用 AI 能力。",
-        "points": ["3 天內完成部署上線", "內建 API Gateway 標準介面", "深度整合快思 APS 與 ESG 系統"]
-      },
-      {
-        "badge": "AI 決策引擎",
-        "title": "大腦決策 手腳執行",
-        "desc": "整合 LLM 推演與 RPA 自動化執行，讓對話進化為真正的數位勞動力，AI Agent 負責思考、系統自動完成執行。",
-        "points": ["LLM 負責分析推演與決策建議", "RPA 自動化執行任務流程", "從「問答」進化為「完成任務」"]
-      },
-      {
-        "badge": "成本優化",
-        "title": "成本可控 長期效益",
-        "desc": "免 Token 計費、優化 GPU 資源調度，讓 AI 轉型從成本中心轉為效益引擎，滿足企業長期永續轉型需求。",
-        "points": ["零 Token 費用，固定硬體成本", "智慧 GPU 排程最大化資源利用", "3 年 ROI 平均超過 300%"]
-      }
-    ],
-    "modules": [
-      {
-        "title": "AI Agent 指揮中心",
-        "desc": "管理與調度數位員工，從「問答」進化為「執行任務」的完整工作流程自動化平台。",
-        "tags": ["Agent Orchestration", "RPA 整合", "Task Automation"]
-      },
-      {
-        "title": "RAG 知識庫 × 向量資料庫",
-        "desc": "基於企業內部 SOP 與技術手冊建立專屬知識庫，提供精準的企業內容問答與即時文件檢索。",
-        "tags": ["Vector Database", "SOP 自動化", "智慧文件問答"]
-      },
-      {
-        "title": "機器學習模型庫",
-        "desc": "專注於製造業的預測分析：設備故障預測、需求預測、品質異常偵測，提供理性決策依據。",
-        "tags": ["故障預測", "需求預測", "品質異常偵測"]
-      },
-      {
-        "title": "vLLM 多模態推理引擎",
-        "desc": "整合語言理解、RAG 增強生成、Whisper 語音辨識及影像分析，提供完整多模態 AI 推理能力。",
-        "tags": ["Language + Vision", "Whisper 語音", "RAG 推理加速"]
-      }
-    ],
-    "kpis": [
-      { "label": "資安合規", "desc": "資料主權完整保障" },
-      { "label": "Token 費用", "desc": "固定成本無計費上限" },
-      { "label": "服務穩定性", "desc": "不受外部網路影響" },
-      { "label": "應用擴充", "desc": "支援多元 AI 應用場景" }
     ]
   },
   "agentforge": {
@@ -762,7 +679,7 @@
     "product_placeholder": "請選擇...",
     "product_aps": "APS 生產排程系統",
     "product_esg": "ESG 碳盤查系統",
-    "product_aibox": "AI 一體機",
+    "product_agentforge": "CRIS AgentForge Platform",
     "product_all": "全套解決方案",
     "promise_title": "我們的承諾",
     "trust_0_title": "24 小時內回覆",
@@ -789,29 +706,6 @@
     "loading": "載入中...",
     "empty": "暫無消息，請稍後再來。",
     "error": "無法載入消息，請重新整理頁面。"
-  },
-  "ai_appliance": {
-    "tag": "硬體規格",
-    "title": "CRIS AI 一體機",
-    "subtitle": "企業級私有 AI 運算平台",
-    "desc": "搭載 NVIDIA 工業級 AI 晶片與 Argox AI 引擎，專為企業內網私有化部署設計。所有 AI 推理運算在本地完成，實現真正的數據主權，零雲端依賴。",
-    "badge_onprem": "On-Premise 私有部署",
-    "badge_security": "數據主權保障",
-    "badge_plug": "即插即用",
-    "spec_cpu_label": "AI 運算核心",
-    "spec_cpu_value": "NVIDIA Jetson AGX Orin",
-    "spec_ram_label": "系統記憶體",
-    "spec_ram_value": "64 GB DDR5 ECC",
-    "spec_storage_label": "高速儲存",
-    "spec_storage_value": "2 TB NVMe SSD",
-    "spec_engine_label": "AI 引擎",
-    "spec_engine_value": "Argox AI Engine v2.0",
-    "spec_network_label": "網路介面",
-    "spec_network_value": "10GbE × 2 埠",
-    "spec_os_label": "作業系統",
-    "spec_os_value": "CRIS OS (Ubuntu 22.04 LTS)",
-    "arch_label": "AI 落地架構",
-    "cta": "申請硬體規格書"
   },
   "solutions": {
     "tag": "解決方案",

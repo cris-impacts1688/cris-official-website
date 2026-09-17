@@ -74,7 +74,7 @@ export default function ContactPage() {
   const products = [
     { icon: Calendar,  value: 'aps',   label: t('contact_page.product_aps'),   color: 'text-cris-blue' },
     { icon: BarChart3, value: 'esg',   label: t('contact_page.product_esg'),   color: 'text-emerald-600' },
-    { icon: Cpu,       value: 'aibox', label: t('contact_page.product_aibox'), color: 'text-violet-600' },
+    { icon: Cpu,       value: 'agentforge', label: t('contact_page.product_agentforge'), color: 'text-violet-600' },
     { icon: null,      value: 'all',   label: t('contact_page.product_all'),   color: 'text-slate-600' },
   ]
 

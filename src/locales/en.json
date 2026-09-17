@@ -10,8 +10,6 @@
     "aps_desc": "AI-driven finite-capacity scheduling",
     "esg_name": "IMPACTs CeO",
     "esg_desc": "AI-powered carbon analytics",
-    "aibox_name": "CRIS AI Appliance",
-    "aibox_desc": "On-premise deployment · Data sovereignty",
     "mc_name": "CRIS Mission Control",
     "mc_desc": "Factory AI Command Center",
     "agentforge_name": "CRIS AgentForge Platform",
@@ -331,87 +329,6 @@
       { "title": "Reduces Audit Risk & Cost", "desc": "Enhances report transparency and effectively mitigates audit failure risk" }
     ]
   },
-  "aibox": {
-    "breadcrumb": "AI Box",
-    "badge": "Enterprise Private AI Platform",
-    "product_name": "IMPACTs",
-    "product_name_gradient": "AI Box",
-    "product_subtitle": "Complete AI Ecosystem — Brain to Execute",
-    "product_desc_part1": "\"Brain-level Decision\"",
-    "product_desc_part2": "\"Action-level Execution\"",
-    "product_desc": "Empower enterprises with a complete AI ecosystem from brain-level decisions to action-level execution. From private deployment to digital workforce orchestration — one device solves all your AI transformation needs.",
-    "floating_badge": "Private Deployment · Zero Token Cost",
-    "cta_primary": "Schedule AI Box Demo",
-    "cta_secondary": "Explore Features",
-    "tags": ["Private Deployment", "RAG Knowledge Base", "AI Agent", "vLLM Inference", "Multimodal", "Ready Out of Box"],
-    "feat_tag": "Core Highlights",
-    "feat_title": "Four Core Value Propositions",
-    "feat_subtitle": "From security compliance to cost control, AI Box provides a complete, controllable AI transformation path for enterprises.",
-    "modules_tag": "AI Software Stack",
-    "modules_title": "Four AI Modules, Ready Out of Box",
-    "modules_subtitle": "Pre-installed enterprise AI software stack covering knowledge management to automated execution — one device handles it all.",
-    "kpi_tag": "Core Advantages",
-    "kpi_title": "Quantifiable AI Transformation Value",
-    "kpi_subtitle": "Trade uncertain cloud costs for deterministic hardware investment — unlocking unlimited AI application potential.",
-    "cta_title": "Ready to Put AI to Work?",
-    "cta_subtitle": "Fill out the form and we'll provide a free AI Box assessment report within 24 hours.",
-    "cta_btn": "Schedule AI Box Demo",
-    "cta_back": "Back to Home",
-    "core_features": [
-      {
-        "badge": "Security First",
-        "title": "Private Deployment, Fully Compliant",
-        "desc": "Models and data run 100% within your enterprise perimeter. Ensures full data sovereignty and security compliance, eliminating sensitive data leakage risks.",
-        "points": ["Models and data never leave your firewall", "Compliant with ISO 27001 and GDPR", "Complete audit logs and access controls"]
-      },
-      {
-        "badge": "Fast Integration",
-        "title": "Plug In, Power On, Start Now",
-        "desc": "Pre-loaded enterprise AI software stack. Connect to ERP / MES / APS / ESG systems out of the box — no AI expertise required to start using AI capabilities immediately.",
-        "points": ["Deployed and live within 3 days", "Built-in API Gateway standard interface", "Deep integration with CRIS APS & ESG systems"]
-      },
-      {
-        "badge": "AI Decision Engine",
-        "title": "Brain Decides, Systems Execute",
-        "desc": "Combines LLM reasoning with RPA automation execution, evolving conversation into a true digital workforce — AI Agent thinks, systems automatically complete tasks.",
-        "points": ["LLM handles analysis, reasoning, and decision recommendations", "RPA automates task execution workflows", "Evolves from 'Q&A' to 'Task Completion'"]
-      },
-      {
-        "badge": "Cost Optimized",
-        "title": "Predictable Cost, Long-term Value",
-        "desc": "No token billing, optimized GPU resource scheduling — transforming AI from a cost center into a value engine for long-term sustainable transformation.",
-        "points": ["Zero token costs, fixed hardware investment", "Smart GPU scheduling maximizes resource utilization", "Average 300%+ ROI over 3 years"]
-      }
-    ],
-    "modules": [
-      {
-        "title": "AI Agent Command Center",
-        "desc": "Manage and orchestrate digital workers — a complete workflow automation platform evolving from 'Q&A' to 'task execution'.",
-        "tags": ["Agent Orchestration", "RPA Integration", "Task Automation"]
-      },
-      {
-        "title": "RAG Knowledge Base × Vector DB",
-        "desc": "Build a proprietary knowledge base from internal SOPs and technical manuals for precise enterprise Q&A and real-time document retrieval.",
-        "tags": ["Vector Database", "SOP Automation", "Smart Document Q&A"]
-      },
-      {
-        "title": "Machine Learning Model Library",
-        "desc": "Manufacturing-focused predictive analytics: equipment failure prediction, demand forecasting, quality anomaly detection — evidence-based decision support.",
-        "tags": ["Failure Prediction", "Demand Forecasting", "Quality Anomaly Detection"]
-      },
-      {
-        "title": "vLLM Multimodal Inference Engine",
-        "desc": "Integrates language understanding, RAG-enhanced generation, Whisper speech recognition, and image analysis for complete multimodal AI inference.",
-        "tags": ["Language + Vision", "Whisper Speech", "RAG Inference Acceleration"]
-      }
-    ],
-    "kpis": [
-      { "label": "Security Compliance", "desc": "Full data sovereignty guaranteed" },
-      { "label": "Token Costs", "desc": "Fixed cost, no billing cap" },
-      { "label": "Service Reliability", "desc": "Unaffected by external networks" },
-      { "label": "Application Scalability", "desc": "Supports diverse AI use cases" }
-    ]
-  },
   "contact_page": {
     "breadcrumb": "Contact Us",
     "badge": "Free Consultation · 24-Hour Response",
@@ -424,7 +341,7 @@
     "product_placeholder": "Please select...",
     "product_aps": "APS Scheduling System",
     "product_esg": "ESG Carbon Tracking",
-    "product_aibox": "AI Box",
+    "product_agentforge": "CRIS AgentForge Platform",
     "product_all": "Full Solution Suite",
     "promise_title": "Our Commitment",
     "trust_0_title": "24-Hour Response",
@@ -451,29 +368,6 @@
     "loading": "Loading...",
     "empty": "No articles yet. Check back soon.",
     "error": "Failed to load news. Please refresh the page."
-  },
-  "ai_appliance": {
-    "tag": "Hardware Specs",
-    "title": "CRIS AI Appliance",
-    "subtitle": "Enterprise-grade Private AI Computing Platform",
-    "desc": "Powered by NVIDIA industrial-grade AI chips and the Argox AI Engine, designed for on-premise enterprise deployment. All AI inference runs locally — true data sovereignty, zero cloud dependency.",
-    "badge_onprem": "On-Premise Deployment",
-    "badge_security": "Data Sovereignty",
-    "badge_plug": "Plug & Play",
-    "spec_cpu_label": "AI Compute",
-    "spec_cpu_value": "NVIDIA Jetson AGX Orin",
-    "spec_ram_label": "System Memory",
-    "spec_ram_value": "64 GB DDR5 ECC",
-    "spec_storage_label": "Fast Storage",
-    "spec_storage_value": "2 TB NVMe SSD",
-    "spec_engine_label": "AI Engine",
-    "spec_engine_value": "Argox AI Engine v2.0",
-    "spec_network_label": "Network",
-    "spec_network_value": "10GbE × 2 Ports",
-    "spec_os_label": "Operating System",
-    "spec_os_value": "CRIS OS (Ubuntu 22.04 LTS)",
-    "arch_label": "AI Deployment Architecture",
-    "cta": "Request Hardware Spec Sheet"
   },
   "solutions": {
     "tag": "Solutions",
