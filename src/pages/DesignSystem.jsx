@@ -13,7 +13,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   ArrowRight, AlertCircle, Lightbulb, TrendingUp,
   X, CheckCircle2, Sun, Moon, Cpu,
+  ArrowLeftRight, Search, Headphones,
 } from 'lucide-react'
+import AgentFlow from '../components/agentforge/AgentFlow'
+import IconCard from '../components/agentforge/IconCard'
+import { DeltaMetrics, QualitativeMetrics } from '../components/agentforge/WorkflowCases'
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 
@@ -93,6 +97,10 @@ const NAV = [
   { id: 'comp-langswitcher', label: 'Lang Switcher' },
   { id: 'comp-gradient',     label: 'Gradient Text' },
   { id: 'comp-darkmode',     label: 'Dark Mode Toggle' },
+  { id: 'comp-agentflow',    label: 'Agent Flow' },
+  { id: 'comp-metric',       label: 'Case Metrics' },
+  { id: 'comp-dualcompare',  label: 'Dual Mode Compare' },
+  { id: 'comp-iconcard',     label: 'Icon Card' },
 ]
 
 function Sidebar({ active }) {
@@ -1023,6 +1031,214 @@ localStorage.setItem('theme', dark ? 'dark' : 'light')`}</Code>
   )
 }
 
+// ─── AgentForge components ─────────────────────────────────────────────────────
+
+function AgentFlowSection() {
+  return (
+    <>
+      <SectionAnchor id="comp-agentflow" title="Agent Flow" subtitle="Multi-Agent 工作流程圖，DATA INSIGHT 與旗艦案例共用" />
+
+      <SubSection title="Live Preview — onLight">
+        <PreviewBox label='<AgentFlow steps={...} tone="onLight" />'>
+          <div className="w-full max-w-sm">
+            <AgentFlow
+              steps={[
+                { title: '排程分析 Agent', subtitle: '排程狀態分析' },
+                { title: '產能分析 Agent ＋ 交期風險 Agent', subtitle: '瓶頸與交期風險辨識' },
+                { title: 'Human Review', subtitle: '管理者確認', human: true },
+              ]}
+              tone="onLight"
+            />
+          </div>
+        </PreviewBox>
+        <Code>{`<AgentFlow
+  steps={[
+    { title: '排程分析 Agent', subtitle: '排程狀態分析' },
+    { title: '產能分析 Agent ＋ 交期風險 Agent', subtitle: '瓶頸與交期風險辨識' },
+    { title: 'Human Review', subtitle: '管理者確認', human: true },
+  ]}
+  tone="onLight"
+/>`}</Code>
+      </SubSection>
+
+      <SubSection title="Live Preview — onDark">
+        <PreviewBox dark label='tone="onDark" — 用在深色底區塊（DATA INSIGHT）。此例同時示範 subtitle 省略：EN 語系下 zh === en 時不重複顯示同一行'>
+          <div className="w-full max-w-sm">
+            <AgentFlow
+              steps={[
+                { title: 'Data Analysis Agent', subtitle: '資料分析代理人', desc: '自動整合 ERP、MES、CRM 與 Excel 資料。' },
+                { title: 'Dashboard Agent', desc: '即時產生儀表板與 KPI 監控畫面。' },
+              ]}
+              tone="onDark"
+            />
+          </div>
+        </PreviewBox>
+      </SubSection>
+
+      <SubSection title="Anatomy">
+        <table className="w-full">
+          <tbody>
+            <AnatomyRow name="steps"          value="{ title, subtitle?, desc?, human? }[]" desc="流程步驟陣列，依序編號 ①②③…" />
+            <AnatomyRow name="steps[].title"  value="string"                  desc="Agent 名稱。多個 Agent 用全形「＋」串成同一字串" />
+            <AnatomyRow name="steps[].subtitle" value="string (選填)"          desc="該步驟做什麼。省略時不渲染該行 —— 用於避免與 title 重複（例：英文語系下 zh 翻譯等於 en 本身）" />
+            <AnatomyRow name="steps[].desc"   value="string (選填)"            desc="第三行補充說明，旗艦案例不用" />
+            <AnatomyRow name="steps[].human"  value="boolean (選填)"           desc="true 改用虛線外框 + 灰階 + UserCheck 圖標，標示人工審核節點（人仍在迴圈中）" />
+            <AnatomyRow name="tone"           value="'onLight' | 'onDark'"    desc="配合底色，預設 onLight" />
+            <AnatomyRow name="進場動畫"        value="useInView once + stagger 0.12s" desc="捲入時逐階點亮" />
+            <AnatomyRow name="連接箭頭"        value="ArrowDown 16px"          desc="步驟之間，最後一步不畫" />
+          </tbody>
+        </table>
+      </SubSection>
+    </>
+  )
+}
+
+function MetricSection() {
+  return (
+    <>
+      <SectionAnchor id="comp-metric" title="Case Metrics" subtitle="案例成果數字，分量化（DeltaMetrics）與質化（QualitativeMetrics）兩種樣式" />
+
+      <SubSection title="Delta — 有明確 before → after 數字">
+        <PreviewBox label="<DeltaMetrics items={...} />  — metrics_kind: 'delta'">
+          <div className="w-full">
+            <DeltaMetrics
+              items={[
+                { label: '訂單準交率', before: '約 71%', after: '85～90%' },
+                { label: '平均延遲', before: '約 46 天', after: '< 20 天' },
+                { label: '整體資源稼動率', before: '約 77%', after: '85%+' },
+                { label: '生管人工排程工時', before: '約 20 小時／週', after: '約 8 小時／週' },
+              ]}
+            />
+          </div>
+        </PreviewBox>
+      </SubSection>
+
+      <SubSection title="Qualitative — 只有方向，沒有數字">
+        <PreviewBox label="<QualitativeMetrics items={...} />  — metrics_kind: 'qualitative'">
+          <div className="w-full">
+            <QualitativeMetrics
+              items={[
+                { label: '缺貨率', direction: 'down', note: '即時掌握需求與庫存缺口' },
+                { label: '備貨準確率', direction: 'up', note: '促銷需求提前預測' },
+              ]}
+            />
+          </div>
+        </PreviewBox>
+        <p className="text-xs text-slate-500 mt-3">
+          客戶未提供量化數據時一律用這個樣式，<strong>不得以 delta 樣式填入推估數字</strong>。
+          兩種樣式刻意做得不像，避免讀者把質化成果誤讀成量化承諾。兩者皆從 <code className="text-cris-blue font-mono">WorkflowCases.jsx</code> 具名匯出，文件與案例頁共用同一份實作，不重新實作一份。
+        </p>
+      </SubSection>
+
+      <SubSection title="Anatomy">
+        <table className="w-full">
+          <tbody>
+            <AnatomyRow name="DeltaMetrics.items"        value="{ label, before, after }[]" desc="量化成果，四欄網格" />
+            <AnatomyRow name="delta 舊值"   value="text-xs line-through text-slate-400" desc="刪除線，弱化" />
+            <AnatomyRow name="delta 新值"   value="text-xl font-extrabold text-violet-600 tabular-nums" desc="視覺主體，等寬數字避免跳動" />
+            <AnatomyRow name="QualitativeMetrics.items"  value="{ label, direction: 'up'|'down', note }[]" desc="質化成果，兩欄網格" />
+            <AnatomyRow name="qualitative ↑" value="ArrowUpRight + emerald" desc="direction: 'up'，正向指標上升" />
+            <AnatomyRow name="qualitative ↓" value="ArrowDownRight + violet" desc="direction: 'down'，負向指標下降（缺貨率、工時等）" />
+            <AnatomyRow name="免責聲明"      value="text-xs text-slate-500 italic" desc="緊接成果下方（呼叫端自行渲染），不得縮小或隱藏" />
+            <AnatomyRow name="grid"         value="grid-cols-2 lg:grid-cols-4 / sm:grid-cols-2" desc="delta 四欄、qualitative 兩欄" />
+          </tbody>
+        </table>
+      </SubSection>
+    </>
+  )
+}
+
+function DualCompareSection() {
+  return (
+    <>
+      <SectionAnchor id="comp-dualcompare" title="Dual Mode Compare" subtitle="AI+ 與 +AI 的概念對照卡（DualMode.jsx 內的 inline JSX，非獨立元件）" />
+
+      <SubSection title="Live Preview">
+        <PreviewBox label="AgentForge 產品頁 #dual 區塊開頭">
+          <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-5 items-stretch">
+            <div className="rounded-2xl border-2 border-violet-200 bg-violet-50/60 p-6">
+              <p className="text-3xl font-extrabold text-violet-600">AI+</p>
+              <p className="mt-2 text-lg font-bold text-slate-900">把 AI 加進營運決策</p>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">接單、生產、供應鏈、經營分析 —— 讓人做的判斷更準。</p>
+            </div>
+            <div className="hidden md:flex items-center justify-center">
+              <ArrowLeftRight size={22} className="text-slate-300" />
+            </div>
+            <div className="rounded-2xl border-2 border-indigo-200 bg-indigo-50/60 p-6">
+              <p className="text-3xl font-extrabold text-indigo-600">+AI</p>
+              <p className="mt-2 text-lg font-bold text-slate-900">把執行交給 AI</p>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">監控、報工、客服、品質 —— 讓 AI 代替人把事情做完。</p>
+            </div>
+          </div>
+        </PreviewBox>
+        <p className="text-xs text-slate-500 mt-3">
+          存在理由：「AI+」與「+AI」只差一個加號位置，訪客無法自行分辨。
+          這張對照卡是進入 12 張能力卡之前的必要前導。此區塊是 <code className="text-cris-blue font-mono">DualMode.jsx</code> 裡的 inline JSX，沒有獨立匯出成元件，這裡照樣式靜態複製一份供參考。
+        </p>
+      </SubSection>
+
+      <SubSection title="Anatomy">
+        <table className="w-full">
+          <tbody>
+            <AnatomyRow name="左卡（AI+）"  value="border-violet-200 / bg-violet-50/60"  desc="決策導向，沿用產品主色" />
+            <AnatomyRow name="右卡（+AI）"  value="border-indigo-200 / bg-indigo-50/60"  desc="執行導向，鄰近色區隔但不衝突" />
+            <AnatomyRow name="標籤字級"     value="text-3xl font-extrabold"             desc="加號位置是識別重點，必須夠大" />
+            <AnatomyRow name="中央圖標"     value="ArrowLeftRight，hidden md:flex"      desc="md 以下隱藏，兩卡改上下堆疊" />
+            <AnatomyRow name="grid"        value="md:grid-cols-[1fr_auto_1fr]"         desc="中欄依圖標寬度自適應" />
+          </tbody>
+        </table>
+      </SubSection>
+    </>
+  )
+}
+
+function IconCardSection() {
+  return (
+    <>
+      <SectionAnchor id="comp-iconcard" title="Icon Card" subtitle="圖標卡片，DualMode 12 張能力卡與 WorkflowCases 10 張場景卡共用" />
+
+      <SubSection title="Live Preview">
+        <PreviewBox label="左：帶 slogan（能力卡，ModeCard）　右：不帶 slogan（工作場景卡，MoreCard）">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+            <IconCard
+              icon={Search} iconSize={21} tileSize="w-11 h-11" descSpacing="mt-3"
+              checkIcon={CheckCircle2} checkSize={15}
+              title="ATP/CTP 精敏詢單"
+              slogan="接單前了解是否能準時交貨"
+              desc="即時評估物料、產能與排程狀況，快速提供可靠交期承諾。"
+              points={['降低誤接訂單與延遲交貨風險', '提升接單成功率']}
+            />
+            <IconCard
+              icon={Headphones}
+              title="智慧售服"
+              desc="整合客服、技術支援與知識庫資料，自動回應客戶問題與服務需求。"
+              points={['降低客服與技術支援人力成本', '建立企業知識持續累積機制']}
+            />
+          </div>
+        </PreviewBox>
+      </SubSection>
+
+      <SubSection title="Anatomy">
+        <table className="w-full">
+          <tbody>
+            <AnatomyRow name="icon"        value="lucide 元件"            desc="解構為 icon: Icon 才能當 JSX 標籤用" />
+            <AnatomyRow name="iconSize"    value="19 (預設) | 21"        desc="場景卡 19（預設）、能力卡 21" />
+            <AnatomyRow name="tileSize"    value="w-10 h-10 (預設) | w-11 h-11" desc="圖標方塊尺寸，與 iconSize 成對" />
+            <AnatomyRow name="title"       value="string"                desc="卡片標題" />
+            <AnatomyRow name="slogan"      value="string (選填)"          desc="標題下的一句話，只有能力卡有" />
+            <AnatomyRow name="desc"        value="string"                desc="說明文字" />
+            <AnatomyRow name="descSpacing" value="mt-2 (預設) | mt-3"     desc="有 slogan 時用 mt-3" />
+            <AnatomyRow name="points"      value="string[]"              desc="效益清單，上方有 border-t 分隔線" />
+            <AnatomyRow name="checkIcon"   value="Check (預設) | CheckCircle2" desc="清單項目圖標" />
+            <AnatomyRow name="checkSize"   value="14 (預設) | 15"        desc="與 checkIcon 成對" />
+            <AnatomyRow name="delay"       value="number (預設 0)"       desc="傳給內部 FadeUp 的進場延遲，做出交錯效果" />
+          </tbody>
+        </table>
+      </SubSection>
+    </>
+  )
+}
+
 // ─── Main page ────────────────────────────────────────────────────────────────
 
 export default function DesignSystem() {
@@ -1055,7 +1271,7 @@ export default function DesignSystem() {
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
                 { label: 'Color Tokens', val: '17' },
-                { label: 'Components', val: '12' },
+                { label: 'Components', val: '16' },
                 { label: 'Animation Tokens', val: '12' },
                 { label: 'Type Styles', val: '9' },
               ].map(s => (
@@ -1087,6 +1303,10 @@ export default function DesignSystem() {
           <LangSwitcherSection />
           <GradientTextSection />
           <DarkModeSection />
+          <AgentFlowSection />
+          <MetricSection />
+          <DualCompareSection />
+          <IconCardSection />
         </main>
       </div>
     </div>
