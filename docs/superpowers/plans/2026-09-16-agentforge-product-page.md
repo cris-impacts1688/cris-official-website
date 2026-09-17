@@ -493,26 +493,88 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 Create `src/components/agentforge/AgentNetwork.jsx`：
 
 ```jsx
+import { useRef, useState, useCallback, useLayoutEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CalendarClock, Network, ScanLine, Bot, BarChart3 } from 'lucide-react'
 
 /**
- * 5 個環繞節點。`pos` 是絕對定位樣式，`line` 是連到中心的線在
- * viewBox 座標中的端點 —— 兩者放在同一筆資料裡，改了位置不會忘記改線。
+ * 5 個環繞節點。只宣告位置，連線端點由實際量測決定 ——
+ * 節點盒的寬度取決於標籤文字，換語言或換寬度都會變，寫死的座標必定對不上。
  * 右側節點用 right 定位，讓盒子往內長，避免窄畫面撐出容器。
  */
 const NODES = [
-  { key: 'sched',  icon: CalendarClock, pos: { left: '2%',  top: '10%' },    line: { x: 14, y: 18 } },
-  { key: 'supply', icon: Network,       pos: { right: '2%', top: '8%' },     line: { x: 86, y: 16 } },
-  { key: 'qc',     icon: ScanLine,      pos: { left: '0%',  top: '66%' },    line: { x: 12, y: 72 } },
-  { key: 'decide', icon: Bot,           pos: { right: '0%', top: '70%' },    line: { x: 88, y: 76 } },
-  { key: 'report', icon: BarChart3,     pos: { left: '50%', bottom: '2%', transform: 'translateX(-50%)' }, line: { x: 50, y: 92 } },
+  { key: 'sched',  icon: CalendarClock, pos: { left: '2%',  top: '8%' } },
+  { key: 'supply', icon: Network,       pos: { right: '2%', top: '6%' } },
+  { key: 'qc',     icon: ScanLine,      pos: { left: '0%',  top: '64%' } },
+  { key: 'decide', icon: Bot,           pos: { right: '0%', top: '68%' } },
+  { key: 'report', icon: BarChart3,     pos: { left: '50%', bottom: '4%', transform: 'translateX(-50%)' } },
 ]
 
+/** 線與節點之間留的空隙（px），避免線頂到邊框。 */
+const GAP = 6
+
+/**
+ * 從 (sx, sy) 朝矩形中心連線時，線該停在矩形邊界的哪一點。
+ * 用來把線裁到節點外緣，而不是穿進盒子裡。
+ */
+function edgePoint(sx, sy, rect) {
+  const cx = rect.x + rect.w / 2
+  const cy = rect.y + rect.h / 2
+  const dx = cx - sx
+  const dy = cy - sy
+  if (dx === 0 && dy === 0) return { x: cx, y: cy }
+  const tx = dx !== 0 ? (rect.w / 2 + GAP) / Math.abs(dx) : Infinity
+  const ty = dy !== 0 ? (rect.h / 2 + GAP) / Math.abs(dy) : Infinity
+  const t = Math.min(tx, ty, 1)
+  return { x: cx - dx * t, y: cy - dy * t }
+}
+
 export default function AgentNetwork() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const reduceMotion = useReducedMotion()
+
+  const wrapRef = useRef(null)
+  const centerRef = useRef(null)
+  const nodeRefs = useRef([])
+  const [edges, setEdges] = useState([])
+
+  /**
+   * 量測中心與各節點的實際位置，算出裁切後的線段。
+   * 量的是外層定位 div —— 內層才有浮動與縮放動畫，transform 不影響 layout，
+   * 所以外層的 rect 在動畫進行中仍然穩定。
+   */
+  const measure = useCallback(() => {
+    const wrap = wrapRef.current
+    const center = centerRef.current
+    if (!wrap || !center) return
+
+    const w = wrap.getBoundingClientRect()
+    const toLocal = (r) => ({ x: r.left - w.left, y: r.top - w.top, w: r.width, h: r.height })
+    const c = toLocal(center.getBoundingClientRect())
+    const ccx = c.x + c.w / 2
+    const ccy = c.y + c.h / 2
+
+    const next = []
+    for (const el of nodeRefs.current) {
+      if (!el) continue
+      const n = toLocal(el.getBoundingClientRect())
+      const from = edgePoint(n.x + n.w / 2, n.y + n.h / 2, c) // 中心盒朝節點那一側的邊界
+      const to = edgePoint(ccx, ccy, n)                        // 節點盒朝中心那一側的邊界
+      next.push({ x1: from.x, y1: from.y, x2: to.x, y2: to.y })
+    }
+    setEdges(next)
+  }, [])
+
+  useLayoutEffect(() => {
+    measure()
+    const ro = new ResizeObserver(measure)
+    if (wrapRef.current) ro.observe(wrapRef.current)
+    if (centerRef.current) ro.observe(centerRef.current)
+    nodeRefs.current.forEach((el) => el && ro.observe(el))
+    return () => ro.disconnect()
+    // 語言改變會換掉標籤文字、改變節點寬度，必須重新量測
+  }, [measure, i18n.language])
 
   /**
    * 無限循環動畫（呼吸、浮動、閃爍）對開啟「減少動態效果」的使用者最不友善，
@@ -521,7 +583,7 @@ export default function AgentNetwork() {
   const loop = (animate, transition) => (reduceMotion ? {} : { animate, transition })
 
   return (
-    <div className="relative h-[420px] w-full select-none" aria-hidden="true">
+    <div ref={wrapRef} className="relative h-[420px] w-full select-none" aria-hidden="true">
       {/* 呼吸光暈 */}
       <motion.div
         className="absolute left-1/2 top-[46%] -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-violet-500/20 blur-3xl"
@@ -531,16 +593,16 @@ export default function AgentNetwork() {
         )}
       />
 
-      {/* 連線 */}
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full" aria-hidden="true">
-        {NODES.map((n, i) => (
+      {/* 連線：以容器像素為座標系，不設 viewBox，避免非等比拉伸讓角度跑掉 */}
+      <svg className="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
+        {edges.map((e, i) => (
           <motion.line
-            key={n.key}
-            x1="50" y1="46" x2={n.line.x} y2={n.line.y}
+            key={i}
+            x1={e.x1} y1={e.y1} x2={e.x2} y2={e.y2}
             stroke="currentColor"
             className="text-violet-400 dark:text-violet-500"
-            strokeWidth="0.35"
-            vectorEffect="non-scaling-stroke"
+            strokeWidth="1"
+            strokeLinecap="round"
             opacity="0.45"
             {...loop(
               { opacity: [0.15, 0.7, 0.15] },
@@ -551,21 +613,25 @@ export default function AgentNetwork() {
       </svg>
 
       {/* 中心：平台 */}
-      <motion.div
-        className="absolute left-1/2 top-[46%] -translate-x-1/2 -translate-y-1/2 z-10"
-        {...loop({ y: [0, -8, 0] }, { duration: 5, repeat: Infinity, ease: 'easeInOut' })}
-      >
-        <div className="rounded-2xl border border-violet-400/60 bg-violet-600/90 dark:bg-violet-600/80 px-6 py-4 shadow-2xl shadow-violet-500/40 backdrop-blur-sm text-center">
-          <p className="text-[10px] font-mono tracking-widest text-violet-200">CRIS</p>
-          <p className="text-base font-extrabold text-white leading-tight">AgentForge</p>
-        </div>
-      </motion.div>
+      <div ref={centerRef} className="absolute left-1/2 top-[46%] -translate-x-1/2 -translate-y-1/2 z-10">
+        <motion.div {...loop({ y: [0, -8, 0] }, { duration: 5, repeat: Infinity, ease: 'easeInOut' })}>
+          <div className="rounded-2xl border border-violet-400/60 bg-violet-600/90 dark:bg-violet-600/80 px-6 py-4 shadow-2xl shadow-violet-500/40 backdrop-blur-sm text-center">
+            <p className="text-[10px] font-mono tracking-widest text-violet-200">CRIS</p>
+            <p className="text-base font-extrabold text-white leading-tight">AgentForge</p>
+          </div>
+        </motion.div>
+      </div>
 
       {/* 環繞的 Agent 節點 */}
       {NODES.map((n, i) => {
         const Icon = n.icon
         return (
-          <div key={n.key} className="absolute z-10" style={n.pos}>
+          <div
+            key={n.key}
+            ref={(el) => { nodeRefs.current[i] = el }}
+            className="absolute z-10"
+            style={n.pos}
+          >
             <motion.div
               initial={reduceMotion ? false : { opacity: 0, scale: 0.7 }}
               animate={{ opacity: 1, scale: 1 }}
