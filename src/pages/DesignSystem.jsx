@@ -244,7 +244,7 @@ const TYPE_SCALE = [
   { cls: 'text-5xl',  size: '48px / 3rem',     weight: '700', usage: 'Hero headline mobile fallback',          sample: 'AI Agent' },
   { cls: 'text-4xl',  size: '36px / 2.25rem',  weight: '700', usage: 'section-title (desktop)',                sample: '產品特色' },
   { cls: 'text-3xl',  size: '30px / 1.875rem', weight: '700', usage: 'section-title (mobile)',                 sample: '成功案例' },
-  { cls: 'text-xl',   size: '20px / 1.25rem',  weight: '400', usage: 'section-subtitle / hero subtitle',       sample: '私有部署，數據不離境' },
+  { cls: 'text-xl',   size: '20px / 1.25rem',  weight: '400', usage: 'section-subtitle / hero subtitle',       sample: 'AI 真正參與企業工作' },
   { cls: 'text-lg',   size: '18px / 1.125rem', weight: '500', usage: 'Card heading / CTA label',              sample: 'APS 智慧排程' },
   { cls: 'text-base', size: '16px / 1rem',      weight: '600', usage: 'Case card title / form label',          sample: '自動排程，效率提升 40%' },
   { cls: 'text-sm',   size: '14px / 0.875rem', weight: '400', usage: 'Body copy / table cell',                sample: '整合 MES、ERP，即時回應插單需求' },
@@ -668,7 +668,7 @@ function BadgeSection() {
         </PreviewBox>
       </SubSection>
 
-      <SubSection title="Private Deploy Badge (Modal)">
+      <SubSection title="Product Badge (Modal)">
         <PreviewBox label="bg-cris-blue/7  border-cris-blue/20  rounded-xl px-4 py-3">
           <div className="flex items-center gap-2.5 bg-cris-blue/[0.07] border border-cris-blue/20 rounded-xl px-4 py-3">
             <span className="text-sm font-semibold text-cris-blue">Multi-Agent 工作流 · CRIS AgentForge</span>

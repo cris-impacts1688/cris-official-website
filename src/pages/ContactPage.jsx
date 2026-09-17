@@ -281,7 +281,7 @@ export default function ContactPage() {
                     <div className="mb-6">
                       <h3 className="text-xl font-bold text-slate-900 dark:text-white">{t('contact_page.form_title')}</h3>
                       <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                        標有 <span className="text-red-500">*</span> {t('contact_page.required_note')}
+                        {t('contact_page.required_prefix')} <span className="text-red-500">*</span> {t('contact_page.required_note')}
                       </p>
                     </div>
 

@@ -151,7 +151,14 @@
     "cta_primary": "Schedule a Demo",
     "cta_secondary": "Watch Scheduling Demo",
     "floating_badge": "AI-Powered · Smart Scheduling",
-    "tags": ["Finite Capacity Scheduling", "Materials Sync Planning", "Tooling Assignment", "Changeover Optimization", "Multi-Plant Coordination", "Gantt Visualization"],
+    "tags": [
+      "Finite Capacity Scheduling",
+      "Materials Sync Planning",
+      "Tooling Assignment",
+      "Changeover Optimization",
+      "Multi-Plant Coordination",
+      "Gantt Visualization"
+    ],
     "pipeline_tag": "Scheduling Concept",
     "pipeline_title": "APS Smart Scheduling",
     "pipeline_subtitle": "The APS engine synchronizes order demands, machine capacity, and material inventory to automatically compute the optimal production schedule.",
@@ -181,15 +188,36 @@
     "cta_btn": "Schedule a Demo Now",
     "cta_back": "Back to Home",
     "quick_stats": [
-      { "label": "Production Efficiency Gain", "sub": "vs. manual scheduling" },
-      { "label": "Manual Adjustment Time Reduced", "sub": "labor cost savings" },
-      { "label": "On-Time Delivery Rate", "sub": "improved customer satisfaction" }
+      {
+        "label": "Production Efficiency Gain",
+        "sub": "vs. manual scheduling"
+      },
+      {
+        "label": "Manual Adjustment Time Reduced",
+        "sub": "labor cost savings"
+      },
+      {
+        "label": "On-Time Delivery Rate",
+        "sub": "improved customer satisfaction"
+      }
     ],
     "kpis": [
-      { "label": "Scheduling Efficiency Gain", "sublabel": "From 2 days to 30 minutes" },
-      { "label": "Production Cycle Shortened", "sublabel": "Precise finite-capacity allocation" },
-      { "label": "WIP Inventory Reduced", "sublabel": "Materials sync planning optimization" },
-      { "label": "On-Time Delivery Rate", "sublabel": "Significantly improved customer satisfaction" }
+      {
+        "label": "Scheduling Efficiency Gain",
+        "sublabel": "From 2 days to 30 minutes"
+      },
+      {
+        "label": "Production Cycle Shortened",
+        "sublabel": "Precise finite-capacity allocation"
+      },
+      {
+        "label": "WIP Inventory Reduced",
+        "sublabel": "Materials sync planning optimization"
+      },
+      {
+        "label": "On-Time Delivery Rate",
+        "sublabel": "Significantly improved customer satisfaction"
+      }
     ],
     "pain_points": [
       {
@@ -274,7 +302,14 @@
     "cta_primary": "Schedule Carbon Audit Consultation",
     "cta_secondary": "Download Solution Whitepaper",
     "floating_badge": "AI-Powered · Real-time Accounting",
-    "tags": ["Carbon Factor Library", "Carbon Audit Plan", "CBAM Reporting", "LCA Analysis", "ISO 14064", "GHG Protocol"],
+    "tags": [
+      "Carbon Factor Library",
+      "Carbon Audit Plan",
+      "CBAM Reporting",
+      "LCA Analysis",
+      "ISO 14064",
+      "GHG Protocol"
+    ],
     "roadmap_tag": "Compliance Roadmap",
     "roadmap_title": "From Collection to Reporting — Fully Automated",
     "roadmap_subtitle": "Four standardized stages replace manual auditing, ensuring every step complies with ISO 14064 and CBAM requirements.",
@@ -302,15 +337,36 @@
     "challenge_label": "Challenge",
     "result_label": "Results",
     "quick_stats": [
-      { "label": "Audit Efficiency Gain", "sub": "Cycle reduced from months to 1–2 weeks" },
-      { "label": "International Compliance", "sub": "ISO 14064 / CBAM / CSRD" },
-      { "label": "Management Cost Reduction", "sub": "Reduced reliance on external consultants" }
+      {
+        "label": "Audit Efficiency Gain",
+        "sub": "Cycle reduced from months to 1–2 weeks"
+      },
+      {
+        "label": "International Compliance",
+        "sub": "ISO 14064 / CBAM / CSRD"
+      },
+      {
+        "label": "Management Cost Reduction",
+        "sub": "Reduced reliance on external consultants"
+      }
     ],
     "kpis": [
-      { "label": "Audit Efficiency Gain", "sublabel": "Cycle reduced from months to 1–2 weeks" },
-      { "label": "Management Cost Reduction", "sublabel": "Reduced reliance on external consultants" },
-      { "label": "Compliance Assurance", "sublabel": "90% reduction in policy violation risk" },
-      { "label": "Financing Cost Reduction", "sublabel": "Excellent ESG rating earns preferential rates" }
+      {
+        "label": "Audit Efficiency Gain",
+        "sublabel": "Cycle reduced from months to 1–2 weeks"
+      },
+      {
+        "label": "Management Cost Reduction",
+        "sublabel": "Reduced reliance on external consultants"
+      },
+      {
+        "label": "Compliance Assurance",
+        "sublabel": "90% reduction in policy violation risk"
+      },
+      {
+        "label": "Financing Cost Reduction",
+        "sublabel": "Excellent ESG rating earns preferential rates"
+      }
     ],
     "sgs_tag": "International Authority Certification",
     "sgs_title": "CRIS CeO Certified by SGS AUP Statement",
@@ -320,13 +376,34 @@
     "sgs_img0_alt": "SGS AUP Statement of Evaluation — Page 1",
     "sgs_img1_alt": "SGS AUP Statement of Evaluation — Page 2",
     "sgs_advantages": [
-      { "title": "Superior Credibility & Validity", "desc": "Your carbon audit gains internationally recognized authority" },
-      { "title": "Precisely Meets Audit Requirements", "desc": "System workflows and KPIs fully comply with international audit standards" },
-      { "title": "Improved Audit Accuracy", "desc": "Reduces human error and increases data transparency" },
-      { "title": "Strengthens Global Supply Chain Collaboration", "desc": "Aligned with global decarbonization trends to win cross-border orders" },
-      { "title": "Supports International Disclosure", "desc": "Facilitates subsequent verification claims and IFRS sustainability disclosure" },
-      { "title": "Accelerates Audit Efficiency", "desc": "Significantly shortens verification cycles and reduces audit costs" },
-      { "title": "Reduces Audit Risk & Cost", "desc": "Enhances report transparency and effectively mitigates audit failure risk" }
+      {
+        "title": "Superior Credibility & Validity",
+        "desc": "Your carbon audit gains internationally recognized authority"
+      },
+      {
+        "title": "Precisely Meets Audit Requirements",
+        "desc": "System workflows and KPIs fully comply with international audit standards"
+      },
+      {
+        "title": "Improved Audit Accuracy",
+        "desc": "Reduces human error and increases data transparency"
+      },
+      {
+        "title": "Strengthens Global Supply Chain Collaboration",
+        "desc": "Aligned with global decarbonization trends to win cross-border orders"
+      },
+      {
+        "title": "Supports International Disclosure",
+        "desc": "Facilitates subsequent verification claims and IFRS sustainability disclosure"
+      },
+      {
+        "title": "Accelerates Audit Efficiency",
+        "desc": "Significantly shortens verification cycles and reduces audit costs"
+      },
+      {
+        "title": "Reduces Audit Risk & Cost",
+        "desc": "Enhances report transparency and effectively mitigates audit failure risk"
+      }
     ]
   },
   "agentforge": {
@@ -338,7 +415,13 @@
     "hero_desc": "From single-point applications to full enterprise operations, multiple workflows are already live. AI doesn't just answer questions — it does the work.",
     "cta_primary": "Book a Demo",
     "cta_secondary": "See 14 Workflows",
-    "tags": ["Multi-Agent", "Workflow Automation", "Enterprise Knowledge Base", "Data Security", "ERP/MES/CRM Integration"],
+    "tags": [
+      "Multi-Agent",
+      "Workflow Automation",
+      "Enterprise Knowledge Base",
+      "Data Security",
+      "ERP/MES/CRM Integration"
+    ],
     "subnav": {
       "dual": "Dual Capabilities",
       "insight": "Data Insight",
@@ -373,42 +456,64 @@
             "title": "Order Feasibility Check (ATP/CTP)",
             "slogan": "Know if you can deliver on time before you accept the order",
             "desc": "Assesses materials, capacity, and schedule in real time to give a reliable delivery commitment fast.",
-            "points": ["Reduces the risk of overcommitting and late delivery", "Improves order win rate", "Builds customer trust in delivery dates"]
+            "points": [
+              "Reduces the risk of overcommitting and late delivery",
+              "Improves order win rate",
+              "Builds customer trust in delivery dates"
+            ]
           },
           {
             "icon": "factory",
             "title": "Advanced Material & Capacity Planning",
             "slogan": "See material shortages and capacity bottlenecks in advance",
             "desc": "Integrates BOM, inventory, procurement, and production data to auto-analyze future material-shortage risk and capacity load, helping you plan ahead.",
-            "points": ["Reduces the risk of shutdowns from material shortages", "Improves production plan accuracy"]
+            "points": [
+              "Reduces the risk of shutdowns from material shortages",
+              "Improves production plan accuracy"
+            ]
           },
           {
             "icon": "calendar",
             "title": "AI Production Scheduling",
             "slogan": "Production scheduling no longer relies on manual experience",
             "desc": "AI and simulation algorithms auto-generate the optimal production schedule, adapting in real time to rush orders and disruptions.",
-            "points": ["Improves equipment utilization", "Shortens lead times", "Reduces WIP inventory"]
+            "points": [
+              "Improves equipment utilization",
+              "Shortens lead times",
+              "Reduces WIP inventory"
+            ]
           },
           {
             "icon": "link",
             "title": "Supply Chain Collaboration",
             "slogan": "Real-time, transparent supply chain collaboration",
             "desc": "Connects your company, suppliers, and outsourcing partners so procurement, delivery, shipping, and exceptions are tracked and coordinated in real time.",
-            "points": ["Faster supply chain response", "Lower communication costs and fewer information gaps"]
+            "points": [
+              "Faster supply chain response",
+              "Lower communication costs and fewer information gaps"
+            ]
           },
           {
             "icon": "bot",
             "title": "Multi-Agent Data Analysis",
             "slogan": "Data becomes management insight, automatically",
             "desc": "AI Agents automatically integrate enterprise data, run analysis, and generate dashboards and management reports.",
-            "points": ["Quickly see current operations", "Less time spent compiling reports", "Faster data-driven decisions"]
+            "points": [
+              "Quickly see current operations",
+              "Less time spent compiling reports",
+              "Faster data-driven decisions"
+            ]
           },
           {
             "icon": "zap",
             "title": "Multi-Agent Digital Workers",
             "slogan": "AI as your digital execution assistant",
             "desc": "AI Agents follow standard procedures to query data, operate systems, answer questions, and coordinate across systems.",
-            "points": ["Less repetitive work", "Higher operational efficiency", "Frees people for higher-value work"]
+            "points": [
+              "Less repetitive work",
+              "Higher operational efficiency",
+              "Frees people for higher-value work"
+            ]
           }
         ]
       },
@@ -422,42 +527,63 @@
             "title": "Equipment Monitoring",
             "slogan": "From reacting to equipment failures to catching them early",
             "desc": "Monitors equipment operation, utilization, and anomaly signals in real time, using AI to catch potential problems early.",
-            "points": ["Lower downtime risk and repair costs", "Higher equipment utilization", "Less loss from unplanned downtime"]
+            "points": [
+              "Lower downtime risk and repair costs",
+              "Higher equipment utilization",
+              "Less loss from unplanned downtime"
+            ]
           },
           {
             "icon": "clipboard",
             "title": "Shop-Floor Reporting",
             "slogan": "Real-time visibility into shop-floor progress",
             "desc": "QR-code and mobile reporting sends work-order progress, production status, and equipment data back automatically.",
-            "points": ["Less manual entry and reporting lag", "More efficient floor management", "Real-time view of production execution"]
+            "points": [
+              "Less manual entry and reporting lag",
+              "More efficient floor management",
+              "Real-time view of production execution"
+            ]
           },
           {
             "icon": "chart",
             "title": "ERP Procurement & Financial Analysis",
             "slogan": "Turns ERP data into business insight, automatically",
             "desc": "AI Agents analyze procurement, cost, inventory, and financial data directly, producing analysis and management reports automatically.",
-            "points": ["Shorter decision prep time", "Fast visibility into cost structure and procurement risk", "Faster business decisions"]
+            "points": [
+              "Shorter decision prep time",
+              "Fast visibility into cost structure and procurement risk",
+              "Faster business decisions"
+            ]
           },
           {
             "icon": "wrench",
             "title": "Smart Technical Support",
             "slogan": "Customer service and technical support, online 24/7",
             "desc": "Combines a knowledge base, FAQs, and AI Agents to automatically answer technical questions, product inquiries, and service requests.",
-            "points": ["Faster responses and better service quality", "Lower labor costs"]
+            "points": [
+              "Faster responses and better service quality",
+              "Lower labor costs"
+            ]
           },
           {
             "icon": "message",
             "title": "AI Customer Service",
             "slogan": "A smart service desk, around the clock",
             "desc": "AI Agents understand customer questions automatically, providing instant replies, information lookup, and service guidance for a better customer experience.",
-            "points": ["Higher customer satisfaction", "Less repetitive service work"]
+            "points": [
+              "Higher customer satisfaction",
+              "Less repetitive service work"
+            ]
           },
           {
             "icon": "alert",
             "title": "Quality Deviation & Maintenance",
             "slogan": "Catch quality issues and equipment risk early",
             "desc": "Integrates quality inspection, anomaly reporting, and maintenance data, using AI to analyze root causes and recommend improvements automatically.",
-            "points": ["Lower quality costs", "Fewer defects and less equipment failure risk"]
+            "points": [
+              "Lower quality costs",
+              "Fewer defects and less equipment failure risk"
+            ]
           }
         ]
       }
@@ -467,9 +593,21 @@
       "title": "AI Data Analysis & Reporting Platform",
       "intro": "From data collection to analysis and management reporting, AI Agents handle the entire process automatically.",
       "pains_label": "Common Pain Points",
-      "pains": ["Data scattered and hard to consolidate", "Analysis is slow", "Heavy reporting workload", "Inconsistent data across departments", "Slow decision-making"],
+      "pains": [
+        "Data scattered and hard to consolidate",
+        "Analysis is slow",
+        "Heavy reporting workload",
+        "Inconsistent data across departments",
+        "Slow decision-making"
+      ],
       "gains_label": "After Deployment",
-      "gains": ["80% less time spent producing reports", "Real-time visibility into key KPIs", "Lower cross-department communication cost", "Standardized decision-making process", "From data to decisions"],
+      "gains": [
+        "80% less time spent producing reports",
+        "Real-time visibility into key KPIs",
+        "Lower cross-department communication cost",
+        "Standardized decision-making process",
+        "From data to decisions"
+      ],
       "agents": [
         {
           "en": "Data Analysis Agent",
@@ -491,13 +629,18 @@
         "tag": "Cloud Marketplace",
         "title": "Easier AI Agent Adoption",
         "desc": "Listed on the Taiwan MOEA Cloud Marketplace AI tools catalog. Deploy an enterprise-grade AI data analysis, dashboard, and reporting platform quickly, with no in-house development required.",
-        "points": ["Purchase directly online", "Fast deployment", "Eligible for government subsidy programs", "Lower cost of AI adoption"],
+        "points": [
+          "Purchase directly online",
+          "Fast deployment",
+          "Eligible for government subsidy programs",
+          "Lower cost of AI adoption"
+        ],
         "cta": "Visit the Taiwan MOEA Cloud Marketplace"
       }
     },
     "cases": {
       "tag": "Case Studies",
-      "title": "14 Live Workflows",
+      "title": "14 Enterprise Workflows",
       "intro": "Covers order intake, scheduling, supply chain, quality, ESG, and admin workflows. Each one is a ready-to-use Multi-Agent workflow — not a custom project built from scratch.",
       "values_label": "Build Your Own AI Workforce",
       "values": [
@@ -532,61 +675,176 @@
           "title": "Production Scheduling & Rush Orders",
           "summary": "Integrates orders, capacity, materials, and equipment data to automatically plan the optimal production schedule.",
           "background": "An electronics manufacturer takes on high-mix, low-volume manufacturing and assembly orders. Production runs through multiple process stages, each requiring a different mix of resources depending on the order. With many product variants, complex process layers, tight delivery windows, and resources that must be reallocated dynamically, order surges or sudden shifts in demand easily create bottlenecks in specific lines and processes.",
-          "pains": ["Order delays are hard to catch in real time", "Capacity bottlenecks cause long queues", "Multi-stage processes are hard to synchronize", "Schedule changes rely heavily on manual judgment"],
+          "pains": [
+            "Order delays are hard to catch in real time",
+            "Capacity bottlenecks cause long queues",
+            "Multi-stage processes are hard to synchronize",
+            "Schedule changes rely heavily on manual judgment"
+          ],
           "flow": [
-            { "agents": "Scheduling Analysis Agent", "label": "Schedule Status Analysis", "human": false },
-            { "agents": "Capacity Analysis Agent + Delivery Risk Agent", "label": "Bottleneck & Delivery Risk Identification", "human": false },
-            { "agents": "Schedule Optimization Agent", "label": "Schedule Scenario Simulation", "human": false },
-            { "agents": "Decision Agent", "label": "Scenario Comparison & Decision", "human": false },
-            { "agents": "Human Review", "label": "Manager Confirmation", "human": true }
+            {
+              "agents": "Scheduling Analysis Agent",
+              "label": "Schedule Status Analysis",
+              "human": false
+            },
+            {
+              "agents": "Capacity Analysis Agent + Delivery Risk Agent",
+              "label": "Bottleneck & Delivery Risk Identification",
+              "human": false
+            },
+            {
+              "agents": "Schedule Optimization Agent",
+              "label": "Schedule Scenario Simulation",
+              "human": false
+            },
+            {
+              "agents": "Decision Agent",
+              "label": "Scenario Comparison & Decision",
+              "human": false
+            },
+            {
+              "agents": "Human Review",
+              "label": "Manager Confirmation",
+              "human": true
+            }
           ],
           "metrics_label": "Measurable Results",
           "metrics_kind": "delta",
           "metrics": [
-            { "label": "On-Time Delivery Rate", "before": "~71%", "after": "85–90%" },
-            { "label": "Average Delay", "before": "~46 days", "after": "<20 days" },
-            { "label": "Overall Resource Utilization", "before": "~77%", "after": "85%+" },
-            { "label": "Planner Scheduling Hours", "before": "~20 hrs/wk", "after": "~8 hrs/wk" }
+            {
+              "label": "On-Time Delivery Rate",
+              "before": "~71%",
+              "after": "85–90%"
+            },
+            {
+              "label": "Average Delay",
+              "before": "~46 days",
+              "after": "<20 days"
+            },
+            {
+              "label": "Overall Resource Utilization",
+              "before": "~77%",
+              "after": "85%+"
+            },
+            {
+              "label": "Planner Scheduling Hours",
+              "before": "~20 hrs/wk",
+              "after": "~8 hrs/wk"
+            }
           ]
         },
         {
           "title": "Supply Chain Coordination & Smart Procurement",
           "summary": "Connects enterprise and supplier data to automatically track demand, delivery, and supply status. AI Agents support procurement analysis, risk alerts, and supplier collaboration — improving supply chain resilience and response speed.",
           "background": "A fast-moving consumer goods retailer operates multiple locations selling everyday products with high purchase frequency, large SKU counts, and fast-changing demand, serving end consumers across many outlets. Demand is sensitive to seasons, holidays, and promotions, and sales velocity varies by region. When promotions or demand spikes hit without accurate forecasting and coordinated inventory and logistics, some locations run out of stock while others carry excess inventory — driving up emergency restocking costs.",
-          "pains": ["Demand shifts are hard to forecast in time", "Regional inventory is unevenly distributed", "Promotion stock planning lacks precision", "Procurement and logistics coordination is slow"],
+          "pains": [
+            "Demand shifts are hard to forecast in time",
+            "Regional inventory is unevenly distributed",
+            "Promotion stock planning lacks precision",
+            "Procurement and logistics coordination is slow"
+          ],
           "flow": [
-            { "agents": "Demand Forecasting Agent", "label": "Demand Sensing & Forecasting", "human": false },
-            { "agents": "Procurement Decision Agent", "label": "Purchase Requirement Assessment", "human": false },
-            { "agents": "Supplier Management Agent + Logistics Dispatch Agent", "label": "Inventory & Logistics Coordination", "human": false },
-            { "agents": "Risk Monitoring Agent + Orchestrator Agent", "label": "Anomaly Alerts & Decisions", "human": false }
+            {
+              "agents": "Demand Forecasting Agent",
+              "label": "Demand Sensing & Forecasting",
+              "human": false
+            },
+            {
+              "agents": "Procurement Decision Agent",
+              "label": "Purchase Requirement Assessment",
+              "human": false
+            },
+            {
+              "agents": "Supplier Management Agent + Logistics Dispatch Agent",
+              "label": "Inventory & Logistics Coordination",
+              "human": false
+            },
+            {
+              "agents": "Risk Monitoring Agent + Orchestrator Agent",
+              "label": "Anomaly Alerts & Decisions",
+              "human": false
+            }
           ],
           "metrics_label": "Qualitative Results",
           "metrics_kind": "qualitative",
           "metrics": [
-            { "label": "Stockout Rate", "direction": "down", "note": "Real-time visibility into demand and inventory gaps" },
-            { "label": "Stocking Accuracy", "direction": "up", "note": "Promotional demand forecast in advance" },
-            { "label": "Inventory Imbalance", "direction": "down", "note": "Dynamic cross-region inventory allocation" },
-            { "label": "Procurement Admin Hours", "direction": "down", "note": "Automated data consolidation and analysis by Agents" }
+            {
+              "label": "Stockout Rate",
+              "direction": "down",
+              "note": "Real-time visibility into demand and inventory gaps"
+            },
+            {
+              "label": "Stocking Accuracy",
+              "direction": "up",
+              "note": "Promotional demand forecast in advance"
+            },
+            {
+              "label": "Inventory Imbalance",
+              "direction": "down",
+              "note": "Dynamic cross-region inventory allocation"
+            },
+            {
+              "label": "Procurement Admin Hours",
+              "direction": "down",
+              "note": "Automated data consolidation and analysis by Agents"
+            }
           ]
         },
         {
           "title": "OTD: From Order to Shipment",
           "summary": "Real-time tracking and management from order intake through scheduling, production, and shipment. AI Agents actively monitor order fulfillment, predict delivery risk, and help hit on-time delivery (OTD) targets.",
           "background": "An electronics manufacturer runs SMT, through-hole insertion, and wave soldering lines alongside SPI, AOI, and X-Ray inspection equipment, taking on high-mix, low-volume EMS orders. Customer requirements change frequently and delivery windows are tight. The company handles a high daily volume of quotes and order changes, requiring cross-department coordination and real-time visibility into progress and quality.",
-          "pains": ["Slow quote turnaround", "Information gaps across departments", "Material and capacity risk hard to catch early", "OTD risk unknown until too late"],
+          "pains": [
+            "Slow quote turnaround",
+            "Information gaps across departments",
+            "Material and capacity risk hard to catch early",
+            "OTD risk unknown until too late"
+          ],
           "flow": [
-            { "agents": "Sales Q&A Agent + ATP/CTP Agent + PO/SO Agent", "label": "Order Intake & Delivery Commitment", "human": false },
-            { "agents": "Material/Capacity Planning Agent + Procurement Collaboration Agent", "label": "Material & Capacity Coordination", "human": false },
-            { "agents": "Production/Quality Monitoring Agent + Shipping/After-Sales Agent", "label": "Production & Quality Monitoring", "human": false },
-            { "agents": "OTD Decision Agent", "label": "Shipment & OTD Decision", "human": false }
+            {
+              "agents": "Sales Q&A Agent + ATP/CTP Agent + PO/SO Agent",
+              "label": "Order Intake & Delivery Commitment",
+              "human": false
+            },
+            {
+              "agents": "Material/Capacity Planning Agent + Procurement Collaboration Agent",
+              "label": "Material & Capacity Coordination",
+              "human": false
+            },
+            {
+              "agents": "Production/Quality Monitoring Agent + Shipping/After-Sales Agent",
+              "label": "Production & Quality Monitoring",
+              "human": false
+            },
+            {
+              "agents": "OTD Decision Agent",
+              "label": "Shipment & OTD Decision",
+              "human": false
+            }
           ],
           "metrics_label": "Measurable Benefits",
           "metrics_kind": "delta",
           "metrics": [
-            { "label": "Quote Turnaround Time", "before": "4–6 hrs", "after": "<30 min" },
-            { "label": "Quote/Delivery Accuracy", "before": "70%", "after": "92%+" },
-            { "label": "OTD On-Time Rate", "before": "82%", "after": "95%" },
-            { "label": "Planner Scheduling Time", "before": "20 hrs/wk", "after": "8 hrs/wk" }
+            {
+              "label": "Quote Turnaround Time",
+              "before": "4–6 hrs",
+              "after": "<30 min"
+            },
+            {
+              "label": "Quote/Delivery Accuracy",
+              "before": "70%",
+              "after": "92%+"
+            },
+            {
+              "label": "OTD On-Time Rate",
+              "before": "82%",
+              "after": "95%"
+            },
+            {
+              "label": "Planner Scheduling Time",
+              "before": "20 hrs/wk",
+              "after": "8 hrs/wk"
+            }
           ]
         }
       ],
@@ -596,61 +854,100 @@
           "icon": "headphones",
           "title": "Smart Customer Service",
           "desc": "Integrates customer service, technical support, and knowledge base data to automatically respond to customer questions and service requests.",
-          "points": ["Instant responses to customer questions, boosting satisfaction and retention", "Lower customer service and technical support labor costs", "Less service-quality variance from staff turnover", "Builds a system for accumulating and passing on institutional knowledge"]
+          "points": [
+            "Instant responses to customer questions, boosting satisfaction and retention",
+            "Lower customer service and technical support labor costs",
+            "Less service-quality variance from staff turnover",
+            "Builds a system for accumulating and passing on institutional knowledge"
+          ]
         },
         {
           "icon": "leaf",
           "title": "ESG Carbon Inventory & Data Reporting",
           "desc": "Automatically integrates energy, equipment, and operations data to run carbon inventory and ESG metric analysis, quickly generating reports and management summaries.",
-          "points": ["Real-time visibility into carbon emissions and sustainability KPIs", "Fast data preparation for customer, supply chain, and regulatory requirements", "Stronger ESG disclosure and audit readiness"]
+          "points": [
+            "Real-time visibility into carbon emissions and sustainability KPIs",
+            "Fast data preparation for customer, supply chain, and regulatory requirements",
+            "Stronger ESG disclosure and audit readiness"
+          ]
         },
         {
           "icon": "filecheck",
           "title": "AI+BPM Attendance & Document Management",
           "desc": "Digitizes and automates leave requests, approvals, documents, and administrative workflows — supporting process tracking, document search, and policy enforcement.",
-          "points": ["Strengthens policy compliance and internal audit capability", "Faster approvals and document routing", "Lower administrative and HR operating costs"]
+          "points": [
+            "Strengthens policy compliance and internal audit capability",
+            "Faster approvals and document routing",
+            "Lower administrative and HR operating costs"
+          ]
         },
         {
           "icon": "ship",
           "title": "Smart Customs Clearance",
           "desc": "Integrates import/export documents, product data, and regulatory requirements to automate customs clearance.",
-          "points": ["Strengthens cross-border logistics and trade competitiveness", "Shorter customs and shipping wait times", "Fewer filing errors and less risk of penalties"]
+          "points": [
+            "Strengthens cross-border logistics and trade competitiveness",
+            "Shorter customs and shipping wait times",
+            "Fewer filing errors and less risk of penalties"
+          ]
         },
         {
           "icon": "package",
           "title": "WMS Warehouse Management",
           "desc": "Real-time visibility into inventory, receiving, shipping, and bin locations — building a smart warehouse management process.",
-          "points": ["Higher inventory turnover and capital efficiency", "Less material shortage, overbuying, and dead stock", "More efficient warehouse operations and space utilization"]
+          "points": [
+            "Higher inventory turnover and capital efficiency",
+            "Less material shortage, overbuying, and dead stock",
+            "More efficient warehouse operations and space utilization"
+          ]
         },
         {
           "icon": "cpu",
           "title": "AIOT & Edge Line Monitoring",
           "desc": "Connects equipment, sensors, and line data for real-time visibility into machine operation and production status, proactively analyzing anomaly signals and equipment health.",
-          "points": ["Less loss from unplanned line stoppages", "Early detection of equipment anomalies and downtime risk", "Higher equipment utilization and production efficiency"]
+          "points": [
+            "Less loss from unplanned line stoppages",
+            "Early detection of equipment anomalies and downtime risk",
+            "Higher equipment utilization and production efficiency"
+          ]
         },
         {
           "icon": "gauge",
           "title": "Energy & Carbon Management",
           "desc": "Monitors energy use and carbon emissions in real time, identifies high-consumption equipment and abnormal usage, and provides energy-saving recommendations and reduction analysis.",
-          "points": ["Real-time visibility into energy cost and consumption hotspots", "Identifies energy-saving opportunities and lowers operating cost"]
+          "points": [
+            "Real-time visibility into energy cost and consumption hotspots",
+            "Identifies energy-saving opportunities and lowers operating cost"
+          ]
         },
         {
           "icon": "scan",
           "title": "AOI & Smart Quality Management",
           "desc": "Combines AOI inspection with quality management data to automatically analyze defect causes and quality trends.",
-          "points": ["Catches anomalies earlier and shortens resolution time", "Lower defect rate and quality cost"]
+          "points": [
+            "Catches anomalies earlier and shortens resolution time",
+            "Lower defect rate and quality cost"
+          ]
         },
         {
           "icon": "users",
           "title": "S&OP Meeting",
           "desc": "Integrates sales orders, production schedules, inventory, and supply chain data, automatically compiling the data decision-makers need — generating meeting summaries, risk analysis, and action recommendations.",
-          "points": ["Identifies delivery, material, and capacity risk early", "Reduces information gaps and communication cost", "Shifts management meetings from reporting to decision-making"]
+          "points": [
+            "Identifies delivery, material, and capacity risk early",
+            "Reduces information gaps and communication cost",
+            "Shifts management meetings from reporting to decision-making"
+          ]
         },
         {
           "icon": "repeat",
           "title": "RPA-Powered Data Processing",
           "desc": "RPA and AI Agents work together to automatically collect, transform, reconcile, and consolidate data.",
-          "points": ["Greatly reduces repetitive manual work", "Frees people for high-value analysis and decision-making", "Improves overall efficiency and speed"]
+          "points": [
+            "Greatly reduces repetitive manual work",
+            "Frees people for high-value analysis and decision-making",
+            "Improves overall efficiency and speed"
+          ]
         }
       ],
       "custom": {
@@ -658,7 +955,13 @@
         "title": "Build Your Own AI Agent Team",
         "desc": "Every business has its own processes and management needs. We build custom Multi-Agent workflows from your SOPs, knowledge documents, system data, and business rules — turning AI into a digital team that genuinely participates in your operations.",
         "tagline": "Your need is the next Agent workflow",
-        "points": ["Custom process design", "Integrates with ERP / MES / CRM / WMS and other systems", "Combines your knowledge base and business rules", "AI analysis, decisions, and automated execution", "Fast-track your own AI Workforce"],
+        "points": [
+          "Custom process design",
+          "Integrates with ERP / MES / CRM / WMS and other systems",
+          "Combines your knowledge base and business rules",
+          "AI analysis, decisions, and automated execution",
+          "Fast-track your own AI Workforce"
+        ],
         "cta": "Talk to Us About Your Workflow"
       }
     },
@@ -674,6 +977,7 @@
     "title_gradient": "Digital Transformation",
     "subtitle": "Fill out the form below and our expert consultants will contact you within 24 hours with tailored solution recommendations.",
     "form_title": "Consultation Form",
+    "required_prefix": "Fields marked",
     "required_note": "fields are required",
     "product_label": "Product(s) of Interest",
     "product_placeholder": "Please select...",
@@ -715,17 +1019,32 @@
     "module_1_subtitle": "Automated ERP Financial Report Simulation",
     "module_1_tag": "Financial AI Agent",
     "module_1_desc": "Connects to enterprise ERP systems, auto-analyzes financial data, and generates all five core financial statements — P&L, Balance Sheet, Cash Flow, Equity Changes, and Ratios — in one click.",
-    "module_1_features": ["Integrates SAP / Yonyou / Digiwin ERP", "Auto-generates 5 financial statements", "AI financial anomaly detection", "Natural language financial queries"],
+    "module_1_features": [
+      "Integrates SAP / Yonyou / Digiwin ERP",
+      "Auto-generates 5 financial statements",
+      "AI financial anomaly detection",
+      "Natural language financial queries"
+    ],
     "module_2_title": "Smart Service",
     "module_2_subtitle": "RAG Knowledge Base · 24/7 Technical Support",
     "module_2_tag": "Service AI Agent",
     "module_2_desc": "Uses RAG (Retrieval-Augmented Generation) to build a private knowledge base from product manuals and troubleshooting docs. AI agents deliver instant, accurate technical Q&A and after-sales support.",
-    "module_2_features": ["Private KB ingestion (PDF/Word/URL)", "RAG semantic retrieval", "24/7 AI technical Q&A", "Multi-turn conversational context"],
+    "module_2_features": [
+      "Private KB ingestion (PDF/Word/URL)",
+      "RAG semantic retrieval",
+      "24/7 AI technical Q&A",
+      "Multi-turn conversational context"
+    ],
     "module_3_title": "Predictive Maintenance",
     "module_3_subtitle": "AIoT Equipment Health Diagnostics & Alerts",
     "module_3_tag": "Maintenance AI Agent",
     "module_3_desc": "Integrates AIoT sensor streams to continuously monitor equipment vibration, temperature, and current. AI predicts failure risk before downtime occurs and auto-dispatches maintenance orders.",
-    "module_3_features": ["Multi-source AIoT sensor integration", "AI health scoring & trend analysis", "Anomaly alert push notifications", "Auto maintenance order dispatch"],
+    "module_3_features": [
+      "Multi-source AIoT sensor integration",
+      "AI health scoring & trend analysis",
+      "Anomaly alert push notifications",
+      "Auto maintenance order dispatch"
+    ],
     "feature_label": "Core Capabilities",
     "cta_demo": "Book AI Demo",
     "cta_learn": "Explore Architecture",
@@ -890,20 +1209,61 @@
     "vision_sub1": "CRIS believes the future of manufacturing lies in making machines smarter and the planet more sustainable.",
     "vision_sub2": "Starting from Taichung, our solutions have served over 200 manufacturing partners.",
     "values": [
-      { "title": "Data-Driven Precision", "desc": "Replace rule-of-thumb with data and AI algorithms so every production decision is scientifically grounded." },
-      { "title": "Customer Success", "desc": "Our success comes from our customers' outcomes — every implementation targets measurable ROI." },
-      { "title": "Sustainability Commitment", "desc": "We help manufacturers reach carbon-neutral goals, letting smart production coexist with a sustainable planet." }
+      {
+        "title": "Data-Driven Precision",
+        "desc": "Replace rule-of-thumb with data and AI algorithms so every production decision is scientifically grounded."
+      },
+      {
+        "title": "Customer Success",
+        "desc": "Our success comes from our customers' outcomes — every implementation targets measurable ROI."
+      },
+      {
+        "title": "Sustainability Commitment",
+        "desc": "We help manufacturers reach carbon-neutral goals, letting smart production coexist with a sustainable planet."
+      }
     ],
     "timeline_tag": "Brand Milestones",
     "timeline_sub": "From Taichung to cross-strait markets and the global manufacturing digital transformation stage.",
     "milestones": [
-      { "title": "CRIS Founded", "desc": "Established CRIS Inc. in Taichung, Taiwan, with the core mission of using AI and digital tools to help manufacturers transform.", "geo_label": "Taichung HQ" },
-      { "title": "IMPACTs APS Launched", "desc": "Officially launched the flagship IMPACTs APS finite-capacity scheduling system. Won 1st place at the Cross-Strait & HK/Macau Youth Entrepreneurship Training in Nanjing.", "award_label": "Nanjing Opening 1st Place" },
-      { "title": "Cross-Strait Expansion", "desc": "Established Guangzhou office to expand the Greater China market and deepen cross-strait manufacturing digitalization collaboration.", "geo_label": "Guangzhou Office" },
-      { "title": "China I&E Contest Champion", "desc": "Won 1st place nationally at the 8th China Innovation & Entrepreneurship Contest (Advanced Manufacturing & AI Group), establishing IMPACTs APS as a leader in industrial AI.", "award_label": "China I&E Contest National 1st" },
-      { "title": "AWS Best IoT Potential Award", "desc": "Selected for the AWS Joint Innovation Center Best IoT Potential Award in New Taipei City, recognizing CRIS's technical depth and commercial potential in industrial IoT.", "award_label": "AWS Best IoT Potential Award" },
-      { "title": "Carbon Monitoring System Launched", "desc": "Industry-first carbon monitoring system launch, enabling manufacturers to precisely measure and manage carbon emissions data in response to the global net-zero trend." },
-      { "title": "IMPACTs CeO Full Launch", "desc": "Launched the IMPACTs CeO solution covering Carbon Factor Center, Carbon Inventory Programs, and CBAM product carbon footprint management — the most comprehensive ESG digitalization platform for manufacturers.", "featured_badge": "Green Digital Transformation Milestone", "ceo_features": ["Carbon Factor Center", "Carbon Inventory Program", "CBAM Carbon Footprint"] }
+      {
+        "title": "CRIS Founded",
+        "desc": "Established CRIS Inc. in Taichung, Taiwan, with the core mission of using AI and digital tools to help manufacturers transform.",
+        "geo_label": "Taichung HQ"
+      },
+      {
+        "title": "IMPACTs APS Launched",
+        "desc": "Officially launched the flagship IMPACTs APS finite-capacity scheduling system. Won 1st place at the Cross-Strait & HK/Macau Youth Entrepreneurship Training in Nanjing.",
+        "award_label": "Nanjing Opening 1st Place"
+      },
+      {
+        "title": "Cross-Strait Expansion",
+        "desc": "Established Guangzhou office to expand the Greater China market and deepen cross-strait manufacturing digitalization collaboration.",
+        "geo_label": "Guangzhou Office"
+      },
+      {
+        "title": "China I&E Contest Champion",
+        "desc": "Won 1st place nationally at the 8th China Innovation & Entrepreneurship Contest (Advanced Manufacturing & AI Group), establishing IMPACTs APS as a leader in industrial AI.",
+        "award_label": "China I&E Contest National 1st"
+      },
+      {
+        "title": "AWS Best IoT Potential Award",
+        "desc": "Selected for the AWS Joint Innovation Center Best IoT Potential Award in New Taipei City, recognizing CRIS's technical depth and commercial potential in industrial IoT.",
+        "award_label": "AWS Best IoT Potential Award"
+      },
+      {
+        "title": "Carbon Monitoring System Launched",
+        "desc": "Industry-first carbon monitoring system launch, enabling manufacturers to precisely measure and manage carbon emissions data in response to the global net-zero trend."
+      },
+      {
+        "title": "IMPACTs CeO Full Launch",
+        "desc": "Launched the IMPACTs CeO solution covering Carbon Factor Center, Carbon Inventory Programs, and CBAM product carbon footprint management — the most comprehensive ESG digitalization platform for manufacturers.",
+        "featured_badge": "Green Digital Transformation Milestone",
+        "ceo_features": [
+          "Carbon Factor Center",
+          "Carbon Inventory Program",
+          "CBAM Carbon Footprint"
+        ]
+      }
     ],
     "team_tag": "Team & Culture",
     "team_title": "Our Team & Culture",
