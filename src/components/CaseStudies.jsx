@@ -156,7 +156,7 @@ function CaseModal({ meta, data, onClose }) {
               <div className="flex items-center gap-2.5 bg-cris-blue/[0.07] dark:bg-cris-blue/[0.12] border border-cris-blue/20 dark:border-cris-blue/30 rounded-xl px-4 py-3 mb-6">
                 <Server size={15} className="text-cris-blue dark:text-cris-blue-light flex-shrink-0" />
                 <span className="text-sm font-semibold text-cris-blue dark:text-cris-blue-light">
-                  {t('cases.appliance_badge')}
+                  {t('cases.platform_badge')}
                 </span>
               </div>
 

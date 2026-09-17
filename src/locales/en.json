@@ -414,7 +414,7 @@
     "benefit_label": "Outcome",
     "view_detail": "View Details",
     "close": "Close",
-    "appliance_badge": "CRIS AI Appliance Ready · On-Premise Deployment",
+    "platform_badge": "CRIS AI Appliance Ready · On-Premise Deployment",
     "items": [
       {
         "title": "ERP Financial Report Simulation",

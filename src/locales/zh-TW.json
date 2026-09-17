@@ -21,7 +21,7 @@
     "title_g1": "AI 代理人",
     "title_between": "時代",
     "title_g2": "",
-    "subtitle": "私有化部署、即插即用、智慧決策——快思科技整合 AI 一體機、智能調度與綠色管理，讓企業 AI 真正落地，數據永不離境。",
+    "subtitle": "從資料分析到流程執行，快思科技以 Multi-Agent 工作流整合智慧排程、碳盤查與營運決策，讓 AI 真正參與企業日常工作。",
     "cta_primary": "預約 AI 體驗",
     "cta_secondary": "探索解決方案",
     "trust": "200+ 企業夥伴信賴 · 數據主權完全掌控",
@@ -33,7 +33,7 @@
   "features_section": {
     "tag": "AI 驅動核心產品",
     "title": "企業 AI 落地解決方案",
-    "subtitle": "三大 AI 驅動系統深度整合，搭載私有化 AI 一體機，從智能調度到綠色管理，數據永不離境。",
+    "subtitle": "三大 AI 驅動系統深度整合，並可接上 CRIS AgentForge Platform，讓分析、決策與執行交由 AI Agent 接手。",
     "learn_more": "深入了解 →"
   },
   "features_data": [
@@ -60,14 +60,14 @@
       ]
     },
     {
-      "title": "CRIS AI 一體機",
-      "subtitle": "私有化部署，數據主權完全掌控",
-      "desc": "搭載 Argox AI 引擎，即插即用部署於企業內網，所有 AI 運算在本地完成，零數據外洩風險。",
+      "title": "CRIS AgentForge Platform",
+      "subtitle": "企業智慧團隊鍛造平台",
+      "desc": "以 Multi-Agent 工作流串接 ERP／MES／CRM，從分析、決策到執行由 AI Agent 接手，14 個企業工作場景可直接套用。",
       "points": [
-        "On-Premise 私有化部署，不上雲",
-        "Argox AI 引擎，邊緣智能運算",
-        "零雲端依賴，數據主權完整保障",
-        "即插即用，7 天完成完整部署"
+        "Multi-Agent 協作，可執行多步驟長時間任務",
+        "內建 14 個企業級工作流，快速落地",
+        "結合企業知識庫，具備長期記憶能力",
+        "資料脫敏與權限控管，安心應用核心資料"
       ]
     }
   ],
@@ -740,7 +740,7 @@
   "cases": {
     "section_tag": "實戰案例成果",
     "section_title": "14 個產業案例",
-    "section_subtitle": "覆蓋製造業核心場景，所有方案均可私有化部署於 CRIS AI 一體機，數據永不離境。",
+    "section_subtitle": "覆蓋製造業核心場景，所有方案均可透過 CRIS AgentForge Platform 的 Multi-Agent 工作流落地。",
     "filter_all": "全部",
     "filter_finance": "經營財務",
     "filter_support": "技術支援",
@@ -752,7 +752,7 @@
     "benefit_label": "效益",
     "view_detail": "查看詳情",
     "close": "關閉",
-    "appliance_badge": "可搭載 CRIS AI 一體機・私有化部署",
+    "platform_badge": "可接上 CRIS AgentForge Platform",
     "items": [
       {
         "title": "ERP 財務模擬系統",

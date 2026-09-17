@@ -1937,12 +1937,22 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ---
 
-## Task 12：刪除舊產品
+## Task 12：刪除舊產品（範圍擴大：一併處理 Part B 機械式殘留與 Part C 文案改寫）
+
+> **範圍擴大說明**：原計畫只涵蓋刪除 `aibox` / `ai_appliance` namespace。實作時發現尚有三處機械式殘留參照（`ContactPage.jsx` 產品選單、`ESGProduct.jsx` 整合夥伴清單、`DesignSystem.jsx` 徽章範例）從未被列入任何 Task，以及首頁／案例區塊仍有四段行銷文案在講「私有化部署／AI 一體機」的舊定位。經與使用者確認，本次一併：
+> - Part B：修掉三處機械式殘留參照
+> - Part C：改寫 4 段文案 + 1 個 key 重新命名（`cases.appliance_badge` → `cases.platform_badge`），並提前完成原訂 Task 16 Step 5 第 6 項的 `features_data[2]` 改寫
+>
+> 因改動性質不同（刪除／改名 vs. 文案改寫），**拆成兩個 commit**，見 Step 6 與 Step 9。
 
 **Files:**
 - Delete: `src/pages/AIBoxProduct.jsx`
 - Delete: `src/components/AIAppliance.jsx`
 - Modify: `src/locales/{zh-TW,zh-CN,en}.json`
+- Modify: `src/pages/ContactPage.jsx`（Part B.1）
+- Modify: `src/pages/ESGProduct.jsx`（Part B.2）
+- Modify: `src/pages/DesignSystem.jsx`（Part B.3）
+- Modify: `src/components/CaseStudies.jsx`（Part C.4 key 改名後的唯一用法）
 
 - [ ] **Step 1：確認 AIAppliance 真的沒有被 import**
 
@@ -1965,7 +1975,13 @@ git rm src/pages/AIBoxProduct.jsx src/components/AIAppliance.jsx
 
 保留 `navbar.agentforge_name` 與 `navbar.agentforge_desc`（現有值已正確）。
 
-- [ ] **Step 4：確認沒有殘留參照**
+- [ ] **Step 4：Part B —— 三處機械式殘留參照**
+
+1. `src/pages/ContactPage.jsx` 聯絡表單產品選單仍提供已下架產品：`value: 'aibox'` → `'agentforge'`；label key `contact_page.product_aibox` → `contact_page.product_agentforge`。三份 locale 同步改名，值統一設為 `CRIS AgentForge Platform`（產品名稱各語言相同，故三語系採同一值，不留給 Task 13/14）。
+2. `src/pages/ESGProduct.jsx` 的 `integrationPartners` 硬編字串陣列中 `{ name: 'AI 一體機', desc: 'RAG 係數查詢' }` → `name: 'AgentForge'`（`desc` 不動；此陣列非 i18n，直接改字串）。
+3. `src/pages/DesignSystem.jsx` 內部文件頁的徽章範例 `私有化部署 · CRIS AI 一體機` → `Multi-Agent 工作流 · CRIS AgentForge`。
+
+- [ ] **Step 5：確認沒有殘留參照（Part A + B）**
 
 Run:
 
@@ -1975,30 +1991,51 @@ grep -rn "aibox\|ai-box\|AIBoxProduct\|AIAppliance\|ai_appliance" src/ || echo "
 
 Expected: `CLEAN`
 
-- [ ] **Step 5：確認編譯通過**
+- [ ] **Step 6：確認編譯通過並 commit（Part A + B）**
 
-Run: `npm run build`
-Expected：`✓ built in ...`
-
-Run（只掃本 task 新增／修改的檔案，並濾掉 prop-types）：
-
-```bash
-npx eslint <本 task 動到的檔案> --rule '{"react/prop-types":"off"}'
-```
-
-Expected：無任何輸出，exit code 0。
-
-- [ ] **Step 6：Commit**
+Run: `npm run build`，再對本 task 動到的檔案跑 `npx eslint <files> --rule '{"react/prop-types":"off"}'`，確認無新增問題（`AIAppliance.jsx` 刪除後全專案問題數應少 1）。
 
 ```bash
 git add -A src/
-git commit -m "refactor: 移除 AI 一體機產品頁與相關 locale
+git commit -m "refactor: 移除 CRIS AI 一體機產品頁與最後殘留引用
 
-刪除 AIBoxProduct.jsx、死碼 AIAppliance.jsx，
-以及三份 locale 的 aibox / ai_appliance namespace。
+刪除 AIBoxProduct.jsx 與死碼 AIAppliance.jsx，並在三份 locale 移除
+aibox / ai_appliance namespace 與 navbar.aibox_name / aibox_desc。
 
-Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
+同步處理三處遺留的機械式參照：ContactPage.jsx 產品選單、
+ESGProduct.jsx 整合夥伴清單、DesignSystem.jsx 徽章範例。
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 ```
+
+- [ ] **Step 7：Part C —— 客戶已核准的文案改寫（僅繁中）**
+
+以下 4 段文案 + 1 個 key 重新命名，**只改 zh-TW 的值**；zh-CN / en 只做結構性改名，值維持原文，留給 Task 13 / 14 翻譯：
+
+1. `hero.subtitle`
+2. `features_section.subtitle`
+3. `cases.section_subtitle`
+4. `cases.appliance_badge` → 重新命名為 `cases.platform_badge`（三語系一併改名；同步更新 `src/components/CaseStudies.jsx:159` 的唯一用法）
+5. `features_data[2]`（首頁第 3 張產品卡，原訂於 Task 16 Step 5 第 6 項處理，提前在此完成）
+
+實際採用文字見規格書 §9 待確認文案第 8–12 項。
+
+- [ ] **Step 8：確認編譯通過（Part C）**
+
+Run: `npm run build`。三份 locale JSON 需能被 `JSON.parse` 正確解析（結構未破壞）。
+
+- [ ] **Step 9：Commit（Part C + 文件）**
+
+```bash
+git add -A
+git commit -m "feat(agentforge): 首頁與案例區塊改寫行銷文案，汰換私有化部署定位
+
+...
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
+```
+
+> **額外發現、未在本次處理範圍內**：`cases_data[0]`（首頁案例卡）的 `tag` / `solution` 仍含「AI 一體機」字樣；`esg.sgs_note` 仍提到「CRIS AI 一體機」與「地端合規」；`hero.trust` 的「數據主權完全掌控」也是同一系列的舊定位語彙。三者均未在原始 16-task 計畫或本次擴大範圍中列出，**刻意不動**，已回報給使用者決定是否要開新 task 處理。
 
 ---
 
@@ -2518,10 +2555,9 @@ Run: `npm run dev`，對照規格書 §10 的 16 條清單逐項打勾。重點�
 3. AI+／+AI 對照導言兩段
 4. 第 4 節簡介
 5. CTA Banner 標題與副標
-6. **首頁 `Features.jsx` 第 3 張卡文案** —— 注意：第 3 張卡的內容來自 `features_data` 第 3 筆，
-   Task 11 只改了連結，**文案還是舊的「私有化部署 · 數據主權掌控」**。這一步要把三份 locale 的
-   `features_data[2]` 改寫成 AgentForge 的內容（title / subtitle / desc / points），
-   然後 `npm run check:i18n && npm run build`，再 commit。
+6. ~~**首頁 `Features.jsx` 第 3 張卡文案**~~ —— **已於 Task 12 Step 7 提前完成**（原計畫此處才處理，
+   實作時發現 Task 12 範圍擴大一併涵蓋首頁行銷文案改寫，故 `features_data[2]`（zh-TW）已改寫成
+   AgentForge 的內容並 commit，不需在本 Task 重複執行。
 
 - [ ] **Step 6：最終 commit**
 

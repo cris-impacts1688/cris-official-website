@@ -548,6 +548,11 @@ SKU 數量多、需求變化快速等特性，並透過多個銷售據點服務�
 | `src/pages/Solutions.jsx` | 兩處 `<Link to="/products/ai-box">` → `/products/agentforge`；`solutions.aibox_*` 五個 key 重新命名為 `solutions.agentforge_*`（原始計畫漏列，Task 11 驗證時發現） |
 | `src/pages/DesignSystem.jsx` | 新增三個元件的 Live Preview / Code snippet / Anatomy table：Agent 流程圖、before→after 數字、AI+/+AI 對照卡 |
 | `src/locales/{zh-TW,zh-CN,en}.json` | 刪 `aibox.*`、`ai_appliance.*`、`navbar.aibox_*`；新增 `agentforge.*`；`solutions.aibox_*` 重新命名為 `solutions.agentforge_*` 並重寫其中三段文案 |
+| `src/pages/ContactPage.jsx` | 產品選單 `value: 'aibox'` → `'agentforge'`；`contact_page.product_aibox` → `contact_page.product_agentforge`（三語系值統一為 `CRIS AgentForge Platform`）（Task 12 Part B，原始計畫漏列） |
+| `src/pages/ESGProduct.jsx` | 硬編字串陣列 `integrationPartners` 中 `{ name: 'AI 一體機' }` → `{ name: 'AgentForge' }`（Task 12 Part B，原始計畫漏列） |
+| `src/pages/DesignSystem.jsx`（追加） | 「Private Deploy Badge」範例文字 `私有化部署 · CRIS AI 一體機` → `Multi-Agent 工作流 · CRIS AgentForge`（Task 12 Part B，原始計畫漏列） |
+| `src/components/Hero.jsx` 對應的 `hero.subtitle`、`Features.jsx` 對應的 `features_section.subtitle` | 首頁行銷文案改寫，移除私有化部署／AI 一體機定位（Task 12 Part C，見 §9 第 8、9 項） |
+| `src/components/CaseStudies.jsx` | `cases.appliance_badge` → `cases.platform_badge`（key 重新命名，三語系同步；zh-TW 值改寫）（Task 12 Part C，見 §9 第 11 項） |
 
 CMS 讀取點：`useCmsContent('agentforge', 'hero_desc')`（原為 `useCmsContent('aibox', 'hero_desc')`）。
 Supabase 中 `page_id='aibox'` 的舊列不處理，成為孤兒資料，不影響前台。
@@ -580,6 +585,11 @@ Supabase 中 `page_id='aibox'` 的舊列不處理，成為孤兒資料，不影�
 | 5 | AI+ / +AI 對照導言（「把 AI 加進營運決策」／「把執行交給 AI」）原稿未提供 | 由我撰寫，實作後請 review |
 | 6 | 第 4 節簡介（§6.4）、CTA Banner 文案（§6.5）原稿未提供 | 由我撰寫，實作後請 review |
 | 7 | `solutions.agentforge_cta_title` / `agentforge_cta_subtitle` / `agentforge_learn_more`（Solutions 頁底部 CTA，原文案講「一體機」「私有化部署」，本次改版必須移除）原稿未提供 | 由我撰寫，實作後請 review。繁中：「所有模組均可接上 CRIS AgentForge Platform」／「從分析、決策到執行，以 Multi-Agent 工作流串接既有 ERP／MES／CRM 系統，顧問團隊全程陪伴導入。」／「了解 AgentForge Platform」 |
+| 8 | `hero.subtitle`（首頁 Hero 副標，原文案講「私有化部署…AI 一體機…數據永不離境」，本次改版必須移除）客戶已核准移除私有化部署定位，原稿未提供新文案 | 由我撰寫，實作後請 review。繁中：「從資料分析到流程執行，快思科技以 Multi-Agent 工作流整合智慧排程、碳盤查與營運決策，讓 AI 真正參與企業日常工作。」 |
+| 9 | `features_section.subtitle`（首頁三欄產品特色副標，原文案講「搭載私有化 AI 一體機…數據永不離境」）同上 | 由我撰寫，實作後請 review。繁中：「三大 AI 驅動系統深度整合，並可接上 CRIS AgentForge Platform，讓分析、決策與執行交由 AI Agent 接手。」 |
+| 10 | `cases.section_subtitle`（案例區塊副標，原文案講「所有方案均可私有化部署於 CRIS AI 一體機，數據永不離境」）同上 | 由我撰寫，實作後請 review。繁中：「覆蓋製造業核心場景，所有方案均可透過 CRIS AgentForge Platform 的 Multi-Agent 工作流落地。」 |
+| 11 | `cases.appliance_badge` → 重新命名為 `cases.platform_badge`（案例詳情彈窗徽章，原文案「可搭載 CRIS AI 一體機・私有化部署」）同上 | 由我撰寫，實作後請 review。繁中：「可接上 CRIS AgentForge Platform」 |
+| 12 | `features_data[2]`（首頁 `Features.jsx` 第 3 張卡，原文案「CRIS AI 一體機／私有化部署，數據主權完全掌控」，見 Task 16 Step 5 第 6 項，實作時提前併入 Task 12 完成）同上 | 由我撰寫，實作後請 review。繁中 title／subtitle／desc／points 四欄見 Task 12 Part C.5，內容為「CRIS AgentForge Platform」「企業智慧團隊鍛造平台」等 |
 
 ---
 
