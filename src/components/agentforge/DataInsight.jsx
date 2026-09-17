@@ -17,7 +17,12 @@ export default function DataInsight() {
   const market = t('agentforge.insight.market', { returnObjects: true })
 
   // 只把名稱餵給流程圖，說明文字留給右欄 —— 兩邊都放會讓同一段話在畫面上出現兩次。
-  const flowSteps = agents.map((a) => ({ title: a.en, subtitle: a.zh }))
+  // zh 是英文術語的在地對照（例：Data Analysis Agent／資料分析代理人）。
+  // 英文語系翻出來會等於 en 本身，此時不重複顯示。
+  const flowSteps = agents.map((a) => ({
+    title: a.en,
+    subtitle: a.zh === a.en ? undefined : a.zh,
+  }))
 
   return (
     <section id="insight" className="scroll-mt-32 py-24 bg-slate-900 dark:bg-slate-950 relative overflow-hidden">
@@ -90,7 +95,9 @@ export default function DataInsight() {
                   <span className="text-2xl text-violet-400 leading-none flex-shrink-0">{NUMERALS[i]}</span>
                   <div>
                     <p className="text-base font-bold text-white leading-snug">{a.en}</p>
-                    <p className="text-sm font-medium text-violet-300">{a.zh}</p>
+                    {a.zh !== a.en && (
+                      <p className="text-sm font-medium text-violet-300">{a.zh}</p>
+                    )}
                     <p className="mt-1.5 text-sm text-slate-400 leading-relaxed">{a.desc}</p>
                   </div>
                 </div>

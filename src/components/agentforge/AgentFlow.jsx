@@ -53,7 +53,9 @@ export default function AgentFlow({ steps, tone = 'onLight' }) {
             </span>
             <div className="min-w-0">
               <p className={`text-sm font-bold leading-snug ${c.title}`}>{step.title}</p>
-              <p className={`text-xs mt-0.5 leading-snug ${step.human ? c.desc : c.sub}`}>{step.subtitle}</p>
+              {step.subtitle && (
+                <p className={`text-xs mt-0.5 leading-snug ${step.human ? c.desc : c.sub}`}>{step.subtitle}</p>
+              )}
               {step.desc && (
                 <p className={`text-xs mt-1.5 leading-relaxed ${c.desc}`}>{step.desc}</p>
               )}
