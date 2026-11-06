@@ -940,7 +940,7 @@ function LangSwitcherSection() {
   const langs = [{ code: 'zh-TW', label: '繁中' }, { code: 'zh-CN', label: '简中' }, { code: 'en', label: 'EN' }]
   return (
     <>
-      <SectionAnchor id="comp-langswitcher" title="Lang Switcher" subtitle="三語切換器，Navbar 右側固定位置" />
+      <SectionAnchor id="comp-langswitcher" title="Lang Switcher" subtitle="三語切換器。lg（≥1024px）以上在 Navbar 右側；以下收進漢堡選單 —— 完整選單需要約 820–960px，平板寬度會擠到逐字換行" />
       <SubSection title="Preview">
         <PreviewBox label="bg-slate-100 rounded-lg — active: bg-white shadow-sm">
           <div className="flex items-center gap-0.5 bg-slate-100 rounded-lg p-0.5">
