@@ -18,6 +18,7 @@ import {
 import AgentFlow from '../components/agentforge/AgentFlow'
 import IconCard from '../components/agentforge/IconCard'
 import { DeltaMetrics, QualitativeMetrics } from '../components/agentforge/WorkflowCases'
+import { TierCard } from '../components/agentforge/PlanTiers'
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 
@@ -101,6 +102,7 @@ const NAV = [
   { id: 'comp-metric',       label: 'Case Metrics' },
   { id: 'comp-dualcompare',  label: 'Dual Mode Compare' },
   { id: 'comp-iconcard',     label: 'Icon Card' },
+  { id: 'comp-plantiers',    label: 'Plan Tiers' },
 ]
 
 function Sidebar({ active }) {
@@ -1036,7 +1038,7 @@ localStorage.setItem('theme', dark ? 'dark' : 'light')`}</Code>
 function AgentFlowSection() {
   return (
     <>
-      <SectionAnchor id="comp-agentflow" title="Agent Flow" subtitle="Multi-Agent 工作流程圖，DATA INSIGHT 與旗艦案例共用" />
+      <SectionAnchor id="comp-agentflow" title="Agent Flow" subtitle="Multi-Agent 工作流程圖，AgentForge 旗艦案例使用" />
 
       <SubSection title="Live Preview — onLight">
         <PreviewBox label='<AgentFlow steps={...} tone="onLight" />'>
@@ -1062,7 +1064,7 @@ function AgentFlowSection() {
       </SubSection>
 
       <SubSection title="Live Preview — onDark">
-        <PreviewBox dark label='tone="onDark" — 用在深色底區塊（DATA INSIGHT）。此例同時示範 subtitle 省略：EN 語系下 zh === en 時不重複顯示同一行'>
+        <PreviewBox dark label='tone="onDark" — 深色底區塊用。此例同時示範 subtitle 省略：與 title 相同時不重複顯示同一行'>
           <div className="w-full max-w-sm">
             <AgentFlow
               steps={[
@@ -1151,13 +1153,13 @@ function MetricSection() {
 function DualCompareSection() {
   return (
     <>
-      <SectionAnchor id="comp-dualcompare" title="Dual Mode Compare" subtitle="AI+ 與 +AI 的概念對照卡（DualMode.jsx 內的 inline JSX，非獨立元件）" />
+      <SectionAnchor id="comp-dualcompare" title="Dual Mode Compare" subtitle="AI+ 與 +AI 的概念對照卡（DualMode.jsx 內的 inline JSX，非獨立元件）。1030 改版起放在解決方案頁" />
 
       <SubSection title="Live Preview">
-        <PreviewBox label="AgentForge 產品頁 #dual 區塊開頭">
+        <PreviewBox label="解決方案頁 #dual 區塊開頭（點卡片跳到 #ai-plus／#plus-ai）">
           <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-5 items-stretch">
-            <div className="rounded-2xl border-2 border-violet-200 bg-violet-50/60 p-6">
-              <p className="text-3xl font-extrabold text-violet-600">AI+</p>
+            <div className="rounded-2xl border-2 border-cris-blue/25 bg-blue-50/70 p-6">
+              <p className="text-3xl font-extrabold text-cris-blue">AI+</p>
               <p className="mt-2 text-lg font-bold text-slate-900">把 AI 加進營運決策</p>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">接單、生產、供應鏈、經營分析 —— 讓人做的判斷更準。</p>
             </div>
@@ -1180,7 +1182,7 @@ function DualCompareSection() {
       <SubSection title="Anatomy">
         <table className="w-full">
           <tbody>
-            <AnatomyRow name="左卡（AI+）"  value="border-violet-200 / bg-violet-50/60"  desc="決策導向，沿用產品主色" />
+            <AnatomyRow name="左卡（AI+）"  value="border-cris-blue/25 / bg-blue-50/70"  desc="決策導向，品牌藍（解決方案頁主色）" />
             <AnatomyRow name="右卡（+AI）"  value="border-indigo-200 / bg-indigo-50/60"  desc="執行導向，鄰近色區隔但不衝突" />
             <AnatomyRow name="標籤字級"     value="text-3xl font-extrabold"             desc="加號位置是識別重點，必須夠大" />
             <AnatomyRow name="中央圖標"     value="ArrowLeftRight，hidden md:flex"      desc="md 以下隱藏，兩卡改上下堆疊" />
@@ -1195,14 +1197,14 @@ function DualCompareSection() {
 function IconCardSection() {
   return (
     <>
-      <SectionAnchor id="comp-iconcard" title="Icon Card" subtitle="圖標卡片，DualMode 12 張能力卡與 WorkflowCases 10 張場景卡共用" />
+      <SectionAnchor id="comp-iconcard" title="Icon Card" subtitle="圖標卡片，DualMode 12 張能力卡（解決方案頁，tone=blue）與 WorkflowCases 13 張場景卡（AgentForge 頁，tone=violet）共用" />
 
       <SubSection title="Live Preview">
-        <PreviewBox label="左：帶 slogan（能力卡，ModeCard）　右：不帶 slogan（工作場景卡，MoreCard）">
+        <PreviewBox label="左：帶 slogan、tone=&quot;blue&quot;（能力卡，ModeCard）　右：不帶 slogan、預設 violet（工作場景卡，MoreCard）">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             <IconCard
               icon={Search} iconSize={21} tileSize="w-11 h-11" descSpacing="mt-3"
-              checkIcon={CheckCircle2} checkSize={15}
+              checkIcon={CheckCircle2} checkSize={15} tone="blue"
               title="ATP/CTP 精敏詢單"
               slogan="接單前了解是否能準時交貨"
               desc="即時評估物料、產能與排程狀況，快速提供可靠交期承諾。"
@@ -1231,7 +1233,77 @@ function IconCardSection() {
             <AnatomyRow name="points"      value="string[]"              desc="效益清單，上方有 border-t 分隔線" />
             <AnatomyRow name="checkIcon"   value="Check (預設) | CheckCircle2" desc="清單項目圖標" />
             <AnatomyRow name="checkSize"   value="14 (預設) | 15"        desc="與 checkIcon 成對" />
+            <AnatomyRow name="tone"        value="'violet' (預設) | 'blue'" desc="violet = AgentForge 產品頁；blue = CRIS 品牌藍，解決方案頁用" />
             <AnatomyRow name="delay"       value="number (預設 0)"       desc="傳給內部 FadeUp 的進場延遲，做出交錯效果" />
+          </tbody>
+        </table>
+      </SubSection>
+    </>
+  )
+}
+
+const SAMPLE_TIERS = [
+  { code: 'S1', name: '標準場景型', en: 'DATA INSIGHT', tagline: '讓資料分析更快速、更標準化',
+    fit: '適合希望運用 AI 處理企業資料的企業。',
+    points: [{ icon: 'sheet', text: 'Excel／CSV 等標準資料解析' }, { icon: 'chart', text: '標準資料分析與 KPI 呈現' }],
+    feature: '以標準分析場景為起點。' },
+  { code: 'S2', name: '專業協作型', en: 'BUILD INTELLIGENCE', tagline: '把企業經驗轉化為 AI 工作方法',
+    fit: '適合需要結合專業知識與企業規則的企業。',
+    points: [{ icon: 'workflow', text: '專屬 Workflow' }, { icon: 'bot', text: 'AI Agent 建置' }],
+    feature: '依業務情境建立專屬流程。' },
+  { code: 'S3', name: '系統整合型', en: 'CONNECT & EXECUTE', tagline: '讓 AI 從分析走向系統執行',
+    fit: '適合希望連結既有營運系統的企業。',
+    points: [{ icon: 'link', text: 'ERP、MES 等系統整合' }, { icon: 'database', text: 'Database 與 API 串接' }],
+    feature: '延伸到既有企業系統。' },
+  { code: 'S4', name: '戰略治理型', en: 'GOVERN & ORCHESTRATE', tagline: '走向跨部門智慧協作',
+    fit: '適合需要多 Agent 協作與治理機制的企業。',
+    points: [{ icon: 'team', text: 'Agent Team 與 Orchestrator' }, { icon: 'shield', text: 'Validator 驗證機制' }],
+    feature: '支援更高層次的治理需求。' },
+]
+
+function PlanTiersSection() {
+  return (
+    <>
+      <SectionAnchor id="comp-plantiers" title="Plan Tiers" subtitle="AgentForge 產品頁「產品與方案」S1–S4 四階卡（PlanTiers.jsx 具名匯出 TierCard）" />
+
+      <SubSection title="Live Preview">
+        <PreviewBox dark label="<TierCard tier={...} index={0–3} featureLabel=&quot;方案特色&quot; isLast={...} />　— 文件欄寬不足，這裡每列兩張；實際頁面 xl 為一列四張">
+          <ol className="grid grid-cols-2 gap-x-9 gap-y-6 w-full">
+            {SAMPLE_TIERS.map((tier, i) => (
+              <li key={tier.code}>
+                {/* 每列最後一張不畫箭頭，避免指向畫面外 */}
+                <TierCard tier={tier} index={i} featureLabel="方案特色" isLast={i % 2 === 1} />
+              </li>
+            ))}
+          </ol>
+        </PreviewBox>
+        <Code>{`<TierCard
+  tier={{ code: 'S1', name: '標準場景型', en: 'DATA INSIGHT',
+          tagline, fit, points: [{ icon: 'sheet', text }], feature }}
+  index={0}            // 0–3 → 藍、青、紫、橙
+  featureLabel="方案特色"
+  isLast={false}       // 最後一張不畫箭頭
+/>`}</Code>
+        <p className="text-xs text-slate-500 mt-3">
+          原稿是一張示意圖，這裡用 DOM 重做：文字可被搜尋、可翻譯、深淺色模式都能讀。
+          色系由淺入深代表導入深度：四張卡的頂端色條並排時連成藍 → 橙的漸層，卡間箭頭圓鈕是「這一階色 → 下一階色」。
+          區塊底色固定深色；淺色模式卡片是白底，深色模式是 slate-900/80，兩者都靠頂部柔光帶出該階色溫。
+        </p>
+      </SubSection>
+
+      <SubSection title="Anatomy">
+        <table className="w-full">
+          <tbody>
+            <AnatomyRow name="TIER_STYLES"     value="4 組完整 class 字串"                 desc="每階的主圖標與色系；Tailwind JIT 不能拼接色名，所以逐字寫死" />
+            <AnatomyRow name="頂端色條"         value="h-1.5 bg-gradient-to-r"              desc="藍→天藍、青→翠綠、紫→桃紅、琥珀→橙，並排時連成一條" />
+            <AnatomyRow name="頂部柔光"         value="w-56 h-40 blur-3xl，該階色 /25"       desc="aria-hidden，只負責色溫，不承載資訊" />
+            <AnatomyRow name="主圖標"           value="Rocket / Users / Share2 / TrendingUp" desc="w-12 h-12 rounded-xl 漸層實心方塊，白色圖標" />
+            <AnatomyRow name="階級代號"         value="text-4xl font-black，漸層字（bg-clip-text）" desc="S1–S4，靠右與圖標對齊" />
+            <AnatomyRow name="英文定位"         value="rounded-full ring-1 膠囊，text-[10.5px] tracking-[0.14em]" desc="DATA INSIGHT 等，三語相同" />
+            <AnatomyRow name="tagline / fit"    value="xl:min-h-[2lh] / xl:min-h-[3lh]"     desc="四欄時預留行數，讓分隔線與條列跨卡對齊；tagline 用 text-balance、fit 用 text-pretty 避免孤字" />
+            <AnatomyRow name="tier.points[].icon" value="afIcon 鍵"                        desc="與 locale 其他 icon 欄位一樣，三語必須相同（check-i18n 會擋）" />
+            <AnatomyRow name="方案特色"         value="rounded-xl 色底，標籤 + 內文兩行"     desc="條列 flex-1，讓四張卡的方案特色底部對齊" />
+            <AnatomyRow name="箭頭"             value="w-10 h-10 漸層圓鈕 + ring-4（同區塊底色）" desc="手機版朝下（rotate-90）、xl 朝右；md 兩欄時不畫，因為換行處不連續" />
           </tbody>
         </table>
       </SubSection>
@@ -1271,7 +1343,7 @@ export default function DesignSystem() {
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
                 { label: 'Color Tokens', val: '17' },
-                { label: 'Components', val: '16' },
+                { label: 'Components', val: '17' },
                 { label: 'Animation Tokens', val: '12' },
                 { label: 'Type Styles', val: '9' },
               ].map(s => (
@@ -1307,6 +1379,7 @@ export default function DesignSystem() {
           <MetricSection />
           <DualCompareSection />
           <IconCardSection />
+          <PlanTiersSection />
         </main>
       </div>
     </div>

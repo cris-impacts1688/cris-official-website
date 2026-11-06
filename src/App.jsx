@@ -12,7 +12,8 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import News from './components/News'
-import Cases from './components/Cases'
+// 數位轉型案例暫時拿掉（見 HomePage），元件保留以便放回
+// import Cases from './components/Cases'
 import Contact from './components/Contact'
 import APSProduct from './pages/APSProduct'
 import About from './pages/About'
@@ -24,16 +25,15 @@ import DesignSystem from './pages/DesignSystem'
 import NewsPost from './pages/NewsPost'
 import Solutions from './pages/Solutions'
 import MissionControl from './pages/MissionControl'
-import AISolutions from './components/AISolutions'
 
 function HomePage() {
   return (
     <>
       <Hero />
       <Features />
-      <AISolutions />
       <News />
-      <Cases />
+      {/* 數位轉型案例：1030 改版暫時拿掉，之後可能放回 */}
+      {/* <Cases /> */}
       <Contact />
     </>
   )

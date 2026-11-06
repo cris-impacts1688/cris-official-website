@@ -5,15 +5,17 @@ import { useTranslation } from 'react-i18next'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import { useCmsContent } from '../hooks/useCmsContent'
 import AgentNetwork from '../components/agentforge/AgentNetwork'
-import DualMode from '../components/agentforge/DualMode'
-import DataInsight from '../components/agentforge/DataInsight'
+import CoreFeatures from '../components/agentforge/CoreFeatures'
+import Benefits from '../components/agentforge/Benefits'
+import PlanTiers from '../components/agentforge/PlanTiers'
 import WorkflowCases from '../components/agentforge/WorkflowCases'
 import FadeUp from '../components/agentforge/FadeUp'
 
 const SUBNAV = [
-  { key: 'dual',    href: '#dual'    },
-  { key: 'insight', href: '#insight' },
-  { key: 'cases',   href: '#cases'   },
+  { key: 'features', href: '#features' },
+  { key: 'benefits', href: '#benefits' },
+  { key: 'plans',    href: '#plans'    },
+  { key: 'cases',    href: '#cases'    },
 ]
 
 /** 捲過 Hero 後淡入的區塊導覽。固定在 Navbar（h-16）下方。 */
@@ -116,8 +118,9 @@ export default function AgentForgeProduct() {
               </div>
 
               <h1 className="text-5xl sm:text-6xl font-extrabold leading-[1.08] tracking-tight">
-                <span className="text-slate-900 dark:text-white">{t('agentforge.hero_title')} </span>
-                <span className="text-gradient-violet-anim">{t('agentforge.hero_title_gradient')}</span>
+                <span className="text-slate-900 dark:text-white">{t('agentforge.hero_title')}</span>
+                {/* 漸層段落自成一行：中文兩段間不能有空格，英文則需要斷行 */}
+                <span className="block text-gradient-violet-anim">{t('agentforge.hero_title_gradient')}</span>
               </h1>
               <p className="mt-3 text-2xl font-semibold text-slate-700 dark:text-white/80">
                 {t('agentforge.hero_subtitle')}
@@ -174,8 +177,9 @@ export default function AgentForgeProduct() {
         </div>
       </section>
 
-      <DualMode />
-      <DataInsight />
+      <CoreFeatures />
+      <Benefits />
+      <PlanTiers />
       <WorkflowCases />
 
       {/* ── CTA Banner ──────────────────────────────────────────────── */}

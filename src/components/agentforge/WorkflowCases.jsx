@@ -158,7 +158,7 @@ function MoreCard({ item, index }) {
   )
 }
 
-/* ── 第 14 張：客製化 CTA ──────────────────────────────────────────── */
+/* ── 收尾：客製化 CTA（不計入工作場景數） ──────────────────────────── */
 function CustomCard({ data }) {
   const Icon = afIcon(data.icon)
   return (
@@ -258,7 +258,7 @@ export default function WorkflowCases() {
           ))}
         </div>
 
-        {/* 更多工作場景 ×10 */}
+        {/* 更多工作場景 ×13（旗艦 3 + 13 = 標題的 16 個） */}
         <FadeUp className="mb-8">
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
             {t('agentforge.cases.more_label')}
@@ -270,7 +270,7 @@ export default function WorkflowCases() {
           ))}
         </div>
 
-        {/* 第 14 張：客製化 */}
+        {/* 客製化 CTA */}
         <CustomCard data={custom} />
       </div>
     </section>

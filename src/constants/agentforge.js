@@ -3,6 +3,11 @@ import {
   Activity, ClipboardList, BarChart3, Wrench, MessageSquare, AlertTriangle,
   Headphones, Leaf, FileCheck2, Ship, Package2, Cpu, Gauge, ScanLine,
   Users, Repeat2, Sparkles,
+  BookOpen, Workflow, UsersRound, MonitorPlay, Plug,
+  TrendingUp, Copy, Gem, Handshake,
+  FileSpreadsheet, FileBarChart, ListChecks, Database, RefreshCw,
+  Presentation, ShieldCheck, Landmark,
+  ArrowLeftRight, Lightbulb, Target,
 } from 'lucide-react'
 
 /**
@@ -38,6 +43,29 @@ export const AF_ICONS = {
   users: Users,
   repeat: Repeat2,
   sparkles: Sparkles,
+  dualtrack: ArrowLeftRight,
+  patent: Lightbulb,
+  target: Target,
+  // 核心功能
+  book: BookOpen,
+  workflow: Workflow,
+  team: UsersRound,
+  monitor: MonitorPlay,
+  plug: Plug,
+  // 實質效益
+  trending: TrendingUp,
+  copy: Copy,
+  gem: Gem,
+  handshake: Handshake,
+  // 產品與方案 S1–S4 條列（另沿用上方 chart / bot / users / link / zap）
+  sheet: FileSpreadsheet,
+  report: FileBarChart,
+  rules: ListChecks,
+  database: Database,
+  sync: RefreshCw,
+  warroom: Presentation,
+  shield: ShieldCheck,
+  governance: Landmark,
 }
 
 /**

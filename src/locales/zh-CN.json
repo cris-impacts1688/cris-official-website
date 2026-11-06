@@ -62,10 +62,10 @@
     {
       "title": "CRIS AgentForge Platform",
       "subtitle": "企业智慧团队锻造平台",
-      "desc": "以 Multi-Agent 工作流串接 ERP／MES／CRM，从分析、决策到执行由 AI Agent 接手，14 个企业工作场景可直接套用。",
+      "desc": "以 Multi-Agent 工作流串接 ERP／MES／CRM，从分析、决策到执行由 AI Agent 接手，16 个企业工作场景可直接套用。",
       "points": [
         "Multi-Agent 协作，可执行多步骤长时间任务",
-        "内建 14 个企业级工作流，快速落地",
+        "内建 16 个企业级工作流，快速落地",
         "结合企业知识库，具备长期记忆能力",
         "数据脱敏与权限管控，安心应用核心数据"
       ]
@@ -408,13 +408,13 @@
   },
   "agentforge": {
     "breadcrumb": "CRIS AgentForge Platform",
-    "badge": "企业智慧团队锻造平台",
-    "hero_title": "CRIS AgentForge",
-    "hero_title_gradient": "Platform",
-    "hero_subtitle": "企业智慧团队锻造平台",
-    "hero_desc": "从单点应用到企业运营，多个工作场景已成功落地。AI 不只是回答问题，而是真正参与企业工作。",
+    "badge": "CRIS AgentForge Platform",
+    "hero_title": "企业智慧团队",
+    "hero_title_gradient": "锻造平台",
+    "hero_subtitle": "让 AI 不只回答问题，而是真正替企业工作",
+    "hero_desc": "CRIS AgentForge Platform（AFP）整合制造业 Know-how、AI 工作流程、多 Agent 协作与企业系统集成，协助企业将专业知识与工作方法转化为可执行、可管理、可持续优化的 AI 工作能力。",
     "cta_primary": "预约 Demo",
-    "cta_secondary": "看 14 个工作场景",
+    "cta_secondary": "看 16 个工作场景",
     "tags": [
       "Multi-Agent",
       "工作流自动化",
@@ -423,9 +423,10 @@
       "ERP/MES/CRM 整合"
     ],
     "subnav": {
-      "dual": "双轨能力",
-      "insight": "数据洞察",
-      "cases": "企业案例",
+      "features": "核心功能",
+      "benefits": "实质效益",
+      "plans": "产品与方案",
+      "cases": "应用案例",
       "contact": "预约咨询"
     },
     "hero_network": {
@@ -435,194 +436,168 @@
       "decide": "决策 Agent",
       "report": "报告 Agent"
     },
-    "dual": {
-      "tag": "双轨能力",
-      "title": "两种导入路径，一个平台",
-      "compare": {
-        "a_label": "AI+",
-        "a_head": "把 AI 加入运营决策",
-        "a_desc": "接单、生产、供应链、经营分析 —— 让人做的判断更准。",
-        "b_label": "+AI",
-        "b_head": "把执行交给 AI",
-        "b_desc": "监控、报工、客服、品质 —— 让 AI 代替人把事情做完。"
-      },
-      "aiplus": {
-        "label": "AI+（应用系统）",
-        "title": "智慧决策与运营应用平台",
-        "intro": "让企业从数据驱动走向智慧决策，提升运营效率与竞争优势。整合接单、生产、供应链与经营分析等核心场景，协助企业即时掌握运营状况并提升决策品质。",
-        "items": [
-          {
-            "icon": "search",
-            "title": "ATP/CTP 精敏询单",
-            "slogan": "接单前了解是否能准时交货",
-            "desc": "即时评估物料、产能与排程状况，快速提供可靠交期承诺。",
-            "points": [
-              "降低误接订单与延迟交货风险",
-              "提升接单成功率",
-              "建立客户对交期的信任"
-            ]
-          },
-          {
-            "icon": "factory",
-            "title": "先进物料与产能规划",
-            "slogan": "提前看见缺料与产能瓶颈",
-            "desc": "整合 BOM、库存、采购与生产信息，自动分析未来缺料风险与产能负荷，协助企业提前规划。",
-            "points": [
-              "降低缺料停工风险",
-              "提高生产计划准确度"
-            ]
-          },
-          {
-            "icon": "calendar",
-            "title": "APS 智慧排程",
-            "slogan": "生产排程不再依赖人工经验",
-            "desc": "通过 AI 与模拟演算，自动产生最佳生产排程方案，即时应对插单、急单与异常状况。",
-            "points": [
-              "提升设备利用率",
-              "缩短交期",
-              "降低在制品库存"
-            ]
-          },
-          {
-            "icon": "link",
-            "title": "供应链协作平台",
-            "slogan": "打造即时透明的供应链协同机制",
-            "desc": "串联企业、供应商与外包伙伴信息，让采购、交期、出货与异常处理能即时协作与追踪。",
-            "points": [
-              "提升供应链反应速度",
-              "降低沟通成本与信息落差"
-            ]
-          },
-          {
-            "icon": "bot",
-            "title": "Multi-Agent 智慧数据分析",
-            "slogan": "数据自动变成管理洞察",
-            "desc": "AI Agent 自动整合企业数据、执行分析、生成仪表板与管理报告。",
-            "points": [
-              "快速掌握运营现况",
-              "减少报表整理时间",
-              "加速数据驱动决策"
-            ]
-          },
-          {
-            "icon": "zap",
-            "title": "Multi-Agent 智慧操作数智员工",
-            "slogan": "让 AI 成为企业的数字执行助手",
-            "desc": "AI Agent 可依据标准流程执行数据查询、系统操作、回复问题与跨系统协作。",
-            "points": [
-              "减少重复性工作",
-              "提升作业效率",
-              "人力专注于更高价值工作"
-            ]
-          }
-        ]
-      },
-      "plusai": {
-        "label": "+AI（自动化操作）",
-        "title": "智慧自动化与 AI Agent 平台",
-        "intro": "打造企业全天候运作的数字员工团队，降低人工作业负担并提升执行效率，让信息查询、分析判断与流程执行自动化。",
-        "items": [
-          {
-            "icon": "activity",
-            "title": "设备监控系统",
-            "slogan": "设备异常从被动处理变成主动预警",
-            "desc": "即时监控设备运转、稼动率与异常信号，通过 AI 分析提前发现潜在问题。",
-            "points": [
-              "降低停机风险与维修成本",
-              "提升设备利用率",
-              "降低非预期停机损失"
-            ]
-          },
-          {
-            "icon": "clipboard",
-            "title": "智慧报工系统",
-            "slogan": "现场生产进度即时透明化",
-            "desc": "通过 QR Code 与移动设备快速报工，自动回传工单进度、生产状况与设备信息。",
-            "points": [
-              "减少人工填报与信息延迟",
-              "提升现场管理效率",
-              "即时掌握生产执行情况"
-            ]
-          },
-          {
-            "icon": "chart",
-            "title": "ERP 采购与财务分析系统",
-            "slogan": "将 ERP 数据自动转为经营洞察",
-            "desc": "AI Agent 直接分析采购、成本、库存与财务数据，自动产出分析结果与管理报表。",
-            "points": [
-              "缩短决策准备时间",
-              "快速掌握成本结构与采购风险",
-              "提升经营决策效率"
-            ]
-          },
-          {
-            "icon": "wrench",
-            "title": "智慧技术支持服务系统",
-            "slogan": "企业客服与技术支持 24 小时在线",
-            "desc": "整合知识库、FAQ 与 AI Agent，自动回复技术问题、产品咨询与服务需求。",
-            "points": [
-              "提高回复速度与服务品质",
-              "降低人力成本"
-            ]
-          },
-          {
-            "icon": "message",
-            "title": "AI 客服系统",
-            "slogan": "全天候智慧客服中心",
-            "desc": "通过 AI Agent 自动理解客户问题，提供即时回复、信息查询与服务引导，提升客户互动体验。",
-            "points": [
-              "提升客户满意度",
-              "减少重复性客服工作"
-            ]
-          },
-          {
-            "icon": "alert",
-            "title": "品质异常与设备维护系统",
-            "slogan": "提早发现品质问题与设备风险",
-            "desc": "整合品质检验、异常通报与设备维护信息，利用 AI 自动分析异常原因并提供改善建议。",
-            "points": [
-              "降低品质成本",
-              "减少不良品与设备故障风险"
-            ]
-          }
-        ]
-      }
+    "features": {
+      "tag": "CAPABILITIES",
+      "title": "核心功能",
+      "items": [
+        {
+          "icon": "book",
+          "title": "懂制造业的专业知识",
+          "desc": "将制造业的管理知识、KPI 定义、分析逻辑与专业规则，转化为 AI 可运用的知识基础。"
+        },
+        {
+          "icon": "workflow",
+          "title": "把工作方法变成可执行流程",
+          "desc": "将数据处理、分析、判断与输出串接成标准工作流程，让任务能依规则持续执行。"
+        },
+        {
+          "icon": "team",
+          "title": "不同专长的 AI 分工协作",
+          "desc": "依任务需求配置不同专长的 Agent，分别处理数据、分析、判断与报告等工作。"
+        },
+        {
+          "icon": "monitor",
+          "title": "智慧监控站台看见 AI 替企业工作",
+          "desc": "呈现企业的作业现场：执行工作流、查看执行状态，分析结果与决策建议集中呈现。"
+        },
+        {
+          "icon": "plug",
+          "title": "让 AI 接入企业运营系统",
+          "desc": "依导入需求整合 ERP、MES、APS、WMS、数据库及 API，让 AI 的应用逐步延伸至企业既有系统。"
+        }
+      ]
     },
-    "insight": {
-      "tag": "DATA INSIGHT",
-      "title": "AI 数据分析与智慧报告平台",
-      "intro": "从数据收集、分析决策到管理报告，全流程由 AI Agent 自动完成。",
-      "pains_label": "企业痛点",
-      "pains": [
-        "数据分散难以整合",
-        "分析耗时",
-        "报表产制负担重",
-        "部门数据不一",
-        "决策速度慢"
-      ],
-      "gains_label": "导入后企业获得",
-      "gains": [
-        "报表制作时间减少 80%",
-        "即时掌握关键 KPI",
-        "降低跨部门沟通成本",
-        "建立标准化决策流程",
-        "从数据走向决策"
-      ],
-      "agents": [
+    "benefits": {
+      "tag": "OUTCOMES",
+      "title": "实质效益",
+      "items": [
         {
-          "en": "Data Analysis Agent",
-          "zh": "数据分析代理人",
-          "desc": "自动整合 ERP、MES、CRM 与 Excel 数据，将数据转换为可执行洞察。"
+          "icon": "trending",
+          "title": "降本增效",
+          "desc": "减少重复数据整理、分析与报告作业，让团队将时间投入更高价值的工作。"
         },
         {
-          "en": "Dashboard Agent",
-          "zh": "智慧仪表板代理人",
-          "desc": "即时产生仪表板与 KPI 监控画面，快速掌握运营现况。"
+          "icon": "copy",
+          "title": "关键流程可复制",
+          "desc": "将常用的分析方法与工作规则标准化，降低不同人员执行时的差异。"
         },
         {
-          "en": "Report Agent",
-          "zh": "智慧报告代理人",
-          "desc": "自动生成管理报告与决策摘要，减少报告撰写时间。"
+          "icon": "gem",
+          "title": "专家经验变资产",
+          "desc": "将专业知识与判断规则整理为可重复使用的 AI 工作资源。"
+        },
+        {
+          "icon": "handshake",
+          "title": "强化跨部门协作",
+          "desc": "让不同工作角色与 AI Agent 能依任务分工，提升信息传递与协作效率。"
+        }
+      ]
+    },
+    "plans": {
+      "tag": "产品与方案",
+      "title": "站在 AI 大语言模型巨人的肩膀上，打造更懂制造的智慧团队",
+      "intro": "以企业专业知识、工作流程、Agent 协作与系统集成，补足通用 AI 在企业实际工作情境中的需求。",
+      "feature_label": "方案特色",
+      "tiers": [
+        {
+          "code": "S1",
+          "name": "标准场景型",
+          "en": "DATA INSIGHT",
+          "tagline": "让数据分析更快速、更标准化",
+          "fit": "适合希望运用 AI 处理企业数据、建立标准分析方法并快速产出洞察的企业。",
+          "points": [
+            {
+              "icon": "sheet",
+              "text": "Excel／CSV 等标准数据解析"
+            },
+            {
+              "icon": "chart",
+              "text": "标准数据分析与 KPI 呈现"
+            },
+            {
+              "icon": "report",
+              "text": "异常识别、图表与报告产出"
+            }
+          ],
+          "feature": "以标准分析场景为起点，降低重复数据处理与报告整理的负担。"
+        },
+        {
+          "code": "S2",
+          "name": "专业协作型",
+          "en": "BUILD INTELLIGENCE",
+          "tagline": "把企业经验转化为可执行的 AI 工作方法",
+          "fit": "适合需要将专业知识、企业规则与特定工作流程结合的企业。",
+          "points": [
+            {
+              "icon": "workflow",
+              "text": "专属 Workflow"
+            },
+            {
+              "icon": "bot",
+              "text": "AI Agent 构建"
+            },
+            {
+              "icon": "rules",
+              "text": "Business Rule 规则设置"
+            },
+            {
+              "icon": "users",
+              "text": "人机协作与管理机制"
+            }
+          ],
+          "feature": "依企业业务情境，建立专属的 AI 工作流程与协作方式。"
+        },
+        {
+          "code": "S3",
+          "name": "系统整合型",
+          "en": "CONNECT & EXECUTE",
+          "tagline": "让 AI 从分析走向企业系统执行",
+          "fit": "适合希望将 AI 工作流程连接既有运营系统的企业。",
+          "points": [
+            {
+              "icon": "link",
+              "text": "ERP、MES、APS、WMS 等系统集成"
+            },
+            {
+              "icon": "database",
+              "text": "Database 与 API 对接"
+            },
+            {
+              "icon": "zap",
+              "text": "工作流程触发与执行"
+            },
+            {
+              "icon": "sync",
+              "text": "依集成范围支持数据回写"
+            }
+          ],
+          "feature": "将 AI 工作能力延伸到既有企业系统与运营流程。"
+        },
+        {
+          "code": "S4",
+          "name": "战略治理型",
+          "en": "GOVERN & ORCHESTRATE",
+          "tagline": "从单一 AI 任务走向跨部门智慧协作",
+          "fit": "适合需要跨部门、多 Agent 协作、决策支持与治理机制的企业。",
+          "points": [
+            {
+              "icon": "team",
+              "text": "Agent Team 与 Orchestrator"
+            },
+            {
+              "icon": "warroom",
+              "text": "War Room 决策协作"
+            },
+            {
+              "icon": "shield",
+              "text": "Validator 验证机制"
+            },
+            {
+              "icon": "governance",
+              "text": "AI Governance 治理"
+            }
+          ],
+          "feature": "支持更高层次的 AI 协作、决策管理与治理需求。"
         }
       ],
       "market": {
@@ -639,8 +614,8 @@
       }
     },
     "cases": {
-      "tag": "企业案例",
-      "title": "14 个企业工作场景",
+      "tag": "应用案例",
+      "title": "16 个企业工作场景",
       "intro": "涵盖接单、排程、供应链、品质、ESG 到行政流程。每一个都是可直接套用的 Multi-Agent 工作流，不是从零开始的定制项目。",
       "values_label": "打造企业专属 AI Workforce",
       "values": [
@@ -948,6 +923,39 @@
             "使人力专注于高价值分析与决策工作",
             "提高整体作业效率与速度"
           ]
+        },
+        {
+          "icon": "dualtrack",
+          "title": "业务与生产双轨",
+          "desc": "整合业务接单与生产执行流程，自动提取订单信息、进行数据比对与规则检核，并串接系统形成从接单到生产的双轨协作机制。",
+          "points": [
+            "降低人工处理负担",
+            "提升跨部门协作效率",
+            "强化订单与生产可视性",
+            "加速异常发现与改善"
+          ]
+        },
+        {
+          "icon": "patent",
+          "title": "研发商机与专利情报",
+          "desc": "整合市场情报、研发设计、专利检索、制程分析与原料评估等，协助研发团队从商机探索到技术评估，建立系统化的信息分析与决策流程。",
+          "points": [
+            "加速研发情报收集",
+            "强化跨领域协作",
+            "提早识别技术风险",
+            "提升研发决策质量"
+          ]
+        },
+        {
+          "icon": "target",
+          "title": "精准营销",
+          "desc": "自动整理客户名单、分析企业背景、评估商机与匹配产品，生成个性化营销内容并持续跟进，提升商机开发效率。",
+          "points": [
+            "加速名单处理",
+            "精准识别商机",
+            "提升营销精准度",
+            "强化商机跟进"
+          ]
         }
       ],
       "custom": {
@@ -1013,45 +1021,163 @@
   },
   "solutions": {
     "tag": "解决方案",
-    "title": "AI Agent 三大应用模块",
-    "subtitle": "基于 Argox AI 引擎，快思科技提供开箱即用的 AI Agent 解决方案，覆盖财务、售服与制造三大核心场景。",
-    "module_1_title": "智能财务",
-    "module_1_subtitle": "ERP 财务报表自动模拟系统",
-    "module_1_tag": "Financial AI Agent",
-    "module_1_desc": "串接企业 ERP 系统，AI 自动分析财务数据，一键产出损益表、资产负债表、现金流量表、权益变动表与财务比率五大报表。",
-    "module_1_features": [
-      "串接主流 ERP 系统（SAP / 用友 / 鼎新）",
-      "自动产出五大财务报表",
-      "AI 财务异常预警检测",
-      "自然语言查询财务数据"
-    ],
-    "module_2_title": "智能售服",
-    "module_2_subtitle": "RAG 企业知识库 · 24/7 技术支持",
-    "module_2_tag": "Service AI Agent",
-    "module_2_desc": "基于 RAG 技术，将企业产品手册、故障排除文档建成私有知识库，AI 代理人提供即时、精准的技术问答与售后支持。",
-    "module_2_features": [
-      "私有知识库构建（PDF/Word/URL）",
-      "RAG 精准语义检索",
-      "24/7 AI 技术问答服务",
-      "多轮对话上下文理解"
-    ],
-    "module_3_title": "预测性维护",
-    "module_3_subtitle": "AIoT 设备健康诊断与异常预警",
-    "module_3_tag": "Maintenance AI Agent",
-    "module_3_desc": "整合 AIoT 传感器数据流，AI 持续监测设备振动、温度、电流等关键指标，提前预判故障风险，自动触发维护工单。",
-    "module_3_features": [
-      "AIoT 多源传感器数据整合",
-      "AI 设备健康评分与趋势分析",
-      "异常预警自动推送通知",
-      "预测性维护工单自动派发"
-    ],
-    "feature_label": "核心能力",
+    "title": "两种导入路径，一个平台",
+    "subtitle": "AI+ 把 AI 加进运营决策，+AI 把执行交给 AI。两条路径都建立在 CRIS AgentForge Platform 上，可依企业现况分阶段导入。",
     "cta_demo": "预约 AI 体验",
     "cta_learn": "了解技术架构",
-    "expand": "展开功能",
-    "collapse": "收起",
+    "dual": {
+      "compare": {
+        "a_label": "AI+",
+        "a_head": "把 AI 加入运营决策",
+        "a_desc": "接单、生产、供应链、经营分析 —— 让人做的判断更准。",
+        "b_label": "+AI",
+        "b_head": "把执行交给 AI",
+        "b_desc": "监控、报工、客服、品质 —— 让 AI 代替人把事情做完。"
+      },
+      "aiplus": {
+        "label": "AI+（应用系统）",
+        "title": "智慧决策与运营应用平台",
+        "intro": "让企业从数据驱动走向智慧决策，提升运营效率与竞争优势。整合接单、生产、供应链与经营分析等核心场景，协助企业即时掌握运营状况并提升决策品质。",
+        "items": [
+          {
+            "icon": "search",
+            "title": "ATP/CTP 精敏询单",
+            "slogan": "接单前了解是否能准时交货",
+            "desc": "即时评估物料、产能与排程状况，快速提供可靠交期承诺。",
+            "points": [
+              "降低误接订单与延迟交货风险",
+              "提升接单成功率",
+              "建立客户对交期的信任"
+            ]
+          },
+          {
+            "icon": "factory",
+            "title": "先进物料与产能规划",
+            "slogan": "提前看见缺料与产能瓶颈",
+            "desc": "整合 BOM、库存、采购与生产信息，自动分析未来缺料风险与产能负荷，协助企业提前规划。",
+            "points": [
+              "降低缺料停工风险",
+              "提高生产计划准确度"
+            ]
+          },
+          {
+            "icon": "calendar",
+            "title": "APS 智慧排程",
+            "slogan": "生产排程不再依赖人工经验",
+            "desc": "通过 AI 与模拟演算，自动产生最佳生产排程方案，即时应对插单、急单与异常状况。",
+            "points": [
+              "提升设备利用率",
+              "缩短交期",
+              "降低在制品库存"
+            ]
+          },
+          {
+            "icon": "link",
+            "title": "供应链协作平台",
+            "slogan": "打造即时透明的供应链协同机制",
+            "desc": "串联企业、供应商与外包伙伴信息，让采购、交期、出货与异常处理能即时协作与追踪。",
+            "points": [
+              "提升供应链反应速度",
+              "降低沟通成本与信息落差"
+            ]
+          },
+          {
+            "icon": "bot",
+            "title": "Multi-Agent 智慧数据分析",
+            "slogan": "数据自动变成管理洞察",
+            "desc": "AI Agent 自动整合企业数据、执行分析、生成仪表板与管理报告。",
+            "points": [
+              "快速掌握运营现况",
+              "减少报表整理时间",
+              "加速数据驱动决策"
+            ]
+          },
+          {
+            "icon": "zap",
+            "title": "Multi-Agent 智慧操作数智员工",
+            "slogan": "让 AI 成为企业的数字执行助手",
+            "desc": "AI Agent 可依据标准流程执行数据查询、系统操作、回复问题与跨系统协作。",
+            "points": [
+              "减少重复性工作",
+              "提升作业效率",
+              "人力专注于更高价值工作"
+            ]
+          }
+        ]
+      },
+      "plusai": {
+        "label": "+AI（自动化操作）",
+        "title": "智慧自动化与 AI Agent 平台",
+        "intro": "打造企业全天候运作的数字员工团队，降低人工作业负担并提升执行效率，让信息查询、分析判断与流程执行自动化。",
+        "items": [
+          {
+            "icon": "activity",
+            "title": "设备监控系统",
+            "slogan": "设备异常从被动处理变成主动预警",
+            "desc": "即时监控设备运转、稼动率与异常信号，通过 AI 分析提前发现潜在问题。",
+            "points": [
+              "降低停机风险与维修成本",
+              "提升设备利用率",
+              "降低非预期停机损失"
+            ]
+          },
+          {
+            "icon": "clipboard",
+            "title": "智慧报工系统",
+            "slogan": "现场生产进度即时透明化",
+            "desc": "通过 QR Code 与移动设备快速报工，自动回传工单进度、生产状况与设备信息。",
+            "points": [
+              "减少人工填报与信息延迟",
+              "提升现场管理效率",
+              "即时掌握生产执行情况"
+            ]
+          },
+          {
+            "icon": "chart",
+            "title": "ERP 采购与财务分析系统",
+            "slogan": "将 ERP 数据自动转为经营洞察",
+            "desc": "AI Agent 直接分析采购、成本、库存与财务数据，自动产出分析结果与管理报表。",
+            "points": [
+              "缩短决策准备时间",
+              "快速掌握成本结构与采购风险",
+              "提升经营决策效率"
+            ]
+          },
+          {
+            "icon": "wrench",
+            "title": "智慧技术支持服务系统",
+            "slogan": "企业客服与技术支持 24 小时在线",
+            "desc": "整合知识库、FAQ 与 AI Agent，自动回复技术问题、产品咨询与服务需求。",
+            "points": [
+              "提高回复速度与服务品质",
+              "降低人力成本"
+            ]
+          },
+          {
+            "icon": "message",
+            "title": "AI 客服系统",
+            "slogan": "全天候智慧客服中心",
+            "desc": "通过 AI Agent 自动理解客户问题，提供即时回复、信息查询与服务引导，提升客户互动体验。",
+            "points": [
+              "提升客户满意度",
+              "减少重复性客服工作"
+            ]
+          },
+          {
+            "icon": "alert",
+            "title": "品质异常与设备维护系统",
+            "slogan": "提早发现品质问题与设备风险",
+            "desc": "整合品质检验、异常通报与设备维护信息，利用 AI 自动分析异常原因并提供改善建议。",
+            "points": [
+              "降低品质成本",
+              "减少不良品与设备故障风险"
+            ]
+          }
+        ]
+      }
+    },
     "agentforge_powered_by": "Powered by Argox AI Engine",
-    "agentforge_cta_title": "所有模块均可接上 CRIS AgentForge Platform",
+    "agentforge_cta_title": "所有方案均可接上 CRIS AgentForge Platform",
     "agentforge_cta_subtitle": "从分析、决策到执行，以 Multi-Agent 工作流串接现有 ERP／MES／CRM 系统，顾问团队全程陪伴导入。",
     "agentforge_cta_btn": "预约 AI 落地顾问",
     "agentforge_learn_more": "了解 AgentForge Platform"

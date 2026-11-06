@@ -46,9 +46,6 @@ const CMS_PAGES = [
     label: '解決方案',
     sections: [
       { key: 'hero_subtitle',  label: 'Hero 副標題',            hint: '解決方案頁面主標下方的副標' },
-      { key: 'module_1_desc',  label: 'AI Agent — 區塊描述',    hint: 'AI Agent 模組卡片說明文字' },
-      { key: 'module_2_desc',  label: 'ESG — 區塊描述',         hint: 'ESG 模組卡片說明文字' },
-      { key: 'module_3_desc',  label: 'APS — 區塊描述',         hint: 'APS 模組卡片說明文字' },
     ],
   },
 ]

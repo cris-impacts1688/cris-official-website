@@ -62,10 +62,10 @@
     {
       "title": "CRIS AgentForge Platform",
       "subtitle": "Forge Your Enterprise AI Workforce",
-      "desc": "Multi-Agent workflows connect ERP, MES, and CRM — AI Agents handle analysis, decisions, and execution, with 14 ready-to-deploy enterprise workflows.",
+      "desc": "Multi-Agent workflows connect ERP, MES, and CRM — AI Agents handle analysis, decisions, and execution, with 16 ready-to-deploy enterprise workflows.",
       "points": [
         "Multi-Agent collaboration for long-running, multi-step tasks",
-        "14 built-in enterprise workflows for fast deployment",
+        "16 built-in enterprise workflows for fast deployment",
         "Connects to your knowledge base with long-term memory",
         "Data masking and access control for safe use of core data"
       ]
@@ -408,13 +408,13 @@
   },
   "agentforge": {
     "breadcrumb": "CRIS AgentForge Platform",
-    "badge": "Forge Your Enterprise AI Workforce",
-    "hero_title": "CRIS AgentForge",
-    "hero_title_gradient": "Platform",
-    "hero_subtitle": "Forge Your Enterprise AI Workforce",
-    "hero_desc": "From single-point applications to full enterprise operations, multiple workflows are already live. AI doesn't just answer questions — it does the work.",
+    "badge": "CRIS AgentForge Platform",
+    "hero_title": "Forge Your Enterprise",
+    "hero_title_gradient": "AI Workforce",
+    "hero_subtitle": "AI that doesn't just answer questions — it works for your business",
+    "hero_desc": "CRIS AgentForge Platform (AFP) brings together manufacturing know-how, AI workflows, multi-agent collaboration, and enterprise system integration — turning your expertise and working methods into AI capabilities that are executable, manageable, and continuously improving.",
     "cta_primary": "Book a Demo",
-    "cta_secondary": "See 14 Workflows",
+    "cta_secondary": "See 16 Workflows",
     "tags": [
       "Multi-Agent",
       "Workflow Automation",
@@ -423,9 +423,10 @@
       "ERP/MES/CRM Integration"
     ],
     "subnav": {
-      "dual": "Dual Capabilities",
-      "insight": "Data Insight",
-      "cases": "Case Studies",
+      "features": "Core Features",
+      "benefits": "Benefits",
+      "plans": "Plans",
+      "cases": "Use Cases",
       "contact": "Book a Consultation"
     },
     "hero_network": {
@@ -435,194 +436,168 @@
       "decide": "Decision",
       "report": "Reporting"
     },
-    "dual": {
-      "tag": "Dual Capabilities",
-      "title": "Two Paths to Adoption, One Platform",
-      "compare": {
-        "a_label": "AI+",
-        "a_head": "Add AI to Operational Decisions",
-        "a_desc": "Order intake, production, supply chain, business analysis — sharper judgment for the people making the calls.",
-        "b_label": "+AI",
-        "b_head": "Hand Execution to AI",
-        "b_desc": "Monitoring, shop-floor reporting, customer service, quality — AI gets the work done instead of people."
-      },
-      "aiplus": {
-        "label": "AI+ (Application Systems)",
-        "title": "Smart Decision & Operations Platform",
-        "intro": "Moves enterprises from data-driven to decision-driven, improving operational efficiency and competitiveness. Covers order intake, production, supply chain, and business analysis, giving real-time visibility and sharper decisions.",
-        "items": [
-          {
-            "icon": "search",
-            "title": "Order Feasibility Check (ATP/CTP)",
-            "slogan": "Know if you can deliver on time before you accept the order",
-            "desc": "Assesses materials, capacity, and schedule in real time to give a reliable delivery commitment fast.",
-            "points": [
-              "Reduces the risk of overcommitting and late delivery",
-              "Improves order win rate",
-              "Builds customer trust in delivery dates"
-            ]
-          },
-          {
-            "icon": "factory",
-            "title": "Advanced Material & Capacity Planning",
-            "slogan": "See material shortages and capacity bottlenecks in advance",
-            "desc": "Integrates BOM, inventory, procurement, and production data to auto-analyze future material-shortage risk and capacity load, helping you plan ahead.",
-            "points": [
-              "Reduces the risk of shutdowns from material shortages",
-              "Improves production plan accuracy"
-            ]
-          },
-          {
-            "icon": "calendar",
-            "title": "AI Production Scheduling",
-            "slogan": "Production scheduling no longer relies on manual experience",
-            "desc": "AI and simulation algorithms auto-generate the optimal production schedule, adapting in real time to rush orders and disruptions.",
-            "points": [
-              "Improves equipment utilization",
-              "Shortens lead times",
-              "Reduces WIP inventory"
-            ]
-          },
-          {
-            "icon": "link",
-            "title": "Supply Chain Collaboration",
-            "slogan": "Real-time, transparent supply chain collaboration",
-            "desc": "Connects your company, suppliers, and outsourcing partners so procurement, delivery, shipping, and exceptions are tracked and coordinated in real time.",
-            "points": [
-              "Faster supply chain response",
-              "Lower communication costs and fewer information gaps"
-            ]
-          },
-          {
-            "icon": "bot",
-            "title": "Multi-Agent Data Analysis",
-            "slogan": "Data becomes management insight, automatically",
-            "desc": "AI Agents automatically integrate enterprise data, run analysis, and generate dashboards and management reports.",
-            "points": [
-              "Quickly see current operations",
-              "Less time spent compiling reports",
-              "Faster data-driven decisions"
-            ]
-          },
-          {
-            "icon": "zap",
-            "title": "Multi-Agent Digital Workers",
-            "slogan": "AI as your digital execution assistant",
-            "desc": "AI Agents follow standard procedures to query data, operate systems, answer questions, and coordinate across systems.",
-            "points": [
-              "Less repetitive work",
-              "Higher operational efficiency",
-              "Frees people for higher-value work"
-            ]
-          }
-        ]
-      },
-      "plusai": {
-        "label": "+AI (Automated Operations)",
-        "title": "Smart Automation & AI Agent Platform",
-        "intro": "Builds a digital workforce that runs around the clock, reducing manual workload and improving execution — automating information lookup, analysis, and process execution.",
-        "items": [
-          {
-            "icon": "activity",
-            "title": "Equipment Monitoring",
-            "slogan": "From reacting to equipment failures to catching them early",
-            "desc": "Monitors equipment operation, utilization, and anomaly signals in real time, using AI to catch potential problems early.",
-            "points": [
-              "Lower downtime risk and repair costs",
-              "Higher equipment utilization",
-              "Less loss from unplanned downtime"
-            ]
-          },
-          {
-            "icon": "clipboard",
-            "title": "Shop-Floor Reporting",
-            "slogan": "Real-time visibility into shop-floor progress",
-            "desc": "QR-code and mobile reporting sends work-order progress, production status, and equipment data back automatically.",
-            "points": [
-              "Less manual entry and reporting lag",
-              "More efficient floor management",
-              "Real-time view of production execution"
-            ]
-          },
-          {
-            "icon": "chart",
-            "title": "ERP Procurement & Financial Analysis",
-            "slogan": "Turns ERP data into business insight, automatically",
-            "desc": "AI Agents analyze procurement, cost, inventory, and financial data directly, producing analysis and management reports automatically.",
-            "points": [
-              "Shorter decision prep time",
-              "Fast visibility into cost structure and procurement risk",
-              "Faster business decisions"
-            ]
-          },
-          {
-            "icon": "wrench",
-            "title": "Smart Technical Support",
-            "slogan": "Customer service and technical support, online 24/7",
-            "desc": "Combines a knowledge base, FAQs, and AI Agents to automatically answer technical questions, product inquiries, and service requests.",
-            "points": [
-              "Faster responses and better service quality",
-              "Lower labor costs"
-            ]
-          },
-          {
-            "icon": "message",
-            "title": "AI Customer Service",
-            "slogan": "A smart service desk, around the clock",
-            "desc": "AI Agents understand customer questions automatically, providing instant replies, information lookup, and service guidance for a better customer experience.",
-            "points": [
-              "Higher customer satisfaction",
-              "Less repetitive service work"
-            ]
-          },
-          {
-            "icon": "alert",
-            "title": "Quality Deviation & Maintenance",
-            "slogan": "Catch quality issues and equipment risk early",
-            "desc": "Integrates quality inspection, anomaly reporting, and maintenance data, using AI to analyze root causes and recommend improvements automatically.",
-            "points": [
-              "Lower quality costs",
-              "Fewer defects and less equipment failure risk"
-            ]
-          }
-        ]
-      }
+    "features": {
+      "tag": "CAPABILITIES",
+      "title": "Core Features",
+      "items": [
+        {
+          "icon": "book",
+          "title": "Built on Manufacturing Expertise",
+          "desc": "Turns manufacturing management knowledge, KPI definitions, analysis logic, and domain rules into a knowledge base AI can put to work."
+        },
+        {
+          "icon": "workflow",
+          "title": "Working Methods as Executable Workflows",
+          "desc": "Chains data processing, analysis, judgment, and output into standard workflows, so tasks keep running by the rules."
+        },
+        {
+          "icon": "team",
+          "title": "Specialized AI Agents, Working Together",
+          "desc": "Assigns agents with different specialties to each task — handling data, analysis, judgment, and reporting."
+        },
+        {
+          "icon": "monitor",
+          "title": "A Control Center to Watch AI at Work",
+          "desc": "Brings your operations floor into one view: run workflows, check execution status, and see analysis results and decision recommendations in one place."
+        },
+        {
+          "icon": "plug",
+          "title": "AI Connected to Your Business Systems",
+          "desc": "Integrates ERP, MES, APS, WMS, databases, and APIs as needed, extending AI step by step into your existing systems."
+        }
+      ]
     },
-    "insight": {
-      "tag": "DATA INSIGHT",
-      "title": "AI Data Analysis & Reporting Platform",
-      "intro": "From data collection to analysis and management reporting, AI Agents handle the entire process automatically.",
-      "pains_label": "Common Pain Points",
-      "pains": [
-        "Data scattered and hard to consolidate",
-        "Analysis is slow",
-        "Heavy reporting workload",
-        "Inconsistent data across departments",
-        "Slow decision-making"
-      ],
-      "gains_label": "After Deployment",
-      "gains": [
-        "80% less time spent producing reports",
-        "Real-time visibility into key KPIs",
-        "Lower cross-department communication cost",
-        "Standardized decision-making process",
-        "From data to decisions"
-      ],
-      "agents": [
+    "benefits": {
+      "tag": "OUTCOMES",
+      "title": "Real Business Benefits",
+      "items": [
         {
-          "en": "Data Analysis Agent",
-          "zh": "Data Analysis Agent",
-          "desc": "Automatically integrates ERP, MES, CRM, and Excel data, turning data into actionable insight."
+          "icon": "trending",
+          "title": "Lower Cost, Higher Efficiency",
+          "desc": "Cuts repetitive data preparation, analysis, and reporting, so your team can spend its time on higher-value work."
         },
         {
-          "en": "Dashboard Agent",
-          "zh": "Dashboard Agent",
-          "desc": "Generates dashboards and KPI monitoring views in real time for instant visibility into operations."
+          "icon": "copy",
+          "title": "Repeatable Key Processes",
+          "desc": "Standardizes common analysis methods and work rules, reducing variation between the people who carry them out."
         },
         {
-          "en": "Report Agent",
-          "zh": "Report Agent",
-          "desc": "Automatically generates management reports and decision summaries, cutting report-writing time."
+          "icon": "gem",
+          "title": "Expertise Becomes an Asset",
+          "desc": "Captures domain knowledge and decision rules as reusable AI work resources."
+        },
+        {
+          "icon": "handshake",
+          "title": "Stronger Cross-Department Teamwork",
+          "desc": "Lets people and AI agents divide work by task, improving information flow and collaboration."
+        }
+      ]
+    },
+    "plans": {
+      "tag": "Plans",
+      "title": "Standing on the Shoulders of Large Language Models to Build an AI Team That Understands Manufacturing",
+      "intro": "Enterprise knowledge, workflows, agent collaboration, and system integration fill the gaps general-purpose AI leaves in real business work.",
+      "feature_label": "Highlight",
+      "tiers": [
+        {
+          "code": "S1",
+          "name": "Standard Scenarios",
+          "en": "DATA INSIGHT",
+          "tagline": "Faster, more standardized data analysis",
+          "fit": "For companies that want to use AI to process business data, set up standard analysis methods, and generate insights quickly.",
+          "points": [
+            {
+              "icon": "sheet",
+              "text": "Standard data parsing for Excel, CSV, and more"
+            },
+            {
+              "icon": "chart",
+              "text": "Standard data analysis and KPI views"
+            },
+            {
+              "icon": "report",
+              "text": "Anomaly detection, charts, and reports"
+            }
+          ],
+          "feature": "Starts from standard analysis scenarios to lighten the load of repetitive data processing and reporting."
+        },
+        {
+          "code": "S2",
+          "name": "Expert Collaboration",
+          "en": "BUILD INTELLIGENCE",
+          "tagline": "Turn company experience into executable AI work methods",
+          "fit": "For companies that need to combine domain knowledge, business rules, and specific workflows.",
+          "points": [
+            {
+              "icon": "workflow",
+              "text": "Custom workflows"
+            },
+            {
+              "icon": "bot",
+              "text": "AI agent development"
+            },
+            {
+              "icon": "rules",
+              "text": "Business rule configuration"
+            },
+            {
+              "icon": "users",
+              "text": "Human–AI collaboration and oversight"
+            }
+          ],
+          "feature": "Builds AI workflows and ways of collaborating tailored to your business context."
+        },
+        {
+          "code": "S3",
+          "name": "System Integration",
+          "en": "CONNECT & EXECUTE",
+          "tagline": "Take AI from analysis to execution in your systems",
+          "fit": "For companies that want to connect AI workflows to their existing operational systems.",
+          "points": [
+            {
+              "icon": "link",
+              "text": "ERP, MES, APS, WMS, and other system integration"
+            },
+            {
+              "icon": "database",
+              "text": "Database and API connections"
+            },
+            {
+              "icon": "zap",
+              "text": "Workflow triggering and execution"
+            },
+            {
+              "icon": "sync",
+              "text": "Data write-back, depending on integration scope"
+            }
+          ],
+          "feature": "Extends AI capabilities into existing enterprise systems and operational processes."
+        },
+        {
+          "code": "S4",
+          "name": "Strategic Governance",
+          "en": "GOVERN & ORCHESTRATE",
+          "tagline": "From single AI tasks to cross-department collaboration",
+          "fit": "For companies that need cross-department, multi-agent collaboration, decision support, and governance.",
+          "points": [
+            {
+              "icon": "team",
+              "text": "Agent Team and Orchestrator"
+            },
+            {
+              "icon": "warroom",
+              "text": "War Room decision collaboration"
+            },
+            {
+              "icon": "shield",
+              "text": "Validator checks"
+            },
+            {
+              "icon": "governance",
+              "text": "AI governance"
+            }
+          ],
+          "feature": "Supports higher-level AI collaboration, decision management, and governance needs."
         }
       ],
       "market": {
@@ -639,8 +614,8 @@
       }
     },
     "cases": {
-      "tag": "Case Studies",
-      "title": "14 Enterprise Workflows",
+      "tag": "Use Cases",
+      "title": "16 Enterprise Workflows",
       "intro": "Covers order intake, scheduling, supply chain, quality, ESG, and admin workflows. Each one is a ready-to-use Multi-Agent workflow — not a custom project built from scratch.",
       "values_label": "Build Your Own AI Workforce",
       "values": [
@@ -948,6 +923,39 @@
             "Frees people for high-value analysis and decision-making",
             "Improves overall efficiency and speed"
           ]
+        },
+        {
+          "icon": "dualtrack",
+          "title": "Sales & Production Dual Track",
+          "desc": "Connects order intake with production execution — automatically capturing order data, cross-checking it against rules, and linking systems into a two-track workflow from order to production.",
+          "points": [
+            "Less manual processing",
+            "More efficient cross-department collaboration",
+            "Better visibility into orders and production",
+            "Faster detection and resolution of issues"
+          ]
+        },
+        {
+          "icon": "patent",
+          "title": "R&D Opportunity & Patent Intelligence",
+          "desc": "Brings together market intelligence, R&D design, patent search, process analysis, and material evaluation, giving R&D teams a systematic analysis and decision process from opportunity discovery to technical assessment.",
+          "points": [
+            "Faster R&D intelligence gathering",
+            "Stronger cross-disciplinary collaboration",
+            "Earlier identification of technical risks",
+            "Better R&D decisions"
+          ]
+        },
+        {
+          "icon": "target",
+          "title": "Precision Marketing",
+          "desc": "Automatically organizes prospect lists, researches company backgrounds, scores opportunities, matches products, and generates personalized marketing content with ongoing follow-up — making business development more efficient.",
+          "points": [
+            "Faster list processing",
+            "Sharper opportunity identification",
+            "More targeted marketing",
+            "Stronger opportunity tracking"
+          ]
         }
       ],
       "custom": {
@@ -1013,45 +1021,163 @@
   },
   "solutions": {
     "tag": "Solutions",
-    "title": "Three AI Agent Modules",
-    "subtitle": "Built on the Argox AI Engine, CRIS delivers ready-to-deploy AI Agent solutions covering Finance, Service, and Manufacturing.",
-    "module_1_title": "Smart Finance",
-    "module_1_subtitle": "Automated ERP Financial Report Simulation",
-    "module_1_tag": "Financial AI Agent",
-    "module_1_desc": "Connects to enterprise ERP systems, auto-analyzes financial data, and generates all five core financial statements — P&L, Balance Sheet, Cash Flow, Equity Changes, and Ratios — in one click.",
-    "module_1_features": [
-      "Integrates SAP / Yonyou / Digiwin ERP",
-      "Auto-generates 5 financial statements",
-      "AI financial anomaly detection",
-      "Natural language financial queries"
-    ],
-    "module_2_title": "Smart Service",
-    "module_2_subtitle": "RAG Knowledge Base · 24/7 Technical Support",
-    "module_2_tag": "Service AI Agent",
-    "module_2_desc": "Uses RAG (Retrieval-Augmented Generation) to build a private knowledge base from product manuals and troubleshooting docs. AI agents deliver instant, accurate technical Q&A and after-sales support.",
-    "module_2_features": [
-      "Private KB ingestion (PDF/Word/URL)",
-      "RAG semantic retrieval",
-      "24/7 AI technical Q&A",
-      "Multi-turn conversational context"
-    ],
-    "module_3_title": "Predictive Maintenance",
-    "module_3_subtitle": "AIoT Equipment Health Diagnostics & Alerts",
-    "module_3_tag": "Maintenance AI Agent",
-    "module_3_desc": "Integrates AIoT sensor streams to continuously monitor equipment vibration, temperature, and current. AI predicts failure risk before downtime occurs and auto-dispatches maintenance orders.",
-    "module_3_features": [
-      "Multi-source AIoT sensor integration",
-      "AI health scoring & trend analysis",
-      "Anomaly alert push notifications",
-      "Auto maintenance order dispatch"
-    ],
-    "feature_label": "Core Capabilities",
+    "title": "Two Paths to Adoption, One Platform",
+    "subtitle": "AI+ brings AI into operational decisions; +AI hands execution over to AI. Both run on CRIS AgentForge Platform and can be adopted in stages to fit where your business is today.",
     "cta_demo": "Book AI Demo",
     "cta_learn": "Explore Architecture",
-    "expand": "Show Features",
-    "collapse": "Collapse",
+    "dual": {
+      "compare": {
+        "a_label": "AI+",
+        "a_head": "Add AI to Operational Decisions",
+        "a_desc": "Order intake, production, supply chain, business analysis — sharper judgment for the people making the calls.",
+        "b_label": "+AI",
+        "b_head": "Hand Execution to AI",
+        "b_desc": "Monitoring, shop-floor reporting, customer service, quality — AI gets the work done instead of people."
+      },
+      "aiplus": {
+        "label": "AI+ (Application Systems)",
+        "title": "Smart Decision & Operations Platform",
+        "intro": "Moves enterprises from data-driven to decision-driven, improving operational efficiency and competitiveness. Covers order intake, production, supply chain, and business analysis, giving real-time visibility and sharper decisions.",
+        "items": [
+          {
+            "icon": "search",
+            "title": "Order Feasibility Check (ATP/CTP)",
+            "slogan": "Know if you can deliver on time before you accept the order",
+            "desc": "Assesses materials, capacity, and schedule in real time to give a reliable delivery commitment fast.",
+            "points": [
+              "Reduces the risk of overcommitting and late delivery",
+              "Improves order win rate",
+              "Builds customer trust in delivery dates"
+            ]
+          },
+          {
+            "icon": "factory",
+            "title": "Advanced Material & Capacity Planning",
+            "slogan": "See material shortages and capacity bottlenecks in advance",
+            "desc": "Integrates BOM, inventory, procurement, and production data to auto-analyze future material-shortage risk and capacity load, helping you plan ahead.",
+            "points": [
+              "Reduces the risk of shutdowns from material shortages",
+              "Improves production plan accuracy"
+            ]
+          },
+          {
+            "icon": "calendar",
+            "title": "AI Production Scheduling",
+            "slogan": "Production scheduling no longer relies on manual experience",
+            "desc": "AI and simulation algorithms auto-generate the optimal production schedule, adapting in real time to rush orders and disruptions.",
+            "points": [
+              "Improves equipment utilization",
+              "Shortens lead times",
+              "Reduces WIP inventory"
+            ]
+          },
+          {
+            "icon": "link",
+            "title": "Supply Chain Collaboration",
+            "slogan": "Real-time, transparent supply chain collaboration",
+            "desc": "Connects your company, suppliers, and outsourcing partners so procurement, delivery, shipping, and exceptions are tracked and coordinated in real time.",
+            "points": [
+              "Faster supply chain response",
+              "Lower communication costs and fewer information gaps"
+            ]
+          },
+          {
+            "icon": "bot",
+            "title": "Multi-Agent Data Analysis",
+            "slogan": "Data becomes management insight, automatically",
+            "desc": "AI Agents automatically integrate enterprise data, run analysis, and generate dashboards and management reports.",
+            "points": [
+              "Quickly see current operations",
+              "Less time spent compiling reports",
+              "Faster data-driven decisions"
+            ]
+          },
+          {
+            "icon": "zap",
+            "title": "Multi-Agent Digital Workers",
+            "slogan": "AI as your digital execution assistant",
+            "desc": "AI Agents follow standard procedures to query data, operate systems, answer questions, and coordinate across systems.",
+            "points": [
+              "Less repetitive work",
+              "Higher operational efficiency",
+              "Frees people for higher-value work"
+            ]
+          }
+        ]
+      },
+      "plusai": {
+        "label": "+AI (Automated Operations)",
+        "title": "Smart Automation & AI Agent Platform",
+        "intro": "Builds a digital workforce that runs around the clock, reducing manual workload and improving execution — automating information lookup, analysis, and process execution.",
+        "items": [
+          {
+            "icon": "activity",
+            "title": "Equipment Monitoring",
+            "slogan": "From reacting to equipment failures to catching them early",
+            "desc": "Monitors equipment operation, utilization, and anomaly signals in real time, using AI to catch potential problems early.",
+            "points": [
+              "Lower downtime risk and repair costs",
+              "Higher equipment utilization",
+              "Less loss from unplanned downtime"
+            ]
+          },
+          {
+            "icon": "clipboard",
+            "title": "Shop-Floor Reporting",
+            "slogan": "Real-time visibility into shop-floor progress",
+            "desc": "QR-code and mobile reporting sends work-order progress, production status, and equipment data back automatically.",
+            "points": [
+              "Less manual entry and reporting lag",
+              "More efficient floor management",
+              "Real-time view of production execution"
+            ]
+          },
+          {
+            "icon": "chart",
+            "title": "ERP Procurement & Financial Analysis",
+            "slogan": "Turns ERP data into business insight, automatically",
+            "desc": "AI Agents analyze procurement, cost, inventory, and financial data directly, producing analysis and management reports automatically.",
+            "points": [
+              "Shorter decision prep time",
+              "Fast visibility into cost structure and procurement risk",
+              "Faster business decisions"
+            ]
+          },
+          {
+            "icon": "wrench",
+            "title": "Smart Technical Support",
+            "slogan": "Customer service and technical support, online 24/7",
+            "desc": "Combines a knowledge base, FAQs, and AI Agents to automatically answer technical questions, product inquiries, and service requests.",
+            "points": [
+              "Faster responses and better service quality",
+              "Lower labor costs"
+            ]
+          },
+          {
+            "icon": "message",
+            "title": "AI Customer Service",
+            "slogan": "A smart service desk, around the clock",
+            "desc": "AI Agents understand customer questions automatically, providing instant replies, information lookup, and service guidance for a better customer experience.",
+            "points": [
+              "Higher customer satisfaction",
+              "Less repetitive service work"
+            ]
+          },
+          {
+            "icon": "alert",
+            "title": "Quality Deviation & Maintenance",
+            "slogan": "Catch quality issues and equipment risk early",
+            "desc": "Integrates quality inspection, anomaly reporting, and maintenance data, using AI to analyze root causes and recommend improvements automatically.",
+            "points": [
+              "Lower quality costs",
+              "Fewer defects and less equipment failure risk"
+            ]
+          }
+        ]
+      }
+    },
     "agentforge_powered_by": "Powered by Argox AI Engine",
-    "agentforge_cta_title": "All Modules Connect to CRIS AgentForge Platform",
+    "agentforge_cta_title": "Every Solution Connects to CRIS AgentForge Platform",
     "agentforge_cta_subtitle": "Multi-Agent workflows connect analysis, decisions, and execution — integrating with your existing ERP, MES, and CRM systems, with consultant support throughout rollout.",
     "agentforge_cta_btn": "Book AI Consultant",
     "agentforge_learn_more": "Explore AgentForge Platform"

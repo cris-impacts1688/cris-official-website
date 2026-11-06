@@ -1,14 +1,10 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import {
-  BarChart2, HeadphonesIcon, Wrench,
-  CheckCircle2, ArrowRight, Zap, Brain, Activity,
-  ChevronDown, ChevronUp,
-} from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useCmsPageContent } from '../hooks/useCmsContent'
-import CaseStudies from '../components/CaseStudies'
+import DualMode from '../components/DualMode'
 import GovProgramCases from '../components/GovProgramCases'
 
 // ─── Neural network nodes ─────────────────────────────────────────────────────
@@ -140,135 +136,10 @@ function TechHeroBg() {
   )
 }
 
-const modulesMeta = [
-  {
-    key: 'module_1',
-    icon: BarChart2,
-    iconBg: 'bg-blue-50 dark:bg-blue-900/30',
-    iconColor: 'text-cris-blue dark:text-cris-blue-light',
-    tagBg: 'bg-cris-blue/10 dark:bg-cris-blue/20',
-    tagColor: 'text-cris-blue dark:text-cris-blue-light',
-    barColor: 'bg-gradient-to-r from-cris-blue to-blue-400',
-    badgeIcon: Zap,
-  },
-  {
-    key: 'module_2',
-    icon: HeadphonesIcon,
-    iconBg: 'bg-violet-50 dark:bg-violet-900/30',
-    iconColor: 'text-violet-600 dark:text-violet-400',
-    tagBg: 'bg-violet-100 dark:bg-violet-900/30',
-    tagColor: 'text-violet-700 dark:text-violet-400',
-    barColor: 'bg-gradient-to-r from-violet-500 to-purple-500',
-    badgeIcon: Brain,
-  },
-  {
-    key: 'module_3',
-    icon: Wrench,
-    iconBg: 'bg-emerald-50 dark:bg-emerald-900/30',
-    iconColor: 'text-emerald-600 dark:text-emerald-400',
-    tagBg: 'bg-emerald-100 dark:bg-emerald-900/30',
-    tagColor: 'text-emerald-700 dark:text-emerald-400',
-    barColor: 'bg-gradient-to-r from-emerald-500 to-teal-500',
-    badgeIcon: Activity,
-  },
-]
-
-function ModuleCard({ meta, index, isInView, cms = {} }) {
-  const [expanded, setExpanded] = useState(false)
-  const { t } = useTranslation()
-  const Icon = meta.icon
-  const BadgeIcon = meta.badgeIcon
-  const features = t(`solutions.${meta.key}_features`, { returnObjects: true })
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.12 }}
-      className="card group cursor-pointer hover:-translate-y-1"
-      onClick={() => setExpanded(!expanded)}
-    >
-      {/* Top colour bar */}
-      <div className={`h-1 w-full ${meta.barColor} rounded-t-2xl -mt-px -mx-px`} />
-
-      <div className="p-8 pt-6">
-        {/* Tag */}
-        <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full ${meta.tagBg} ${meta.tagColor} mb-5`}>
-          <BadgeIcon size={11} />
-          {t(`solutions.${meta.key}_tag`)}
-        </span>
-
-        {/* Icon + Title */}
-        <div className="flex items-start gap-4 mb-4">
-          <div className={`w-12 h-12 rounded-xl ${meta.iconBg} flex items-center justify-center flex-shrink-0`}>
-            <Icon size={24} className={meta.iconColor} strokeWidth={1.5} />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-              {t(`solutions.${meta.key}_title`)}
-            </h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-              {t(`solutions.${meta.key}_subtitle`)}
-            </p>
-          </div>
-        </div>
-
-        {/* Description */}
-        <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-          {cms[`${meta.key}_desc`]
-            ? <span dangerouslySetInnerHTML={{ __html: cms[`${meta.key}_desc`] }} />
-            : t(`solutions.${meta.key}_desc`)}
-        </p>
-
-        {/* Expandable features */}
-        <motion.div
-          initial={false}
-          animate={{ height: expanded ? 'auto' : 0, opacity: expanded ? 1 : 0 }}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
-          className="overflow-hidden"
-        >
-          <div className="mt-5 pt-5 border-t border-slate-100 dark:border-slate-700">
-            <p className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">
-              {t('solutions.feature_label')}
-            </p>
-            <ul className="space-y-2.5">
-              {Array.isArray(features) && features.map((feat, fi) => (
-                <li key={fi} className="flex items-start gap-2.5 text-sm text-slate-600 dark:text-slate-300">
-                  <CheckCircle2 size={15} className="text-cris-blue dark:text-cris-blue-light mt-0.5 flex-shrink-0" />
-                  {feat}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
-
-        {/* Footer */}
-        <div className="mt-6 flex items-center justify-between">
-          <span className="text-xs text-slate-400 dark:text-slate-500">
-            <span className="inline-flex items-center gap-1">
-              {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
-              {expanded ? t('solutions.collapse') : t('solutions.expand')}
-            </span>
-          </span>
-          <Link
-            to="/contact"
-            className="btn-primary text-xs px-4 py-2 gap-1.5"
-            onClick={e => e.stopPropagation()}
-          >
-            {t('solutions.cta_demo')} <ArrowRight size={12} />
-          </Link>
-        </div>
-      </div>
-    </motion.div>
-  )
-}
-
 export default function Solutions() {
   const headerRef = useRef(null)
-  const gridRef   = useRef(null)
   const ctaRef    = useRef(null)
   const headerInView = useInView(headerRef, { once: true, margin: '-80px' })
-  const gridInView   = useInView(gridRef,   { once: true, margin: '-60px' })
   const ctaInView    = useInView(ctaRef,    { once: true, margin: '-60px' })
   const { t } = useTranslation()
   const cms = useCmsPageContent('solutions')
@@ -307,19 +178,8 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* Cards */}
-      <section className="py-16">
-        <div ref={gridRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {modulesMeta.map((meta, i) => (
-              <ModuleCard key={meta.key} meta={meta} index={i} isInView={gridInView} cms={cms} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <CaseStudies />
+      {/* AI+ ／ +AI 雙軌能力（1030 改版自 AgentForge 產品頁搬來） */}
+      <DualMode />
 
       {/* Gov Program Cases */}
       <GovProgramCases />
